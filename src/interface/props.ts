@@ -12,3 +12,8 @@ export interface CardIntroProps {
   image: string
   button: string
 }
+
+export interface CarouselProps{
+  images: string[]
+  speed: number
+}
