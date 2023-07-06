@@ -80,9 +80,17 @@ header{
 }
 
 .nav__ham{
-  display: flex;
+  display:grid;
   place-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.2rem;
+  transition: 0.3s;
 }
+.nav__ham svg{
+  stroke: var(--black);
+}
+
 @media (min-width: 720px){
   header{
     padding: 0.5rem 1rem;
@@ -98,4 +106,9 @@ header{
   .nav__ham{
     display: none;
   }
+}
+.nav__ham:hover,
+.nav__ham:focus{
+  background-color: var(--black-10);
+  outline: none;
 }

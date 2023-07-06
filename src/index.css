@@ -4,6 +4,7 @@
 :root {
   --black: #141938;
   --black-10: #E8E8EC;
+  --black-50: #898C9B;
   --blue: #1E51B6;
   --white: #FFF;
   --font-primary: 'Open Sans', sans-serif;
@@ -23,4 +24,7 @@ li{
 }
 a{
   text-decoration: none;
+}
+button{
+  cursor: pointer;
 }

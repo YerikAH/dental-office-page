@@ -1,0 +1,42 @@
+.card{
+  display: grid;
+  justify-content: center;
+  align-items: start;
+  padding: 1rem;
+}
+.image{
+  border-radius: 15rem;
+  padding: 2rem;
+  background-color: var(--white);
+}
+.image img{
+  object-fit: cover;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.separate{
+  width: 100%;
+  height: 1px;
+  background-color: var(--blue);
+}
+.text{
+  font: normal normal 400 0.8rem/1rem var(--font-primary);
+  color: var(--black-50);
+}
+.text--bold{
+  font: normal normal 600 0.7rem/1rem var(--font-primary);
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.button{
+  margin-top: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  border-radius: 0.2rem;
+  font-size: 0.6rem;
+  transition: 0.3s;
+  outline: none;
+  color: var(--white);
+}

@@ -1,0 +1,104 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 1rem 1rem;
+  position: fixed;
+  left: 0;
+  background-color: var(--white);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  top: -100vh;
+  transition: 0.3s;
+}
+.nav--active {
+  top: 0;
+}
+
+.nav__logo img {
+  height: auto;
+  width: 4rem;
+  object-fit: contain;
+}
+.nav__logo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.nav__pages {
+  display: grid;
+  gap: 1rem;
+}
+.nav__pages:last-child {
+  margin-top: auto;
+}
+.nav__pages a {
+  width: 100%;
+  text-align: center;
+  display: block;
+  outline: none;
+}
+
+.nav__link {
+  font: normal normal 400 0.8rem/1.2rem var(--font-primary);
+  color: var(--black);
+  transition: 0.3s;
+}
+.nav__link--active,
+.nav__link--bold {
+  font-weight: 600;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  opacity: 0.7;
+}
+.nav__link--active:hover,
+.nav__link--active:focus {
+  opacity: 1;
+}
+
+.nav__button {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  display: block;
+  width: 100%;
+  padding: 0.2rem 1rem;
+  font-weight: 700;
+  border-radius: 0.2rem;
+  border: 1px solid var(--black);
+  font-size: 0.6rem;
+  transition: 0.3s;
+  outline: none;
+  text-align: center;
+}
+.nav__button:hover,
+.nav__button:focus {
+  opacity: 1;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.nav__ham {
+  display: grid;
+  place-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.2rem;
+  transition: 0.3s;
+}
+.nav__ham svg {
+  stroke: var(--black);
+}
+.nav__ham:hover,
+.nav__ham:focus {
+  background-color: var(--black-10);
+  outline: none;
+}
+@media (min-width: 720px) {
+  .nav {
+    display: none;
+  }
+}
