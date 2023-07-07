@@ -17,3 +17,9 @@ export interface CarouselProps{
   images: string[]
   speed: number
 }
+
+export interface SectionIntroProps{
+  images: string[]
+  speed: number
+  items: CardIntroProps[]
+}
