@@ -1,0 +1,92 @@
+.modal{
+  max-width: 20rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+.banner{
+  padding: 1rem;
+  background-color: var(--green);
+}
+.banner button{
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  opacity: 0.5;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  background-color: transparent;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+.banner h2{
+  font: normal normal 700 1rem/1.2rem var(--font-primary);
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.banner p{
+  font: normal normal 400 0.8rem/1.2rem var(--font-primary);
+  color: var(--white);
+}
+
+.chats{
+  display: grid;
+  background-color: #E5DCD5;
+  background-color: var(--white);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.chat{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: var(--white);
+  border-radius: 0.3rem;
+  border:none;
+  border-left: 2px solid var(--green);
+  box-shadow: var(--shadow-light);
+  transition: 0.3s;
+}
+.chat svg{
+  stroke: var(--green);
+}
+.chat__info{
+  display: flex;
+}
+.chat__info div:first-child{
+  display: grid;
+  place-items: center;
+  margin-right: 0.5rem;
+}
+.chat__info div:first-child img{
+  border-radius: 4rem;
+  object-fit: cover;
+  width: 3rem;
+  height: 3rem;
+}
+
+.chat__info div:last-child{
+  display: grid;  
+  align-content: center;
+  width: 100%;
+}
+.chat__info div:last-child h5{
+  font: normal normal 400 0.7rem/1rem var(--font-primary);
+  color: var(--black-50);
+  margin-bottom: 0.2rem;
+}
+.chat__info div:last-child p{
+  font: normal normal 600 0.8rem/1rem var(--font-primary);
+  color: var(--black);
+}
+.chat:hover,
+.chat:focus{
+  background-color: var(--black-5);
+}
