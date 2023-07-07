@@ -1,0 +1,25 @@
+.button{
+  border-radius: 2rem;
+  background-color: var(--green);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.2rem;
+  padding: 0.4rem 1rem;
+  transition: 0.3s;
+
+  /* no style button */
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+.button p{
+  font: normal normal 600 0.8rem/1rem var(--font-primary);
+  color: var(--white);
+}
+
+.button:hover, 
+.button:focus{
+  filter: brightness(1.1);
+}
