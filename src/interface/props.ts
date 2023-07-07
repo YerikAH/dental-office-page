@@ -23,3 +23,12 @@ export interface SectionIntroProps{
   speed: number
   items: CardIntroProps[]
 }
+
+export interface CardInfoProps{
+  label: string
+  title: string
+  slogan: string
+  text: string
+  items: string[]
+  button: string
+}

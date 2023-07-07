@@ -10,13 +10,6 @@ const CHATS = [
     tag: "Asistente tecnico",
     online: true,
   },
-  {
-    avatar:
-      "https://img.freepik.com/vector-premium/plantilla-diseno-vector-plano-mascota-logotipo-personaje-maquina-robot-pequeno-divertido_194708-2022.jpg",
-    name: "Diego Jackson",
-    tag: "Asistente tecnico",
-    online: true,
-  },
 ];
 function ChatWhatsApp() {
   return (
@@ -25,31 +18,30 @@ function ChatWhatsApp() {
         <button>
           <IconX size={18} color="white" />
         </button>
-        <h2>Abrir Charla</h2>
-        <p>
-          ¡Hola! Haga clic en uno de nuestros miembros a continuación para
-          chatear en
-          <b> WhatsApp</b>.
-        </p>
+        <IconBrandWhatsapp size={32} color="white"/>
+        <div>
+          <h2>Abrir Charla</h2>
+          <p>
+            ¡Hola! Haga clic en uno de nuestros miembros a continuación para
+            chatear en
+            <b> WhatsApp</b>.
+          </p>
+        </div>
       </div>
       <div className={s.chats}>
-        {CHATS.map((item,idx) => (
-
-        <button className={s.chat} key={idx}>
-          <div className={s.chat__info}>
-            <div>
-              <img
-                src={item.avatar}
-                alt={item.name}
-              />
+        {CHATS.map((item, idx) => (
+          <button className={s.chat} key={idx}>
+            <div className={s.chat__info}>
+              <div>
+                <img src={item.avatar} alt={item.name} />
+              </div>
+              <div>
+                <h5>{item.tag}</h5>
+                <p>{item.name}</p>
+              </div>
             </div>
-            <div>
-              <h5>{item.tag}</h5>
-              <p>{item.name}</p>
-            </div>
-          </div>
-          <IconBrandWhatsapp size={24} />
-        </button>
+            <IconBrandWhatsapp size={24} />
+          </button>
         ))}
       </div>
     </div>
