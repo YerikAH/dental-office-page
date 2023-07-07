@@ -1,9 +1,11 @@
-.section{
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  overflow: auto;
+  position: relative;
+  bottom: 5rem;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-}
-.cards{
-  display: grid;
-  overflow: auto;
+  place-items: center;
 }

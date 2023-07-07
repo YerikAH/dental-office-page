@@ -10,6 +10,7 @@
   overflow: auto;
   top: -100vh;
   transition: 0.3s;
+  z-index: 500;
 }
 .nav--active {
   top: 0;

@@ -5,7 +5,7 @@ import s from './SectionIntro.module.css'
 
 function SectionIntro({images, speed, items}: SectionIntroProps){
   return (
-    <section className={s.section}>
+    <section>
       <Carousel images={images} speed={speed}/>
       <div className={s.cards}>
         {items.map((item, idx) => (

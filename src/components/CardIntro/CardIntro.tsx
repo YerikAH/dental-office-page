@@ -7,10 +7,10 @@ function CardIntro({ image, text, title, button }: CardIntroProps) {
       <div className={s.image}>
         <img src={image} alt={title} />
       </div>
-      <hr className={s.separate} />
-      <h3 className={`${s['text-bold']}`}>{title}</h3>
+      <div className={s.separate} />
+      <h3 className={`${s['text--bold']}`}>{title}</h3>
       <p className={s.text}>{text}</p>
-      <button className={`${s['text-bold']} ${s.button}`}>{button}</button>
+      <button className={`${s['text--bold']} ${s.button}`}>{button}</button>
     </div>
   );
 }

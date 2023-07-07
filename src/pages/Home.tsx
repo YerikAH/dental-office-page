@@ -1,6 +1,6 @@
 import Navigation from "../components/Navigation/Navigation";
 import logo from '../assets/logo.png'
-
+import Main from "../components/Main/Main";
 
 const ITEMS= [
   {
@@ -15,15 +15,21 @@ const ITEMS= [
   },
   {
     path: '/',
+    label: 'Productos',
+    active: false
+  },
+  {
+    path: '/',
     label: 'Contactanos',
     active: false
-  }
+  },
 ]
 
 function Home(){
   return (
     <>
       <Navigation items={ITEMS} logo={logo}/>
+      <Main/>
     </>
   )
 }
