@@ -6,6 +6,7 @@
   --black-10: #E8E8EC;
   --black-50: #898C9B;
   --blue: #1E51B6;
+  --blue-70: #6285CC;
   --white: #FFF;
   --font-primary: 'Open Sans', sans-serif;
 }
@@ -24,7 +25,9 @@ li{
 }
 a{
   text-decoration: none;
+  outline: none;
 }
 button{
+  outline: none;
   cursor: pointer;
 }

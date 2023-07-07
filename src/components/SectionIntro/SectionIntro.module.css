@@ -1,11 +1,26 @@
-.cards{
-  display: grid;
-  grid-template-columns: repeat(3,auto);
-  overflow: auto;
+.section{
+  margin-top: 1rem;
+}
+.container{
   position: relative;
   bottom: 5rem;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+.cards{
+  display: none;
   place-items: center;
+  grid-template-columns: repeat(3,auto);
+}
+#cards--mobile{
+  display: block;
+}
+@media (min-width: 720px){
+  .cards{
+    display: grid;
+  }
+  #cards--mobile{
+    display: none;
+  }
 }
