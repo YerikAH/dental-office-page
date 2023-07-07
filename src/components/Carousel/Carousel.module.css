@@ -14,7 +14,7 @@
   position: absolute;
   background-color: var(--white);
   animation-name: flash;
-  animation-duration: 0.3s;
+  animation-duration: 1s;
   opacity: 0;
   animation-iteration-count: infinite;
 }
