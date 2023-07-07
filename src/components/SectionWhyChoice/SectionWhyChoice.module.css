@@ -1,0 +1,9 @@
+.section{
+  max-width: 1200px;
+  width: 100%;
+  margin: 7rem auto 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 50%);
+  place-items: center;
+}

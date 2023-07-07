@@ -11,7 +11,7 @@ function CardInfo({
   button,
 }: CardInfoProps) {
   return (
-    <div className={s.card}>
+    <>
       <div className={s.card__title}>
         <span>{label}</span>
         <h2>{title}</h2>
@@ -35,7 +35,7 @@ function CardInfo({
         </div>
         <button className={s.card__button}>{button}</button>
       </div>
-    </div>
+    </>
   );
 }
 export default CardInfo;
