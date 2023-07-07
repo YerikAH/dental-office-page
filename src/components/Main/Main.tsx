@@ -1,5 +1,6 @@
 import banner from '../../assets/banner.png'
 import banner_2 from '../../assets/banner_2.jpg'
+import banner_3 from '../../assets/banner_3.jpeg'
 import SectionIntro from '../SectionIntro/SectionIntro'
 import icon from '../../assets/iconIntro.png'
 import SectionWhyChoice from '../SectionWhyChoice/SectionWhyChoice'
@@ -7,7 +8,8 @@ import doctor from "../../assets/doctor.png";
 
 const IMAGES_INTRO = [
   banner,
-  banner_2
+  banner_2,
+  banner_3
 ]
 const ITEMS_INTRO = [
   {

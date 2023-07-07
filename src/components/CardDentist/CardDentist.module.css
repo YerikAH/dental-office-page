@@ -1,0 +1,25 @@
+.card{
+  width: 100%;
+  max-width: 300px;
+  border-radius: 0.4rem;
+  background-color: var(--white);
+}
+.card__image{
+  width: 100%;
+  height: 6rem;
+  object-fit: cover;
+}
+.card__info{
+  padding: 1rem 0.5rem;
+  display: grid;
+  gap: 1rem;
+}
+.card__text--bold{
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+}
+.card__text{
+  font: normal normal 400 0.8rem/1.2rem var(--font-primary);
+  color: var(--black-50);
+}
