@@ -10,15 +10,17 @@ function Carousel({ images, speed }: CarouselProps) {
     const int = setInterval(() => {
       idx += 1;
       if (idx >= images.length) idx = 0;
-      setImage(images[idx])
+      setImage(images[idx])      
     }, speed);
 
     return () => {
       clearInterval(int);
     };
   }, [speed, images]);
+
   return (
-    <div className={s.carousel}>
+    <div className={s.carousel}> 
+      <div className={s.flash}>Flash</div>
       <img className={s.image}  src={image} alt="image" />
     </div>
   );

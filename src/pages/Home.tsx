@@ -31,7 +31,7 @@ function Home(){
   return (
     <>
       <Navigation items={ITEMS} logo={logo}/>
-      <Carousel images={IMAGES} speed={1000}/>
+      <Carousel images={IMAGES} speed={5000}/>
     </>
   )
 }
