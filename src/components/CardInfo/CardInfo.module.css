@@ -14,7 +14,6 @@
   letter-spacing: 0.1rem;
 }
 .card__contain {
-  padding-left: 2rem;
   max-width: 25rem;
   width: 100%;
   display: grid;
@@ -57,4 +56,9 @@
 .card__button:hover,
 .card__button:focus {
   background-color: var(--blue-70);
+}
+@media(min-width: 1000px){
+  .card__contain{
+    padding-left: 2rem;
+  }
 }

@@ -33,7 +33,7 @@ function Home() {
     <>
       <Navigation items={ITEMS} logo={logo} />
       <Main />
-      <BtnWhatsApp />
+      {/* <BtnWhatsApp /> */}
     </>
   );
 }

@@ -5,7 +5,7 @@ import {SectionWhyChoiceProps} from '../../interface/props'
 function SectionWhyChoice({info, image}: SectionWhyChoiceProps) {
   return (
     <section className={s.section}>
-      <div>
+      <div className={s.section__info}>
         <CardInfo
           label={info.label}
           title={info.title}
@@ -15,7 +15,7 @@ function SectionWhyChoice({info, image}: SectionWhyChoiceProps) {
           items={info.items}
         />
       </div>
-      <div>
+      <div className={s.section__image}>
         <img src={image} alt="doctor" />
       </div>
     </section>

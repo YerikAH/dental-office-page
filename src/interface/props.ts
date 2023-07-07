@@ -32,3 +32,8 @@ export interface CardInfoProps{
   items: string[]
   button: string
 }
+
+export interface SectionWhyChoiceProps{
+  info: CardInfoProps,
+  image: string
+}
