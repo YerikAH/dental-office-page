@@ -45,12 +45,65 @@ const ITEMS_INFO = {
   button: "reserva tu cita",
 };
 
+const ITEMS_DOCTORS = [
+  {
+    name: 'Harvey Yerik',
+    special: 'Ingeniero de software',
+    image: 'https://images.pexels.com/photos/6502026/pexels-photo-6502026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    text:'Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible',
+    email: '',
+    fb: '',
+    phone: '',
+    url: ''
+  },
+  {
+    name: 'Harvey Yerik',
+    special: 'Ingeniero de software',
+    image: 'https://images.pexels.com/photos/6502026/pexels-photo-6502026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    text:'Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible',
+    email: '',
+    fb: '',
+    phone: '',
+    url: ''
+  },
+  {
+    name: 'Harvey Yerik',
+    special: 'Ingeniero de software',
+    image: 'https://images.pexels.com/photos/6502026/pexels-photo-6502026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    text:'Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible',
+    email: '',
+    fb: '',
+    phone: '',
+    url: ''
+  },
+  {
+    name: 'Harvey Yerik',
+    special: 'Ingeniero de software',
+    image: 'https://images.pexels.com/photos/6502026/pexels-photo-6502026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    text:'Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible',
+    email: '',
+    fb: '',
+    phone: '',
+    url: ''
+  },
+  {
+    name: 'Harvey Yerik',
+    special: 'Ingeniero de software',
+    image: 'https://images.pexels.com/photos/6502026/pexels-photo-6502026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    text:'Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible',
+    email: '',
+    fb: '',
+    phone: '',
+    url: ''
+  }
+]
+
 function Main(){
   return (
     <main>
       <SectionIntro images={IMAGES_INTRO} items={ITEMS_INTRO} speed={10000}/>
       <SectionWhyChoice image={doctor} info={ITEMS_INFO}/>
-      <SectionOurDoctors/>
+      <SectionOurDoctors doctors={ITEMS_DOCTORS} title='Conoce a nuestros dentistas'/>
     </main>
   )
 }

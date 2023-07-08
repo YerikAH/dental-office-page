@@ -1,6 +1,7 @@
 import Navigation from "../components/Navigation/Navigation";
 import logo from "../assets/logo.png";
 import Main from "../components/Main/Main";
+import BtnWhatsApp from "../components/BtnWhatsApp/BtnWhatsApp";
 
 const ITEMS = [
   {
@@ -30,9 +31,7 @@ function Home() {
     <>
       <Navigation items={ITEMS} logo={logo} />
       <Main />
-
-{/* 
-      <BtnWhatsApp />  */}
+      <BtnWhatsApp />  
     </>
   );
 }

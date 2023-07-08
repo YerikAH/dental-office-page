@@ -50,3 +50,7 @@ export interface CardDentistProps{
 export interface CarouselCardsProps{
   cards: CardDentistProps[]
 }
+export interface SectionOurDoctorsProps{
+  doctors: CardDentistProps[]
+  title: string
+}
