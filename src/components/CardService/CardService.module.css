@@ -1,0 +1,36 @@
+.card {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  padding-bottom: 0.3rem;
+  overflow: hidden;
+}
+.card__container {
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.card__container img {
+  margin: 0 auto;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+.card__container h2 {
+  font: normal normal 600 1rem/1.2rem var(--font-primary);
+  color: var(--black);
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+}
+.card__container p {
+  font: normal normal 400 0.8rem/1.2rem var(--font-primary);
+  color: var(--black-50);
+  text-align: center;
+  margin-top: 1rem;
+}

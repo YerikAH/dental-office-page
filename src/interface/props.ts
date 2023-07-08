@@ -68,3 +68,10 @@ export interface ChatWhatsAppProps{
   title: string
   text: string
 }
+
+export interface CardServiceProps{
+  title: string, 
+  icon: string,
+  color: string,
+  text: string
+}
