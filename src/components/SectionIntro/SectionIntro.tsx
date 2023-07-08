@@ -26,7 +26,6 @@ function SectionIntro({ images, speed, items }: SectionIntroProps) {
           effect="slide"
           grabCursor={true}
           loop={true}
-          zoom={true}
           slidesPerView={1}
           scrollbar={{ draggable: true }}
           id={`${s["cards--mobile"]}`}
