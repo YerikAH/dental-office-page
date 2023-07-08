@@ -1,0 +1,28 @@
+.cards__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+.cards__controls button {
+  border-radius: 2rem;
+  padding: 0.2rem;
+  border: 1px solid var(--blue);
+  background-color: transparent;
+  transition: 0.3s;
+  display: grid;
+  place-items: center;
+}
+.cards__controls svg {
+  color: var(--blue);
+}
+.cards__controls button:hover,
+.cards__controls button:focus {
+  background-color: var(--blue);
+}
+.cards__controls button:hover svg,
+.cards__controls button:focus svg {
+  color: var(--white);
+}

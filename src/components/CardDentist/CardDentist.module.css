@@ -1,28 +1,18 @@
 .card{
-  width: 100%;
-  max-width: 300px;
+  width: 300px;
   border-radius: 0.2rem;
   background-color: var(--white);
   position: relative;
-  box-shadow: var(--shadow);
   overflow: hidden;
   transition: 0.3s;
   cursor: pointer;
   display: grid;
 }
-.card:hover .card__info{
-  background-color: var(--purple);  
-}
-.card:hover p,
-.card:hover span{
-  color: white;
-  opacity: 0.7;
-}
-.card:hover h4{
-  color: white;
+.card:hover{
+  box-shadow: var(--shadow);
 }
 .card:hover .card__social{
-  bottom: 11.5rem;
+  bottom: 9rem;
 }
 .card__image{
   width: 100%;

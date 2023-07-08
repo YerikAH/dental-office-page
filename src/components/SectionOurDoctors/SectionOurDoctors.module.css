@@ -1,0 +1,30 @@
+.section{
+  width: 100%;
+  background-color: #F3F9FE;
+}
+.section__contain{
+  max-width: 1200px;
+  width: 100%;
+  margin: 7rem auto 0 auto;
+  padding: 5rem 1rem;
+}
+.section__contain__title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.section__contain__title h3{
+  font: normal normal 700 1.3rem/1.8rem var(--font-primary);
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+.section__contain__title div{
+  background-color: var(--black);
+  width: 100px;
+  height: 3px;
+  margin-top: 1rem;
+}

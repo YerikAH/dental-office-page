@@ -5,6 +5,7 @@ import SectionIntro from '../SectionIntro/SectionIntro'
 import icon from '../../assets/iconIntro.png'
 import SectionWhyChoice from '../SectionWhyChoice/SectionWhyChoice'
 import doctor from "../../assets/doctor.png";
+import SectionOurDoctors from '../SectionOurDoctors/SectionOurDoctors'
 
 const IMAGES_INTRO = [
   banner,
@@ -49,6 +50,7 @@ function Main(){
     <main>
       <SectionIntro images={IMAGES_INTRO} items={ITEMS_INTRO} speed={10000}/>
       <SectionWhyChoice image={doctor} info={ITEMS_INFO}/>
+      <SectionOurDoctors/>
     </main>
   )
 }

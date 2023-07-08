@@ -56,7 +56,7 @@ function CardDentist({
           </h4>
           <span className={s.card__text}>{special}</span>
         </div>
-        <p className={s.card__text}>{text}</p>
+        <p className={s.card__text}>{text.substring(0,100)}...</p>
       </div>
     </div>
   );
