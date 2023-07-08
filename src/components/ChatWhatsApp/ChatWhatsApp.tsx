@@ -1,6 +1,7 @@
 import { IconX } from "@tabler/icons-react";
 import s from "./ChatWhatsApp.module.css";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
+import { ChatWhatsAppProps } from "../../interface/props";
 
 const CHATS = [
   {
@@ -11,20 +12,30 @@ const CHATS = [
     online: true,
   },
 ];
-function ChatWhatsApp() {
+function ChatWhatsApp({
+  state,
+  setState,
+  title,
+  text,
+  logo,
+}: ChatWhatsAppProps) {
+
+  const onClick = () => {
+    setState();
+  };
+
   return (
-    <div className={s.modal}>
+    <div className={`${s.modal} ${state && `${s['--active']}`}`}>
       <div className={s.banner}>
-        <button>
+        <button tabIndex={1} onClick={onClick}>
           <IconX size={18} color="white" />
         </button>
-        <IconBrandWhatsapp size={32} color="white"/>
+        <IconBrandWhatsapp size={32} color="white" />
         <div>
-          <h2>Abrir Charla</h2>
+          <h2>{title}</h2>
           <p>
-            ¡Hola! Haga clic en uno de nuestros miembros a continuación para
-            chatear en
-            <b> WhatsApp</b>.
+            {text}
+            <b>{logo}</b>.
           </p>
         </div>
       </div>

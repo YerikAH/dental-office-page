@@ -1,10 +1,10 @@
 import { NavigationItems } from "./interface"
 
 export interface NavigationProps{
-  items: NavigationItems[]
-  logo?: string
   state?: boolean
   setState?: () => void
+  items: NavigationItems[]
+  logo?: string
 }
 export interface CardIntroProps {
   text: string
@@ -53,4 +53,18 @@ export interface CarouselCardsProps{
 export interface SectionOurDoctorsProps{
   doctors: CardDentistProps[]
   title: string
+}
+export interface BtnWhatsAppProps {
+  text: string,
+  logo: string, 
+  textTwo:string, 
+  title: string
+}
+
+export interface ChatWhatsAppProps{
+  state: boolean
+  setState: () => void
+  logo: string,
+  title: string
+  text: string
 }
