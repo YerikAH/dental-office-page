@@ -37,3 +37,16 @@ export interface SectionWhyChoiceProps{
   info: CardInfoProps,
   image: string
 }
+export interface CardDentistProps{
+  image: string,
+  name: string,
+  special: string, 
+  text: string,
+  fb: string,
+  email: string, 
+  phone: string,
+  url: string,
+}
+export interface CarouselCardsProps{
+  cards: CardDentistProps[]
+}
