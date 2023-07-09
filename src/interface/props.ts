@@ -75,3 +75,9 @@ export interface CardServiceProps{
   color: string,
   text: string
 }
+
+export interface SectionServiceProps {
+  title: string
+  text: string
+  items: CardServiceProps[]
+}
