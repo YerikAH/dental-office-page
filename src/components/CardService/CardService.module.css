@@ -5,6 +5,7 @@
   box-shadow: var(--shadow);
   padding-bottom: 0.3rem;
   overflow: hidden;
+  border: none;
 }
 .card__container {
   display: grid;

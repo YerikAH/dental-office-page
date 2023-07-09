@@ -1,0 +1,44 @@
+.card {
+  width: 100%;
+  padding: 1.5rem 0;
+}
+.card__title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card h6 {
+  font: normal normal 600 1rem/1.5rem var(--font-primary);
+  color: var(--black);
+}
+.card button {
+  border: none;
+  border-radius: 3rem;
+  display: flex;
+  place-items: center;
+  background-color: transparent;
+  transition: 0.3s;
+  padding: 0.2rem;
+}
+.card button:focus,
+.card button:hover{
+  background-color: var(--black-5);
+}
+.card div {
+  width: 100%;
+}
+.card svg {
+  color: var(--black);
+}
+.card p {
+  height: auto;
+  font: normal normal 400 0.8rem/1.5rem var(--font-primary);
+  color: var(--black-50);
+  text-align: left;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+.--active {
+  rotate: 180deg;
+}

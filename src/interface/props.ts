@@ -81,3 +81,26 @@ export interface SectionServiceProps {
   text: string
   items: CardServiceProps[]
 }
+
+export interface QuestionAnswerProps{
+  title: string
+  text: string
+}
+
+export interface QuestionQAProps{
+  title: string,
+  text: string
+  items: QuestionAnswerProps[]
+}
+export interface CardOpinionProps{
+  avatar: string, 
+  opinion: string,
+  name: string,
+  tag: string
+}
+export interface SectionOurClientProps{
+  title: string, 
+  text: string,
+  items: CardOpinionProps[]
+}
+
