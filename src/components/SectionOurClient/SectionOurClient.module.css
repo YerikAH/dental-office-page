@@ -24,3 +24,9 @@
 .section__contain{
   margin-top: 4rem;
 }
+.section__contain__swiper{
+  height: 23rem;
+}
+#pagination{
+  background-color: var(--black);
+}

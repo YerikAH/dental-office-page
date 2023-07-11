@@ -2,9 +2,18 @@ import s from "./SectionOurClient.module.css";
 import { SectionOurClientProps } from "../../interface/props";
 import CardOpinion from "../CardOpinion/CardOpinion";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from 'swiper/modules';
+import 'swiper/css/pagination';
 import "swiper/css";
 
 function SectionOurClient({ title, text, items }: SectionOurClientProps) {
+  const pagination = {
+    clickable: true,
+    renderBullet: function (idx: number, className: string) {
+      return `<span class="${className}" id="${s.pagination}"></span>`;
+    },
+  };
+
   return (
     <section className={s.section}>
       <div className={s.section__intro}>
@@ -12,17 +21,25 @@ function SectionOurClient({ title, text, items }: SectionOurClientProps) {
         <p>{text}</p>
       </div>
       <div className={s.section__contain}>
-        <Swiper spaceBetween={10} slidesPerView={3} rewind={true} breakpoints={{
-          0:{
-            slidesPerView: 1
-          },
-          720:{
-            slidesPerView: 2,
-          },
-          1000:{
-            slidesPerView: 3
-          }
-        }}>
+        <Swiper
+        className={s.section__contain__swiper}
+          spaceBetween={10}
+          slidesPerView={3}
+          rewind={true}
+          pagination={pagination}
+          modules={[Pagination]}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            720: {
+              slidesPerView: 2,
+            },
+            1000: {
+              slidesPerView: 3,
+            },
+          }}
+        >
           {items.map((item, idx) => (
             <SwiperSlide key={idx}>
               <CardOpinion
