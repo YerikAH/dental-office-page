@@ -1,8 +1,8 @@
 .card{
   background-color: var(--white);
   border-radius: 1.5rem;
-  box-shadow: var(--shadow);
-  padding: 0 1rem 2rem 1rem;
+  box-shadow: var(--shadow-bold);
+  padding: 0 1.5rem 2rem 1.5rem;
   width: 270px;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@
 .card__avatar{
   width: 4rem;
   height: 4rem;
-  border: 3px solid var(--blue);
+  border: 2px solid var(--blue);
   border-radius: 5rem;
   object-fit: cover;
   margin: 0 auto;
@@ -19,7 +19,7 @@
   bottom: 2rem;
 }
 .card__container p{
-  font: normal italic 400 0.8rem/1.2rem var(--font-primary);
+  font: normal italic 400 0.8rem/1.5rem var(--font-primary);
   color: var(--black-50);
   text-align: center;
 }

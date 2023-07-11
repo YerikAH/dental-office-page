@@ -24,7 +24,6 @@ function SectionOurClient({ title, text, items }: SectionOurClientProps) {
         <Swiper
         className={s.section__contain__swiper}
           spaceBetween={10}
-          slidesPerView={3}
           rewind={true}
           pagination={pagination}
           modules={[Pagination]}
@@ -37,6 +36,9 @@ function SectionOurClient({ title, text, items }: SectionOurClientProps) {
             },
             1000: {
               slidesPerView: 3,
+            },
+            1200: {
+              slidesPerView: 4,
             },
           }}
         >
