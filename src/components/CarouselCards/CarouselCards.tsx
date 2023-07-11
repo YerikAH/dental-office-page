@@ -13,6 +13,17 @@ function CarouselCards({ cards }: CarouselCardsProps) {
           spaceBetween={20}
           slidesPerView={3}
           rewind={true}
+          breakpoints={{
+            0:{
+              slidesPerView: 1,
+            },
+            720:{
+              slidesPerView: 2,
+            },
+            1000:{
+              slidesPerView: 3,
+            }
+          }}
         >
           {cards.map((item, idx) => (
             <SwiperSlide key={idx}>

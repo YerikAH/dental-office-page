@@ -12,7 +12,17 @@ function SectionOurClient({ title, text, items }: SectionOurClientProps) {
         <p>{text}</p>
       </div>
       <div className={s.section__contain}>
-        <Swiper spaceBetween={10} slidesPerView={3} rewind={true}>
+        <Swiper spaceBetween={10} slidesPerView={3} rewind={true} breakpoints={{
+          0:{
+            slidesPerView: 1
+          },
+          720:{
+            slidesPerView: 2,
+          },
+          1000:{
+            slidesPerView: 3
+          }
+        }}>
           {items.map((item, idx) => (
             <SwiperSlide key={idx}>
               <CardOpinion

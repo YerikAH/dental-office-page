@@ -7,6 +7,7 @@
   transition: 0.3s;
   cursor: pointer;
   display: grid;
+  margin: 0 auto;
 }
 .card:hover{
   box-shadow: var(--shadow);
