@@ -1,6 +1,10 @@
 header{
   padding: 0.2rem 1rem;
   box-shadow: 0px 0px 5px 2px var(--black-10);
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
+  background: var(--white);
 }
 
 .nav{

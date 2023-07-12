@@ -10,6 +10,7 @@ import SectionService from "../SectionService/SectionService";
 import iconTest from "../../assets/IconTestII.svg";
 import SectionQA from "../SectionQA/SectionQA";
 import SectionOurClient from "../SectionOurClient/SectionOurClient";
+import s from './Main.module.css'
 
 const IMAGES_INTRO = [banner, banner_2, banner_3];
 const ITEMS_INTRO = [
@@ -281,7 +282,7 @@ const OPINIONS = {
 
 function Main() {
   return (
-    <main>
+    <main className={s.main}>
       <SectionIntro images={IMAGES_INTRO} items={ITEMS_INTRO} speed={10000} />
       <SectionWhyChoice image={doctor} info={ITEMS_INFO} />
       <SectionOurDoctors
