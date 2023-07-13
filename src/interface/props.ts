@@ -1,4 +1,4 @@
-import { Contacts, NavigationItems, SocialMedia } from "./interface"
+import {  Contacts, NavigationItems, SocialMedia } from "./interface"
 
 export interface NavigationProps{
   state?: boolean
@@ -12,14 +12,18 @@ export interface CardIntroProps {
   image: string
   button: string
 }
-
+export interface BannerProps{
+  image: string,
+  title?: string,
+  text?: string
+}
 export interface CarouselProps{
-  images: string[]
+  images: BannerProps[]
   speed: number
 }
 
 export interface SectionIntroProps{
-  images: string[]
+  images: BannerProps[]
   speed: number
   items: CardIntroProps[]
 }

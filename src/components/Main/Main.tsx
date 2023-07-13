@@ -10,9 +10,21 @@ import SectionService from "../SectionService/SectionService";
 import iconTest from "../../assets/IconTestII.svg";
 import SectionQA from "../SectionQA/SectionQA";
 import SectionOurClient from "../SectionOurClient/SectionOurClient";
-import s from './Main.module.css'
+import s from "./Main.module.css";
 
-const IMAGES_INTRO = [banner, banner_2, banner_3];
+const IMAGES_INTRO = [
+  {
+    image: banner,
+    title: "Tratamientos dentales de calidad en un solo lugar",
+    text: "Para ello contamos con una gran variedad de servicios odontológicos, así también tenemos un staff de profesionales.",
+  },
+  {
+    image: banner_2,
+  },
+  {
+    image: banner_3,
+  },
+];
 const ITEMS_INTRO = [
   {
     image: icon,
@@ -295,7 +307,11 @@ function Main() {
         items={SERVICE.items}
       />
       <SectionQA title={QA.title} text={QA.text} items={QA.items} />
-      <SectionOurClient title={OPINIONS.title} text={OPINIONS.text} items={OPINIONS.items} />
+      <SectionOurClient
+        title={OPINIONS.title}
+        text={OPINIONS.text}
+        items={OPINIONS.items}
+      />
     </main>
   );
 }
