@@ -7,3 +7,7 @@ export interface SocialMedia {
   media: string;
   url: string;
 }
+export interface Contacts{
+  label: string
+  icon: string
+}

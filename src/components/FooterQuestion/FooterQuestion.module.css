@@ -7,18 +7,40 @@
   display: flex;
   background-color: var(--blue);
   border-radius: 15rem;
-  justify-content: space-around;
+  align-items: center;
   bottom: 4rem;
+  flex-direction: column;
+  justify-content: center;
 }
 .question p{
-  font: normal normal 600 1.7rem/2.5rem var(--font-primary);
+  font: normal normal 600 1rem/1.5rem var(--font-primary);
   color: var(--white);
 }
 .question button{
-  font: normal normal 500 0.8rem/1.5rem var(--font-primary);
+  font: normal normal 500 0.8rem/1rem var(--font-primary);
   color: var(--black);
   background-color: var(--white);
   border-radius: 15rem;
   padding: 0.5rem 2rem;
   border: none;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+.question button:hover,
+.question button:focus{
+  filter: brightness(0.9);
+}
+
+@media (min-width: 720px){
+  .question{
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .question p{
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+  .question button{
+    margin-top: 0;
+  }
 }

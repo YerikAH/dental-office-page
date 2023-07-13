@@ -1,4 +1,4 @@
-import { NavigationItems, SocialMedia } from "./interface"
+import { Contacts, NavigationItems, SocialMedia } from "./interface"
 
 export interface NavigationProps{
   state?: boolean
@@ -108,7 +108,15 @@ export interface FooterProps{
   text: string,
   media: SocialMedia[],
   navigation: NavigationItems[],
-  contacts: string[],
+  contacts:Contacts[],
   labelNavigation: string,
-  labelContact: string
+  labelContact: string,
+  copyright: string,
+  question: string,
+  button: string
+}
+
+export interface FooterQuestionProps {
+  text: string
+  button: string
 }

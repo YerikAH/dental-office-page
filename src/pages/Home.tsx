@@ -4,7 +4,10 @@ import logoWhite from "../assets/logo_white.png";
 import Main from "../components/Main/Main";
 import BtnWhatsApp from "../components/BtnWhatsApp/BtnWhatsApp";
 import Footer from "../components/Footer/Footer";
-
+import email from '../assets/email.png'
+import location from '../assets/location.png'
+import phone from '../assets/phone.png'
+import facebook from '../assets/facebook.png'
 
 const ITEMS = [
   {
@@ -32,8 +35,13 @@ const ITEMS = [
 const ITEMS_FOOTER = [
   {
     path: "/",
-    label: "Inicio",
+    label: "Productos",
     active: true,
+  },
+  {
+    path: "/",
+    label: "Nosotros",
+    active: false,
   },
   {
     path: "/",
@@ -42,21 +50,26 @@ const ITEMS_FOOTER = [
   },
   {
     path: "/",
-    label: "Productos",
-    active: false,
-  },
-  {
-    path: "/",
-    label: "Contactanos",
+    label: "Porque elegirnos",
     active: false,
   },  {
     path: "/",
-    label: "Inicio",
+    label: "Agendar cita",
     active: true,
   },
   {
     path: "/",
-    label: "Servicios",
+    label: "Preguntas frecuentes",
+    active: false,
+  },
+  {
+    path: "/",
+    label: "Opiniones",
+    active: false,
+  },
+  {
+    path: "/",
+    label: "Los mejores resultados",
     active: false,
   },
   {
@@ -66,30 +79,33 @@ const ITEMS_FOOTER = [
   },
   {
     path: "/",
-    label: "Contactanos",
-    active: false,
-  },
-  {
-    path: "/",
-    label: "Productos",
-    active: false,
-  },
-  {
-    path: "/",
-    label: "Contactanos",
+    label: "Politicas de privacidad",
     active: false,
   },
 ];
 const MEDIA = [
  {
-  media: '',
+  media: facebook,
+  url: ''
+ },
+ {
+  media: facebook,
   url: ''
  }
 ]
 const CONTACTS = [
-  'Jr. Ica a lado de dodne',
-  'Un lugar muy conocido',
-  '967523180'
+  {
+    icon: phone,
+    label: '(+51) 967 523 180'
+  },
+  {
+    icon: email,
+    label: 'lapreventiva@gmail.com'
+  },
+  {
+    icon: location,
+    label: 'Jr. Ica 113 2 Do Piso Of. 09'
+  },
 ]
 
 function Home() {
@@ -97,7 +113,7 @@ function Home() {
     <>
       <Navigation items={ITEMS} logo={logo} />
       <Main />
-      <Footer logo={logo} text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus etLorem ipsum dolor sit amet, consectetur adipiscing elit etiam tellus ipsum, pellentesque quis dapibus et." media={MEDIA} contacts={CONTACTS} labelContact="Nuestros Contactos" labelNavigation="Sitio de Navegación" navigation={ITEMS_FOOTER}/>
+      <Footer logo={logo} text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus etLorem ipsum dolor sit amet, consectetur adipiscing elit etiam tellus ipsum, pellentesque quis dapibus et." media={MEDIA} contacts={CONTACTS} labelContact="Nuestros Contactos" labelNavigation="Sitio de Navegación" navigation={ITEMS_FOOTER} copyright='Copyright © 2023 Consultorio odontológico "La Preventiva"' question="¿Quieres agendar una cita facilmente?" button="Agenda aquí"/>
       <BtnWhatsApp text="Chatea con nosotros en WhatsApp" logo="WhatsApp" textTwo="¡Hola! Haga clic en uno de nuestros miembros a continuación para chatear en " title="Abrir Charla"/>  
     </>
   );
