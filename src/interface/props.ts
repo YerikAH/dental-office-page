@@ -124,3 +124,8 @@ export interface FooterQuestionProps {
   text: string
   button: string
 }
+
+export interface DragImageProps{
+  smile_good: string,
+  smile_bad: string
+}
