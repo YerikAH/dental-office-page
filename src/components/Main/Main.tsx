@@ -11,6 +11,9 @@ import iconTest from "../../assets/IconTestII.svg";
 import SectionQA from "../SectionQA/SectionQA";
 import SectionOurClient from "../SectionOurClient/SectionOurClient";
 import s from "./Main.module.css";
+import SectionBestResults from "../SectionBestResults/SectionBestResults";
+import smile_good from '../../assets/smile_perfect.jpg'
+import smile_bad from '../../assets/smile_bad.jpg'
 
 const IMAGES_INTRO = [
   {
@@ -292,6 +295,14 @@ const OPINIONS = {
   ],
 };
 
+const BEST = {
+  title: "Los mejores resultados",
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. Sed sit amet vulputate nulla, vitae blandit enim. ",
+  images: {
+    smile_good: smile_good,
+    smile_bad: smile_bad
+  }
+}
 function Main() {
   return (
     <main className={s.main}>
@@ -305,6 +316,11 @@ function Main() {
         title={SERVICE.title}
         text={SERVICE.text}
         items={SERVICE.items}
+      />
+      <SectionBestResults
+        title={BEST.title}
+        text={BEST.text}
+        images={BEST.images}
       />
       <SectionQA title={QA.title} text={QA.text} items={QA.items} />
       <SectionOurClient

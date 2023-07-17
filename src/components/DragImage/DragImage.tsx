@@ -18,6 +18,7 @@ function DragImage({ smile_bad, smile_good }: DragImageProps) {
   }
   function dragOver(e: DragEvent) {
     e.preventDefault();
+    console.log(e.clientX)
     setPosition(e.clientX);
   }
 
@@ -38,8 +39,9 @@ function DragImage({ smile_bad, smile_good }: DragImageProps) {
     };
   }, []);
   return (
-    <div>
-      <div ref={ref} className={s.contain}>
+
+    <div className={s.contain}>
+      <div ref={ref} className={s.images}>
         <img src={smile_good} alt="smile_good" />
         <img
           src={smile_bad}

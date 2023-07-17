@@ -129,3 +129,9 @@ export interface DragImageProps{
   smile_good: string,
   smile_bad: string
 }
+
+export interface SectionBestResultsProps{
+  title: string
+  text: string
+  images: DragImageProps
+}
