@@ -1,13 +1,12 @@
 import Navigation from "../components/Navigation/Navigation";
 import logo from "../assets/logo.png";
-import logoWhite from "../assets/logo_white.png";
 import Main from "../components/Main/Main";
 import BtnWhatsApp from "../components/BtnWhatsApp/BtnWhatsApp";
 import Footer from "../components/Footer/Footer";
-import email from '../assets/email.png'
-import location from '../assets/location.png'
-import phone from '../assets/phone.png'
-import facebook from '../assets/facebook.png'
+import email from "../assets/email.png";
+import location from "../assets/location.png";
+import phone from "../assets/phone.png";
+import facebook from "../assets/facebook.png";
 
 const ITEMS = [
   {
@@ -52,7 +51,8 @@ const ITEMS_FOOTER = [
     path: "/",
     label: "Porque elegirnos",
     active: false,
-  },  {
+  },
+  {
     path: "/",
     label: "Agendar cita",
     active: true,
@@ -84,37 +84,53 @@ const ITEMS_FOOTER = [
   },
 ];
 const MEDIA = [
- {
-  media: facebook,
-  url: ''
- },
- {
-  media: facebook,
-  url: ''
- }
-]
+  {
+    media: facebook,
+    url: "",
+  },
+  {
+    media: facebook,
+    url: "",
+  },
+];
 const CONTACTS = [
   {
     icon: phone,
-    label: '(+51) 967 523 180'
+    label: "(+51) 967 523 180",
   },
   {
     icon: email,
-    label: 'lapreventiva@gmail.com'
+    label: "lapreventiva@gmail.com",
   },
   {
     icon: location,
-    label: 'Jr. Ica 113 2 Do Piso Of. 09'
+    label: "Jr. Ica 113 2 Do Piso Of. 09",
   },
-]
-
+];
+const FOOTER = {
+  logo:  logo ,
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus etLorem ipsum dolor sit amet, consectetur adipiscing elit etiam tellus ipsum, pellentesque quis dapibus et.",
+  media:  MEDIA ,
+  contacts: CONTACTS ,
+  labelContact: "Nuestros Contactos",
+  labelNavigation: "Sitio de Navegación",
+  navigation:  ITEMS_FOOTER ,
+  copyright: 'Copyright © 2023 Consultorio odontológico "La Preventiva"',
+  question: "¿Quieres agendar una cita facilmente?",
+  button: "Agenda aquí",
+};
 function Home() {
   return (
     <>
       <Navigation items={ITEMS} logo={logo} />
       <Main />
-      <Footer logo={logo} text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus etLorem ipsum dolor sit amet, consectetur adipiscing elit etiam tellus ipsum, pellentesque quis dapibus et." media={MEDIA} contacts={CONTACTS} labelContact="Nuestros Contactos" labelNavigation="Sitio de Navegación" navigation={ITEMS_FOOTER} copyright='Copyright © 2023 Consultorio odontológico "La Preventiva"' question="¿Quieres agendar una cita facilmente?" button="Agenda aquí"/>
-      <BtnWhatsApp text="Chatea con nosotros en WhatsApp" logo="WhatsApp" textTwo="¡Hola! Haga clic en uno de nuestros miembros a continuación para chatear en " title="Abrir Charla"/>  
+      <Footer footer={FOOTER} />
+      <BtnWhatsApp
+        text="Chatea con nosotros en WhatsApp"
+        logo="WhatsApp"
+        textTwo="¡Hola! Haga clic en uno de nuestros miembros a continuación para chatear en "
+        title="Abrir Charla"
+      />
     </>
   );
 }

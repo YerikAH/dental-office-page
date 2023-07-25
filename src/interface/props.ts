@@ -107,6 +107,9 @@ export interface SectionOurClientProps{
   text: string,
   items: CardOpinionProps[]
 }
+export interface FooterCompressedProps{
+  footer: FooterProps
+}
 export interface FooterProps{
   logo: string,
   text: string,
