@@ -22,3 +22,18 @@
   max-width: 40rem;
 }
 
+.section__contain{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 6rem 0 2rem 0;
+  position: relative
+}
+
+.section__decoration{
+  height: 60%;
+  top: 0;
+  width: 100%;
+  background-color: var(--cream);
+  position: absolute;
+}

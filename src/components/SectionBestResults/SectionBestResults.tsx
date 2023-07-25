@@ -9,7 +9,8 @@ function SectionBestResults({ title, text, images }: SectionBestResultsProps) {
         <h2>{title}</h2>
         <p>{text}</p>
       </div>
-      <div>
+      <div className={s.section__contain}>
+        <div className={s.section__decoration}></div>
         <DragImage
           smile_bad={images.smile_bad}
           smile_good={images.smile_good}

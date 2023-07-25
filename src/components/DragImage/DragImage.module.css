@@ -1,47 +1,71 @@
-
-.contain{
+.contain {
   position: relative;
-  max-width: 750px;
   width: 100%;
-  overflow: hidden;
+  max-width: 750px;
 }
-.images{
-  max-width: 750px;
-  width: 100%;
+.contain__switch {
+  position: relative;
+}
+
+.good {
   position: absolute;
-  height: 500px;
-}
-.images img{
   object-position: left center;
   object-fit: cover;
   height: auto;
-  transition: 0.3s;
   width: 100%;
-  position: absolute;
+  transition: 0.3s;
+  top: 0;
 }
-.drag{
+.bad {
+  object-position: left center;
+  object-fit: cover;
   height: 500px;
-  width: 5px;
+  width: 100%;
+  transition: 0.3s;
+}
+.drag {
+  height: 500px;
+  width: 10px;
   background-color: white;
-  position: relative;
+  position: absolute;
   transition: 0.3s;
   cursor: pointer;
+  top: 0;
+  z-index: 500;
+  right: 0;
 }
-.drag::after{
-  content: "Drag";
-  width: 50px;
-  height: 50px;
-  background-color: white;
+.drag::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
   position: absolute;
   border-radius: 250px;
   top: 0;
   bottom: 0;
   margin: auto;
-  right: -25px;
+  right: -33px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  font: normal normal 700 0.6rem/1rem Arial;
+  border: 2px solid var(--blue);
+}
+.drag div {
+  width: 60px;
+  height: 60px;
+  background: var(--blue);
+  margin: auto 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -25px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: normal normal 700 0.6rem/1rem var(--font-primary);
+  letter-spacing: 0.05rem;
+  color: var(--white);
 }
