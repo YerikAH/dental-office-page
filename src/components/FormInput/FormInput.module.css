@@ -1,0 +1,15 @@
+.form {
+  display: grid;
+  margin-top: 2rem;
+  row-gap: 1rem;
+}
+.form__aditional{
+  margin-top: 1rem;
+}
+@media (min-width: 500px){
+  .form {
+    grid-template-columns: repeat(2, 46%);
+    justify-content: space-between;
+    column-gap: 4%;
+  }
+}

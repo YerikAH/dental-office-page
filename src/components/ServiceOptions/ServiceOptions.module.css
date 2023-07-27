@@ -1,0 +1,35 @@
+.service{
+  display: grid;
+  place-items: center;
+  place-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.service__button{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+  border: none;
+  background-color: var(--white);
+  box-shadow: var(--shadow-bold);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.service img{
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+}
+.service p{
+  font: normal normal 500 0.8rem/1rem var(--font-primary);
+  color: var(--black);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.--active{
+  background-color: var(--strong-blue);
+}
+.--active img{
+  filter: brightness(20);
+}

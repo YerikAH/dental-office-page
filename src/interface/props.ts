@@ -1,4 +1,5 @@
-import {  Contacts, NavigationItems, SocialMedia } from "./interface"
+import { InputTypes } from "./enum"
+import {  Contacts, NavigationItems, Service, SocialMedia } from "./interface"
 
 export interface NavigationProps{
   state?: boolean
@@ -137,4 +138,24 @@ export interface SectionBestResultsProps{
   title: string
   text: string
   images: DragImageProps
+}
+
+export interface ServiceOptionsProps{
+  services:Service[]
+}
+
+export interface SectionAppointmentProps{
+  services:Service[],
+  title: string,
+  text: string
+}
+
+
+export interface CustomInputProps{
+  icon?: JSX.Element,
+  label: string,
+  placeholder: string,
+  type: InputTypes
+  withIcon: boolean
+  multiline?: boolean
 }

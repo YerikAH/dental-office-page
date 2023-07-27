@@ -11,3 +11,8 @@ export interface Contacts{
   label: string
   icon: string
 }
+export interface Service{
+  image: string,
+  name: string,
+  active: boolean
+}
