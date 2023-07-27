@@ -16,20 +16,20 @@ function ServiceOptions({ services }: ServiceOptionsProps) {
         className="mySwiper"
         slidesPerView={4}
         breakpoints={{
-          0:{
+          0: {
             slidesPerView: 2,
           },
-          400:{
+          400: {
             slidesPerView: 3,
           },
-          1000:{
+          1000: {
             slidesPerView: 4,
-          }
+          },
         }}
       >
         {services.map((item, idx) => (
-          <SwiperSlide>
-            <div key={idx} className={s.service}>
+          <SwiperSlide key={idx}>
+            <div className={s.service}>
               <button
                 className={`${s.service__button} ${
                   item.active && s["--active"]

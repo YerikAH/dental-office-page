@@ -1,69 +1,33 @@
-import {
-  IconBuildingHospital,
-  IconCalendar,
-  IconClock,
-  IconMail,
-  IconPhone,
-  IconUser,
-} from "@tabler/icons-react";
 import CustomInput from "../CustomInput/CustomInput";
-import { InputTypes } from "../../interface/enum";
+import {FormInputProps} from '../../interface/props'
 import s from "./FormInput.module.css";
 
-function FormInput() {
+
+
+function FormInput({inputs, textarea}: FormInputProps) {
   return (
     <>
       <div className={s.form}>
-        <CustomInput
-          label="Nombre"
-          icon={<IconUser />}
-          placeholder="Escribe tu nombre"
-          type={InputTypes.TEXT}
-          withIcon={true}
-        />
-        <CustomInput
-          label="Email"
-          icon={<IconMail />}
-          placeholder="Escribe tu correo electronico"
-          type={InputTypes.EMAIL}
-          withIcon={true}
-        />
-        <CustomInput
-          label="Numero de celular"
-          icon={<IconPhone />}
-          placeholder="Escribe tu numero de celular"
-          type={InputTypes.NUMBER}
-          withIcon={true}
-        />
-        <CustomInput
-          label="Fecha"
-          icon={<IconCalendar />}
-          placeholder="Selecciona la fecha"
-          type={InputTypes.DATE}
-          withIcon={true}
-        />
-        <CustomInput
-          label="Hora"
-          icon={<IconClock />}
-          placeholder="Selecciona la hora"
-          type={InputTypes.HOUR}
-          withIcon={true}
-        />
-        <CustomInput
-          label="Odontologo"
-          icon={<IconBuildingHospital />}
-          placeholder="Selecciona el odontologo"
-          type={InputTypes.SELECT}
-          withIcon={true}
-        />
+        {inputs.map((item, idx) => (
+          <CustomInput
+            key={idx}
+            label={item.label}
+            placeholder={item.placeholder}
+            type={item.type}
+            icon={item.icon}  
+            withIcon={item.withIcon}
+            doctors={item.doctors}
+          />
+        ))}
       </div>
       <div className={s.form__aditional}>
         <CustomInput
-          label="Mensaje adicional"
-          placeholder="Escribe algún mensaje adicional por la consulta"
-          type={InputTypes.TEXT}
-          withIcon={false}
-          multiline={true}
+          label={textarea.label}
+          placeholder={textarea.placeholder}
+          type={textarea.type}
+          withIcon={textarea.withIcon}
+          doctors={textarea.doctors}
+          multiline={textarea.multiline}
         />
       </div>
     </>

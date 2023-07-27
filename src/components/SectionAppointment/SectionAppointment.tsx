@@ -1,14 +1,11 @@
-import ServiceOptions from "../ServiceOptions/ServiceOptions";
 import { SectionAppointmentProps } from "../../interface/props";
 import s from "./SectionAppointment.module.css";
 import image from "../../assets/doctor_poster.png";
-import CustomInput from "../CustomInput/CustomInput";
-import { IconUser } from "@tabler/icons-react";
-import { InputTypes } from "../../interface/enum";
-import FormInput from "../FormInput/FormInput";
+import FormAppointment from "../FormAppointment/FormAppointment";
 
 function SectionAppointment({
   services,
+  form,
   title,
   text,
 }: SectionAppointmentProps) {
@@ -20,8 +17,7 @@ function SectionAppointment({
       <div className={s.section__content}>
         <h1 className={s.title}>{title}</h1>
         <p className={s.text}>{text}</p>
-        <ServiceOptions services={services} />
-        <FormInput />
+        <FormAppointment form={form} services={services}/>
       </div>
     </section>
   );

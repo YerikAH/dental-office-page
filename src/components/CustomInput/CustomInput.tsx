@@ -8,17 +8,6 @@ import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { MultiSectionDigitalClock } from "@mui/x-date-pickers/MultiSectionDigitalClock";
 import { Moment } from "moment";
 
-const doctors = [
-  {
-    name: "Harvey Vasquez Huaranga Yerik",
-    number: "967523180",
-  },
-  {
-    name: "Pepe Vargas Sinche Pedro",
-    number: "971234232",
-  },
-];
-
 function CustomInput({
   icon,
   label,
@@ -26,6 +15,7 @@ function CustomInput({
   type,
   withIcon,
   multiline = false,
+  doctors,
 }: CustomInputProps) {
   const [showDate, setShowDate] = useState(false);
   const [showTime, setShowTime] = useState(false);
