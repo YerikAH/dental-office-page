@@ -8,6 +8,17 @@ import location from "../assets/location.png";
 import phone from "../assets/phone.png";
 import facebook from "../assets/facebook.png";
 
+const INFO = [
+  {
+    title: "Encuentranos en: ",
+    text: "Jr. Ica N° 113 - 2do Piso - Of. 09",
+  },
+  {
+    title: "Horario: ",
+    text: "Lunes a Sabados - 8:00am a 8:00pm",
+  },
+];
+
 const ITEMS = [
   {
     path: "/",
@@ -108,13 +119,13 @@ const CONTACTS = [
   },
 ];
 const FOOTER = {
-  logo:  logo ,
+  logo: logo,
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus etLorem ipsum dolor sit amet, consectetur adipiscing elit etiam tellus ipsum, pellentesque quis dapibus et.",
-  media:  MEDIA ,
-  contacts: CONTACTS ,
+  media: MEDIA,
+  contacts: CONTACTS,
   labelContact: "Nuestros Contactos",
   labelNavigation: "Sitio de Navegación",
-  navigation:  ITEMS_FOOTER ,
+  navigation: ITEMS_FOOTER,
   copyright: 'Copyright © 2023 Consultorio odontológico "La Preventiva"',
   question: "¿Quieres agendar una cita facilmente?",
   button: "Agenda aquí",
@@ -122,7 +133,7 @@ const FOOTER = {
 function Home() {
   return (
     <>
-      <Navigation items={ITEMS} logo={logo} />
+      <Navigation items={ITEMS} logo={logo} info={INFO} />
       <Main />
       <Footer footer={FOOTER} />
       <BtnWhatsApp

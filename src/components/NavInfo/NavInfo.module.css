@@ -1,0 +1,33 @@
+.info {
+  background-color: var(--strong-blue);
+  display: none;
+}
+.info__contain {
+  margin: 0 auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  max-width: 1200px;
+  gap: 2rem;
+}
+.info__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.title {
+  font: normal normal 600 0.8rem/1.2rem var(--font-primary);
+  color: var(--white);
+}
+.text {
+  font: normal normal 400 0.8rem/1.2rem var(--font-primary);
+  color: var(--white);
+  opacity: 0.9;
+}
+@media (min-width: 720px) {
+  .info {
+    display: block;
+  }
+}

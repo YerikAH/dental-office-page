@@ -1,5 +1,4 @@
-header{
-  padding: 0.2rem 1rem;
+header {
   box-shadow: 0px 0px 5px 2px var(--black-10);
   position: fixed;
   width: 100vw;
@@ -7,35 +6,36 @@ header{
   background: var(--white);
 }
 
-.nav{
+.nav {
   display: flex;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
+  padding: 0.2rem 1rem;
 }
 
-.nav__logo img{
+.nav__logo img {
   height: auto;
   width: 4rem;
   object-fit: contain;
 }
 
-.nav__pages{
-  display:none;
+.nav__pages {
+  display: none;
   gap: 2rem;
   align-items: center;
 }
 
-.nav__link{
+.nav__link {
   font: normal normal 400 0.8rem/1.2rem var(--font-primary);
   color: var(--black);
   position: relative;
   transition: 0.3s;
 }
-.nav__link::before{
-  content: '';
+.nav__link::before {
+  content: "";
   width: 4px;
   position: absolute;
   margin: 0 auto;
@@ -49,22 +49,22 @@ header{
 }
 
 .nav__link--active,
-.nav__link--bold{
+.nav__link--bold {
   font-weight: 600;
 }
-.nav__link--active::before{
+.nav__link--active::before {
   display: block;
 }
 .nav__link:hover,
-.nav__link:focus{
+.nav__link:focus {
   opacity: 0.7;
 }
 .nav__link--active:hover,
-.nav__link--active:focus{
+.nav__link--active:focus {
   opacity: 1;
 }
 
-.nav__button{
+.nav__button {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   display: block;
@@ -77,42 +77,42 @@ header{
   outline: none;
 }
 .nav__button:hover,
-.nav__button:focus{
+.nav__button:focus {
   opacity: 1;
   background-color: var(--black);
   color: var(--white);
 }
 
-.nav__ham{
-  display:grid;
+.nav__ham {
+  display: grid;
   place-items: center;
   background-color: transparent;
   border: none;
   border-radius: 0.2rem;
   transition: 0.3s;
 }
-.nav__ham svg{
+.nav__ham svg {
   stroke: var(--black);
 }
 
-@media (min-width: 720px){
-  header{
+@media (min-width: 720px) {
+  .nav {
     padding: 0.5rem 1rem;
   }
-  .nav__logo img{
+  .nav__logo img {
     height: auto;
     width: 6.25rem;
     object-fit: contain;
   }
-  .nav__pages{
+  .nav__pages {
     display: flex;
   }
-  .nav__ham{
+  .nav__ham {
     display: none;
   }
 }
 .nav__ham:hover,
-.nav__ham:focus{
+.nav__ham:focus {
   background-color: var(--black-10);
   outline: none;
 }

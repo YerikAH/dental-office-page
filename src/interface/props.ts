@@ -6,6 +6,7 @@ export interface NavigationProps {
   setState?: () => void;
   items: NavigationItems[];
   logo?: string;
+  info?: { title: string; text: string }[];
 }
 export interface CardIntroProps {
   text: string;
@@ -144,8 +145,6 @@ export interface ServiceOptionsProps {
   services: Service[];
 }
 
-
-
 export interface CustomInputProps {
   icon?: JSX.Element;
   label: string;
@@ -155,17 +154,21 @@ export interface CustomInputProps {
   multiline?: boolean;
   doctors: { name: string; phone: string }[];
 }
-export interface FormInputProps{
-  inputs: CustomInputProps[],
-  textarea: CustomInputProps
+export interface FormInputProps {
+  inputs: CustomInputProps[];
+  textarea: CustomInputProps;
 }
-export interface FormAppointmentProps{
-  form: FormInputProps,
-  services:  Service[]
+export interface FormAppointmentProps {
+  form: FormInputProps;
+  services: Service[];
 }
 export interface SectionAppointmentProps {
   services: Service[];
   title: string;
   text: string;
-  form: FormInputProps
+  form: FormInputProps;
+}
+
+export interface NavInfoProps {
+  info: { title: string; text: string }[];
 }
