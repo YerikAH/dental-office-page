@@ -207,5 +207,5 @@ export interface CardProductProps {
 }
 
 export interface NavigationUserProps{
-  items: {name: string, to: string, active: boolean}[]
+  items?: {name: string, to: string, active: boolean}[]
 }

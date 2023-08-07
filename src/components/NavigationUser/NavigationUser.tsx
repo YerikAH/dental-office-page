@@ -2,7 +2,14 @@ import s from "./NavigationUser.module.css";
 import {NavigationUserProps} from '../../interface/props'
 import { Link } from "react-router-dom";
 
-function NavigationUser({items}: NavigationUserProps) {
+const DEFAULT = [
+  {
+    name: "Nuevos items",
+    to: "/products",
+    active: true
+  }
+]
+function NavigationUser({items = DEFAULT}: NavigationUserProps) {
   return (
     <div className={s.navigation}>
       <></>

@@ -2,6 +2,7 @@ import CardProduct from "../components/CardProduct/CardProduct";
 import Navigation from "../components/Navigation/Navigation";
 import logo from "../assets/logo.png";
 import NavigationGuide from "../components/NavigationGuide/NavigationGuide";
+import NavigationProducts from "../components/NavigationProducts/NavigationProducts";
 
 const INFO = [
   {
@@ -39,7 +40,7 @@ const ITEMS = [
 function Products() {
   return (
     <>
-      <Navigation items={ITEMS} logo={logo} info={INFO} Component={<NavigationGuide />}/>
+      <Navigation items={ITEMS} logo={logo} info={INFO} Component={<NavigationProducts />}/>
       {/*<CardProduct
         name="Prada"
         price={2000}
