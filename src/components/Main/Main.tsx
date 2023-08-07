@@ -12,8 +12,10 @@ import SectionQA from "../SectionQA/SectionQA";
 import SectionOurClient from "../SectionOurClient/SectionOurClient";
 import s from "./Main.module.css";
 import SectionBestResults from "../SectionBestResults/SectionBestResults";
-import smile_good from '../../assets/smile_perfect.jpg'
-import smile_bad from '../../assets/smile_bad.jpg'
+import smile_good from "../../assets/smile_perfect.jpg";
+import smile_bad from "../../assets/smile_bad.jpg";
+import SectionContact from "../SectionContact/SectionContact";
+import { InputTypes } from "../../interface/enum";
 
 const IMAGES_INTRO = [
   {
@@ -300,9 +302,51 @@ const BEST = {
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. Sed sit amet vulputate nulla, vitae blandit enim. ",
   images: {
     smile_good: smile_good,
-    smile_bad: smile_bad
-  }
-}
+    smile_bad: smile_bad,
+  },
+};
+const CONTACT = {
+  title: "Contactanos",
+  text: "Lorem ipsum dolor sit amet, qui minim labore adipisicing.",
+  inputs: [
+    {
+      label: "Nombre",
+      placeholder: "Escribe tu nombre",
+      type: InputTypes.TEXT,
+      withIcon: false,
+      doctors: [],
+    },
+    {
+      label: "Apellido",
+      placeholder: "Escribe tu apellido",
+      type: InputTypes.TEXT,
+      withIcon: false,
+      doctors: [],
+    },
+    {
+      label: "Correo electronico",
+      placeholder: "Escribe tu correo electronico",
+      type: InputTypes.EMAIL,
+      withIcon: false,
+      doctors: [],
+    },
+    {
+      label: "Numero de celular",
+      placeholder: "Escribe tu numero de celular",
+      type: InputTypes.NUMBER,
+      withIcon: false,
+      doctors: [],
+    },
+    {
+      label: "Mensaje",
+      placeholder: "Escribe algún mensaje adicional",
+      type: InputTypes.TEXT,
+      withIcon: false,
+      multiline: true,
+      doctors: [],
+    },
+  ],
+};
 function Main() {
   return (
     <main className={s.main}>
@@ -321,6 +365,12 @@ function Main() {
         title={BEST.title}
         text={BEST.text}
         images={BEST.images}
+      />
+
+      <SectionContact
+        title={CONTACT.title}
+        text={CONTACT.text}
+        inputs={CONTACT.inputs}
       />
       <SectionQA title={QA.title} text={QA.text} items={QA.items} />
       <SectionOurClient

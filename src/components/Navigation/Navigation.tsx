@@ -6,7 +6,7 @@ import { NavigationProps } from "../../interface/props";
 import NavigationMobile from "../NavigationMobile/NavigationMobile";
 import NavInfo from "../NavInfo/NavInfo";
 
-function Navigation({ items, logo, info }: NavigationProps) {
+function Navigation({ items, logo, info, Component }: NavigationProps) {
   const [menu, setMenu] = useState(false);
   const toggleMenu = () => {
     setMenu(!menu);
@@ -30,11 +30,9 @@ function Navigation({ items, logo, info }: NavigationProps) {
                 <Link
                   to={item.path}
                   tabIndex={1}
-                  className={
-                    item.active
-                      ? `${s.nav__link} ${s["nav__link--active"]}`
-                      : `${s.nav__link}`
-                  }
+                  className={item.active
+                    ? `${s.nav__link} ${s["nav__link--active"]}`
+                    : `${s.nav__link}`}
                 >
                   {item.label}
                 </Link>
@@ -65,6 +63,7 @@ function Navigation({ items, logo, info }: NavigationProps) {
             <IconMenu2 size={18} />
           </button>
         </nav>
+        {Component !== undefined && Component}
         <NavigationMobile
           items={items}
           logo={logo}

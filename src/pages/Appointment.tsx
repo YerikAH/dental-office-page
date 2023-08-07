@@ -116,12 +116,24 @@ const FOOTER = {
   question: "¿Quieres agendar una cita facilmente?",
   button: "Agenda aquí",
 };
+
+const INFO = [
+  {
+    title: "Encuentranos en: ",
+    text: "Jr. Ica N° 113 - 2do Piso - Of. 09",
+  },
+  {
+    title: "Horario: ",
+    text: "Lunes a Sabados - 8:00am a 8:00pm",
+  },
+];
+
 function Appointment() {
   return (
     <>
-      <Navigation items={ITEMS} logo={logo} />
+      <Navigation items={ITEMS} logo={logo} info={INFO}/>
       <MainAppointment />
-      {/* <Footer footer={FOOTER}/> */}
+      <Footer footer={FOOTER}/>
     </>
   );
 }

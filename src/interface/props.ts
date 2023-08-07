@@ -7,6 +7,7 @@ export interface NavigationProps {
   items: NavigationItems[];
   logo?: string;
   info?: { title: string; text: string }[];
+  Component?: JSX.Element
 }
 export interface CardIntroProps {
   text: string;
@@ -171,4 +172,36 @@ export interface SectionAppointmentProps {
 
 export interface NavInfoProps {
   info: { title: string; text: string }[];
+}
+
+export interface CardFindUsProps {
+  image: string
+  title: string
+  description: string
+  contact: string
+}
+
+export interface  SectionFindUsProps {
+  items: CardFindUsProps[]
+  title: string
+  text: string
+  tag: string
+}
+export interface FormContactProps{
+  inputs: CustomInputProps[]
+}
+export interface  SectionContactProps{
+  inputs: CustomInputProps[],
+  title: string
+  text: string
+}
+
+export interface CardProductProps {
+  name: string, 
+  description: string,
+  image: string, 
+  price: number,
+  descount?: number
+  like: boolean
+  tag?: {bg: string, color: string, text: string}
 }

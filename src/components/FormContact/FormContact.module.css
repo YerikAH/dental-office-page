@@ -1,0 +1,33 @@
+.form {
+  display: grid;
+  row-gap: 1rem;
+  column-gap: 2%;
+  grid-template-columns: repeat(2, 48%);
+  margin-bottom: 8rem;
+}
+.input__full {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.form input[type="submit"] {
+  background-color: var(--blue);
+  color: var(--white);
+  font: normal normal 600 0.8rem/1rem var(--font-primary);
+  padding: 0.8rem 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.form input[type="submit"]:hover,
+.form input[type="submit"]:focus {
+  filter: brightness(0.8);
+}

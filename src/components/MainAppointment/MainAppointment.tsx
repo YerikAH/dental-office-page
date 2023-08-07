@@ -10,6 +10,7 @@ import {
   IconPhone,
   IconUser,
 } from "@tabler/icons-react";
+import SectionFindUs from "../SectionFindUs/SectionFindUs";
 
 const APPOINTMENT = {
   services : [
@@ -118,11 +119,36 @@ const FORM_ALL = {
     multiline:true
   },
 }
-
+const FIND_US = {
+  items:[
+    {
+      image: icon,
+      title: "Chat to sales",
+      description:"Speak to our friendly team.",
+      contact: "yerik05vh@gmail.com"
+    },
+    {
+      image: icon,
+      title: "Visitamos",
+      description:"Speak to our friendly team.",
+      contact: "JR. Ica 2do Piso, 100 - Huancayo"
+    },
+    {
+      image: icon,
+      title: "Chat to sales",
+      description:"Speak to our friendly team.",
+      contact: "(+51) 967523180"
+    },
+  ],
+  title: "Nosotros amamos escucharte",
+  text: "Conversa con nuestro maravilloso equipo",
+  tag: "Contactanos"
+}
 
 function MainAppointment(){
   return <main className={s.main}>
     <SectionAppointment services={APPOINTMENT.services} title={APPOINTMENT.title} text={APPOINTMENT.text} form={FORM_ALL}/>
+    <SectionFindUs items={FIND_US.items} title={FIND_US.title} text={FIND_US.text} tag={FIND_US.tag} />
   </main>
 }
 export default MainAppointment
