@@ -205,3 +205,7 @@ export interface CardProductProps {
   like: boolean
   tag?: {bg: string, color: string, text: string}
 }
+
+export interface NavigationUserProps{
+  items: {name: string, to: string, active: boolean}[]
+}
