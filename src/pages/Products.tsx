@@ -1,8 +1,8 @@
-import CardProduct from "../components/CardProduct/CardProduct";
 import Navigation from "../components/Navigation/Navigation";
 import logo from "../assets/logo.png";
-import NavigationGuide from "../components/NavigationGuide/NavigationGuide";
 import NavigationProducts from "../components/NavigationProducts/NavigationProducts";
+import { Routes } from "../interface/enum";
+import { HomeProps } from "../interface/props";
 
 const INFO = [
   {
@@ -15,32 +15,23 @@ const INFO = [
   },
 ];
 
-const ITEMS = [
+const ITEMS = {
+  home: "Inicio",
+  our: "Nosotros",
+  services: "Servicios",
+  contact: "Contactanos",
+};
+const ITEMS_PAGES = [
   {
-    path: "/",
-    label: "Inicio",
-    active: true,
-  },
-  {
-    path: "/",
-    label: "Servicios",
-    active: false,
-  },
-  {
-    path: "/",
     label: "Productos",
-    active: false,
-  },
-  {
-    path: "/",
-    label: "Contactanos",
-    active: false,
-  },
-];
-function Products() {
+    to: Routes.PRODUCTS
+  }
+]
+
+function Products({linkClick}: HomeProps) {
   return (
     <>
-      <Navigation items={ITEMS} logo={logo} info={INFO} Component={<NavigationProducts />}/>
+      <Navigation items={ITEMS} logo={logo} info={INFO} itemsPage={ITEMS_PAGES} Component={<NavigationProducts />} activeSection={1000} linkClick={linkClick}/>
       {/*<CardProduct
         name="Prada"
         price={2000}

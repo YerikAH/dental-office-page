@@ -1,12 +1,15 @@
 import s from "./Navigation.module.css";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
+import { Link as LinkRouter } from "react-router-dom";
 import { IconMenu2 } from "@tabler/icons-react";
 import { useState } from "react";
 import { NavigationProps } from "../../interface/props";
 import NavigationMobile from "../NavigationMobile/NavigationMobile";
 import NavInfo from "../NavInfo/NavInfo";
+import { Routes } from "../../interface/enum";
+import RenderConditionalLinks from "../RenderConditionalLinks/RenderConditionalLinks";
 
-function Navigation({ items, logo, info, Component }: NavigationProps) {
+function Navigation({ items, logo, info, Component, activeSection, itemsPage, linkClick }: NavigationProps) {
   const [menu, setMenu] = useState(false);
   const toggleMenu = () => {
     setMenu(!menu);
@@ -25,21 +28,7 @@ function Navigation({ items, logo, info, Component }: NavigationProps) {
             </li>
           </div>
           <ul className={s.nav__pages}>
-            {items.map((item, idx) => (
-              <li key={idx}>
-                <Link
-                  to={item.path}
-                  tabIndex={1}
-                  className={
-                    item.active
-                      ? `${s.nav__link} ${s["nav__link--active"]}`
-                      : `${s.nav__link}`
-                  }
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            <RenderConditionalLinks items={items} activeSection={activeSection} itemsPage={itemsPage} linkClick={linkClick}/>
           </ul>
           <div className={s.nav__pages}>
             <li>
@@ -52,13 +41,13 @@ function Navigation({ items, logo, info, Component }: NavigationProps) {
               </Link>
             </li>
             <li>
-              <Link
-                to="/"
+              <LinkRouter
+                to={Routes.APPOINTMENT}
                 tabIndex={1}
                 className={`${s.nav__link} ${s.nav__button}`}
               >
                 agendar una cita
-              </Link>
+              </LinkRouter>
             </li>
           </div>
           <button className={s.nav__ham} tabIndex={1} onClick={toggleMenu}>
@@ -67,9 +56,11 @@ function Navigation({ items, logo, info, Component }: NavigationProps) {
         </nav>
         {Component !== undefined && Component}
         <NavigationMobile
+          itemsPage={itemsPage}
           items={items}
           logo={logo}
           state={menu}
+          linkClick={linkClick}
           setState={toggleMenu}
         />
       </header>

@@ -1,12 +1,26 @@
 import { NavigationProps } from "../../interface/props";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
+import { Link as LinkRouter } from "react-router-dom";
 import { IconX } from "@tabler/icons-react";
 import s from "./NavigationMobile.module.css";
+import { Routes } from "../../interface/enum";
 
-function NavigationMobile({ items, logo, state, setState }: NavigationProps) {
+function NavigationMobile({
+  items,
+  logo,
+  state,
+  setState,
+  linkClick,
+  itemsPage,
+}: NavigationProps) {
   const toggleMenu = () => {
     setState?.();
   };
+  function closeAndTravel(idx: number){
+    linkClick?.(idx)
+    toggleMenu()
+  }
+  const itemsArray = Object.values(items);
   return (
     <>
       <nav className={state ? `${s.nav} ${s["nav--active"]}` : `${s.nav}`}>
@@ -21,19 +35,33 @@ function NavigationMobile({ items, logo, state, setState }: NavigationProps) {
           </button>
         </ul>
         <ul className={s.nav__pages}>
-          {items.map((item, idx) => (
+          {itemsArray.map((item, idx) => (
             <li key={idx}>
               <Link
-                to={item.path}
+                to={item}
+                onClick={() => closeAndTravel(idx)}
+                tabIndex={1}
+                className={item.active
+                  ? `${s.nav__link} ${s["nav__link--active"]}`
+                  : `${s.nav__link}`}
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
+          {itemsPage.map((item, idx) => (
+            <li key={idx}>
+              <LinkRouter
+                to={item.to}
                 tabIndex={1}
                 className={
-                  item.active
+                  location.pathname.includes(item.to)
                     ? `${s.nav__link} ${s["nav__link--active"]}`
                     : `${s.nav__link}`
                 }
               >
                 {item.label}
-              </Link>
+              </LinkRouter>
             </li>
           ))}
         </ul>
@@ -48,13 +76,13 @@ function NavigationMobile({ items, logo, state, setState }: NavigationProps) {
             </Link>
           </li>
           <li>
-            <Link
-              to="/"
+            <LinkRouter
+              to={Routes.APPOINTMENT}
               tabIndex={1}
               className={`${s.nav__link} ${s.nav__button}`}
             >
               agendar una cita
-            </Link>
+            </LinkRouter>
           </li>
         </ul>
       </nav>

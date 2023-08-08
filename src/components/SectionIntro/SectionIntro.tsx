@@ -5,9 +5,9 @@ import s from "./SectionIntro.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-function SectionIntro({ images, speed, items }: SectionIntroProps) {
+function SectionIntro({ images, speed, items, sectionRefs }: SectionIntroProps) {
   return (
-    <section className={s.section}>
+    <section className={s.section} ref={sectionRefs?.[0]} id="Inicio">
       <Carousel images={images} speed={speed} />
       <div className={s.container}>
         <div className={s.cards}>

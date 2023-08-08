@@ -2,9 +2,14 @@ import s from "./SectionContact.module.css";
 import { SectionContactProps } from "../../interface/props";
 import FormContact from "../FormContact/FormContact";
 
-function SectionContact({ title, text, inputs }: SectionContactProps) {
+function SectionContact({
+  title,
+  text,
+  inputs,
+  sectionRefs,
+}: SectionContactProps) {
   return (
-    <section className={s.section}>
+    <section className={s.section} id="Contactanos" ref={sectionRefs?.[3]}>
       <div className={s.section__form}>
         <h2>{title}</h2>
         <p>{text}</p>

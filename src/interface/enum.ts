@@ -6,3 +6,8 @@ export enum InputTypes{
   TEXT,
   NUMBER
 }
+export enum Routes{
+  APPOINTMENT = "/appointment",
+  HOME = "/",
+  PRODUCTS = "/products"
+}

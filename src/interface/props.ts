@@ -1,13 +1,28 @@
 import { InputTypes } from "./enum";
-import { Contacts, NavigationItems, Service, SocialMedia } from "./interface";
-
+import { Contacts, Service, SocialMedia,NavigationItems } from "./interface";
+export interface HomeProps{
+  linkClick?(arg: number): void
+  link?: number
+}
 export interface NavigationProps {
   state?: boolean;
   setState?: () => void;
-  items: NavigationItems[];
+  items: object;
+  itemsPage: {label: string, to: string}[];
   logo?: string;
   info?: { title: string; text: string }[];
   Component?: JSX.Element
+  activeSection?: number
+  linkClick?(arg: number): void
+}
+export interface RenderConditionalLinksProps{
+  items: object,
+  activeSection?: number
+  itemsPage: {label: string, to: string}[];
+  linkClick?(arg: number): void
+}
+export interface MainProps{
+  sectionRefs?: React.RefObject<HTMLDivElement>[]
 }
 export interface CardIntroProps {
   text: string;
@@ -29,6 +44,7 @@ export interface SectionIntroProps {
   images: BannerProps[];
   speed: number;
   items: CardIntroProps[];
+  sectionRefs?: React.RefObject<HTMLDivElement>[]
 }
 
 export interface CardInfoProps {
@@ -60,6 +76,7 @@ export interface CarouselCardsProps {
 export interface SectionOurDoctorsProps {
   doctors: CardDentistProps[];
   title: string;
+  sectionRefs?: React.RefObject<HTMLDivElement>[]
 }
 export interface BtnWhatsAppProps {
   text: string;
@@ -87,6 +104,7 @@ export interface SectionServiceProps {
   title: string;
   text: string;
   items: CardServiceProps[];
+  sectionRefs?: React.RefObject<HTMLDivElement>[]
 }
 
 export interface QuestionAnswerProps {
@@ -194,6 +212,7 @@ export interface  SectionContactProps{
   inputs: CustomInputProps[],
   title: string
   text: string
+  sectionRefs?: React.RefObject<HTMLDivElement>[]
 }
 
 export interface CardProductProps {

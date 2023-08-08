@@ -6,28 +6,21 @@ import email from "../assets/email.png";
 import location from "../assets/location.png";
 import phone from "../assets/phone.png";
 import facebook from "../assets/facebook.png";
-const ITEMS = [
+import { Routes } from "../interface/enum";
+import { HomeProps } from "../interface/props";
+const ITEMS = {
+  home: "Inicio",
+  our: "Nosotros",
+  services: "Servicios",
+  contact: "Contactanos",
+};
+const ITEMS_PAGES = [
   {
-    path: "/",
-    label: "Inicio",
-    active: true,
-  },
-  {
-    path: "/",
-    label: "Servicios",
-    active: false,
-  },
-  {
-    path: "/",
     label: "Productos",
-    active: false,
-  },
-  {
-    path: "/",
-    label: "Contactanos",
-    active: false,
+    to: Routes.PRODUCTS,
   },
 ];
+
 const ITEMS_FOOTER = [
   {
     path: "/",
@@ -105,13 +98,13 @@ const CONTACTS = [
   },
 ];
 const FOOTER = {
-  logo:  logo ,
+  logo: logo,
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus etLorem ipsum dolor sit amet, consectetur adipiscing elit etiam tellus ipsum, pellentesque quis dapibus et.",
-  media:  MEDIA ,
-  contacts: CONTACTS ,
+  media: MEDIA,
+  contacts: CONTACTS,
   labelContact: "Nuestros Contactos",
   labelNavigation: "Sitio de Navegación",
-  navigation:  ITEMS_FOOTER ,
+  navigation: ITEMS_FOOTER,
   copyright: 'Copyright © 2023 Consultorio odontológico "La Preventiva"',
   question: "¿Quieres agendar una cita facilmente?",
   button: "Agenda aquí",
@@ -128,12 +121,19 @@ const INFO = [
   },
 ];
 
-function Appointment() {
+function Appointment({ linkClick }: HomeProps) {
   return (
     <>
-      <Navigation items={ITEMS} logo={logo} info={INFO}/>
+      <Navigation
+        items={ITEMS}
+        logo={logo}
+        info={INFO}
+        itemsPage={ITEMS_PAGES}
+        linkClick={linkClick}
+        activeSection={1000} 
+      />
       <MainAppointment />
-      <Footer footer={FOOTER}/>
+      <Footer footer={FOOTER} />
     </>
   );
 }
