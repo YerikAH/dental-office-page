@@ -44,7 +44,7 @@ function CardProduct(
       };
       setTagInterface(newTag);
     }
-  }, []);
+  }, [descount, price, tag]);
   return (
     <button className={s.product}>
       <div className={s.product__image}>
