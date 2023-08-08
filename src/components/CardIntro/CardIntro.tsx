@@ -1,5 +1,5 @@
 import s from "./CardIntro.module.css";
-import { CardIntroProps } from '../../interface/props'
+import { CardIntroProps } from "../../interface/props";
 
 function CardIntro({ image, text, title, button }: CardIntroProps) {
   return (
@@ -8,9 +8,9 @@ function CardIntro({ image, text, title, button }: CardIntroProps) {
         <img src={image} alt={title} />
       </div>
       <div className={s.separate} />
-      <h3 className={`${s['text--bold']}`}>{title}</h3>
+      <h3 className={`${s["text--bold"]}`}>{title}</h3>
       <p className={s.text}>{text}</p>
-      <button className={`${s['text--bold']} ${s.button}`}>{button}</button>
+      <button className={`${s["text--bold"]} ${s.button}`}>{button}</button>
     </div>
   );
 }

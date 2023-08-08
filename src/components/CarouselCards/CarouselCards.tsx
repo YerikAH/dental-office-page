@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import ButtonCarousel from "../ButtonCarousel/ButtonCarousel";
 import "swiper/css";
 function CarouselCards({ cards }: CarouselCardsProps) {
-
   return (
     <div className={s.carousel}>
       <div className={s.cards}>
@@ -14,15 +13,15 @@ function CarouselCards({ cards }: CarouselCardsProps) {
           slidesPerView={3}
           rewind={true}
           breakpoints={{
-            0:{
+            0: {
               slidesPerView: 1,
             },
-            720:{
+            720: {
               slidesPerView: 2,
             },
-            1000:{
+            1000: {
               slidesPerView: 3,
-            }
+            },
           }}
         >
           {cards.map((item, idx) => (
@@ -39,12 +38,11 @@ function CarouselCards({ cards }: CarouselCardsProps) {
               />
             </SwiperSlide>
           ))}
-          <ButtonCarousel/>
+          <ButtonCarousel />
         </Swiper>
       </div>
     </div>
   );
 }
-
 
 export default CarouselCards;

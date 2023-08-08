@@ -30,9 +30,11 @@ function Navigation({ items, logo, info, Component }: NavigationProps) {
                 <Link
                   to={item.path}
                   tabIndex={1}
-                  className={item.active
-                    ? `${s.nav__link} ${s["nav__link--active"]}`
-                    : `${s.nav__link}`}
+                  className={
+                    item.active
+                      ? `${s.nav__link} ${s["nav__link--active"]}`
+                      : `${s.nav__link}`
+                  }
                 >
                   {item.label}
                 </Link>

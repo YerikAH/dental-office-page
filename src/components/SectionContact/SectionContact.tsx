@@ -19,8 +19,7 @@ function SectionContact({ title, text, inputs }: SectionContactProps) {
           allowFullScreen={false}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-        >
-        </iframe>
+        ></iframe>
       </div>
     </section>
   );

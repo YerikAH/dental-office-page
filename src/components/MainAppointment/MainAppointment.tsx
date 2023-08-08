@@ -1,6 +1,6 @@
-import SectionAppointment from "../SectionAppointment/SectionAppointment"
-import icon from '../../assets/iconAppointment.png'
-import s from './MainAppointment.module.css'
+import SectionAppointment from "../SectionAppointment/SectionAppointment";
+import icon from "../../assets/iconAppointment.png";
+import s from "./MainAppointment.module.css";
 import { InputTypes } from "../../interface/enum";
 import {
   IconBuildingHospital,
@@ -13,41 +13,41 @@ import {
 import SectionFindUs from "../SectionFindUs/SectionFindUs";
 
 const APPOINTMENT = {
-  services : [
+  services: [
     {
       image: icon,
       name: "Endodoncia",
-      active: true
+      active: true,
     },
     {
       image: icon,
       name: "Endodoncia",
-      active: false
+      active: false,
     },
     {
       image: icon,
       name: "Endodoncia",
-      active: false
+      active: false,
     },
     {
       image: icon,
       name: "Endodoncia",
-      active: false
+      active: false,
     },
     {
       image: icon,
       name: "Endodoncia",
-      active: false
+      active: false,
     },
     {
       image: icon,
       name: "Endodoncia",
-      active: false
-    }
+      active: false,
+    },
   ],
   title: 'Reserva tu cita en "La preventiva"',
-  text: 'Suspendisse fermentum arcu eget risus auctor, vel pretium eros ultricies.'
-} 
+  text: "Suspendisse fermentum arcu eget risus auctor, vel pretium eros ultricies.",
+};
 const doctors = [
   {
     name: "Harvey Vasquez Huaranga Yerik",
@@ -110,45 +110,57 @@ const FORM = [
 ];
 const FORM_ALL = {
   inputs: FORM,
-  textarea:   {
+  textarea: {
     label: "Mensaje adicional",
     placeholder: "Escribe algún mensaje adicional por la consulta",
     type: InputTypes.TEXT,
-    withIcon: false,  
+    withIcon: false,
     doctors: doctors,
-    multiline:true
+    multiline: true,
   },
-}
+};
 const FIND_US = {
-  items:[
+  items: [
     {
       image: icon,
       title: "Chat to sales",
-      description:"Speak to our friendly team.",
-      contact: "yerik05vh@gmail.com"
+      description: "Speak to our friendly team.",
+      contact: "yerik05vh@gmail.com",
     },
     {
       image: icon,
       title: "Visitamos",
-      description:"Speak to our friendly team.",
-      contact: "JR. Ica 2do Piso, 100 - Huancayo"
+      description: "Speak to our friendly team.",
+      contact: "JR. Ica 2do Piso, 100 - Huancayo",
     },
     {
       image: icon,
       title: "Chat to sales",
-      description:"Speak to our friendly team.",
-      contact: "(+51) 967523180"
+      description: "Speak to our friendly team.",
+      contact: "(+51) 967523180",
     },
   ],
   title: "Nosotros amamos escucharte",
   text: "Conversa con nuestro maravilloso equipo",
-  tag: "Contactanos"
-}
+  tag: "Contactanos",
+};
 
-function MainAppointment(){
-  return <main className={s.main}>
-    <SectionAppointment services={APPOINTMENT.services} title={APPOINTMENT.title} text={APPOINTMENT.text} form={FORM_ALL}/>
-    <SectionFindUs items={FIND_US.items} title={FIND_US.title} text={FIND_US.text} tag={FIND_US.tag} />
-  </main>
+function MainAppointment() {
+  return (
+    <main className={s.main}>
+      <SectionAppointment
+        services={APPOINTMENT.services}
+        title={APPOINTMENT.title}
+        text={APPOINTMENT.text}
+        form={FORM_ALL}
+      />
+      <SectionFindUs
+        items={FIND_US.items}
+        title={FIND_US.title}
+        text={FIND_US.text}
+        tag={FIND_US.tag}
+      />
+    </main>
+  );
 }
-export default MainAppointment
+export default MainAppointment;

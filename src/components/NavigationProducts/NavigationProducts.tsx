@@ -1,12 +1,12 @@
-import NavigationGuide from "../NavigationGuide/NavigationGuide"
-import NavigationUser from "../NavigationUser/NavigationUser"
+import NavigationGuide from "../NavigationGuide/NavigationGuide";
+import NavigationUser from "../NavigationUser/NavigationUser";
 
-function NavigationProducts(){
+function NavigationProducts() {
   return (
     <>
-      <NavigationUser/>
-      <NavigationGuide/>
+      <NavigationUser />
+      <NavigationGuide />
     </>
-  )
+  );
 }
-export default NavigationProducts
+export default NavigationProducts;

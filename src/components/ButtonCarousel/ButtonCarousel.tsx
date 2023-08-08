@@ -1,6 +1,6 @@
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import { useSwiper } from "swiper/react";
-import s from './ButtonCarousel.module.css'
+import s from "./ButtonCarousel.module.css";
 
 function ButtonCarousel() {
   const swiper = useSwiper();
@@ -15,4 +15,4 @@ function ButtonCarousel() {
     </div>
   );
 }
-export default ButtonCarousel
+export default ButtonCarousel;

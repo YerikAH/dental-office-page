@@ -1,8 +1,8 @@
-.navigation{
+.navigation {
   margin-top: 0.5rem;
-  border-top: 1px solid var(--black-5) ;
+  border-top: 1px solid var(--black-5);
 }
-.user{
+.user {
   max-width: 1200px;
   padding: 0 0.7rem;
   width: 100%;
@@ -11,25 +11,25 @@
   align-items: center;
   justify-content: space-between;
 }
-.user__list{
+.user__list {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
-.user__decoration{
+.user__decoration {
   font: normal normal 600 0.8rem/1rem var(--font-primary);
   color: var(--blue);
   text-transform: uppercase;
   letter-spacing: 0.05rem;
 }
-.user__text{
+.user__text {
   font: normal normal 600 0.8rem/1rem var(--font-primary);
   color: var(--black);
   display: block;
   padding: 2rem 0;
   position: relative;
 }
-.user__text--active::after{
+.user__text--active::after {
   position: absolute;
   width: 100%;
   height: 3px;
@@ -38,45 +38,45 @@
   bottom: 0;
   left: 0;
   display: block;
-  content: '';
+  content: "";
 }
-.user__input{
+.user__input {
   display: flex;
   position: relative;
   border-radius: 15rem;
   background-color: var(--black-5);
-  width:100%;
+  width: 100%;
   max-width: 200px;
 }
-.user__input input{
+.user__input input {
   background-color: transparent;
   border: none;
-  width:100%;
+  width: 100%;
   padding: 0.5rem 2rem;
   outline: none;
   font: normal normal 600 0.8rem/1rem var(--font-primary);
 }
-.user__input input::placeholder{
+.user__input input::placeholder {
   color: var(--black);
   opacity: 1;
 }
-.user__input svg{
+.user__input svg {
   position: absolute;
   color: var(--black);
   top: 0;
   bottom: 0;
-  margin:  auto;
+  margin: auto;
   left: 0.5rem;
 }
-.user__actions{
+.user__actions {
   display: flex;
   align-items: center;
 }
-.user__button svg{
+.user__button svg {
   width: 1.2rem;
   height: 1.2rem;
 }
-.user__button{
+.user__button {
   padding: 0.5rem;
   background-color: var(--black-5);
   border: none;
@@ -84,19 +84,19 @@
   place-items: center;
   border-radius: 15rem;
 }
-.user__actions__decoration{
+.user__actions__decoration {
   height: 1.5rem;
   width: 2px;
   border-radius: 15rem;
   background-color: var(--black);
   margin: 0 1rem;
 }
-.actions{
+.actions {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.user__info{
+.user__info {
   display: flex;
   gap: 0.5rem;
   margin-left: 2rem;
@@ -109,6 +109,6 @@
   color: var(--black);
   font: normal normal 600 0.8rem/1rem var(--font-primary);
 }
-.user__info svg{
+.user__info svg {
   color: var(--black);
 }

@@ -19,13 +19,12 @@ function ChatWhatsApp({
   text,
   logo,
 }: ChatWhatsAppProps) {
-
   const onClick = () => {
     setState();
   };
 
   return (
-    <div className={`${s.modal} ${state && `${s['--active']}`}`}>
+    <div className={`${s.modal} ${state && `${s["--active"]}`}`}>
       <div className={s.banner}>
         <button tabIndex={1} onClick={onClick}>
           <IconX size={18} color="white" />

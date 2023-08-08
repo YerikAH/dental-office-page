@@ -2,8 +2,8 @@ import s from "./SectionOurClient.module.css";
 import { SectionOurClientProps } from "../../interface/props";
 import CardOpinion from "../CardOpinion/CardOpinion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from 'swiper/modules';
-import 'swiper/css/pagination';
+import { Pagination } from "swiper/modules";
+import "swiper/css/pagination";
 import "swiper/css";
 
 function SectionOurClient({ title, text, items }: SectionOurClientProps) {
@@ -22,7 +22,7 @@ function SectionOurClient({ title, text, items }: SectionOurClientProps) {
       </div>
       <div className={s.section__contain}>
         <Swiper
-        className={s.section__contain__swiper}
+          className={s.section__contain__swiper}
           spaceBetween={10}
           rewind={true}
           pagination={pagination}

@@ -30,9 +30,11 @@
   filter: brightness(1.1);
 }
 
-@media (min-width: 720px){
+@media (min-width: 720px) {
   .button p {
     display: block;
   }
-  .button{  padding: 0.4rem 1rem;}
+  .button {
+    padding: 0.4rem 1rem;
+  }
 }

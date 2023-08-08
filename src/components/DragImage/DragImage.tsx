@@ -19,7 +19,7 @@ function DragImage({ smile_bad, smile_good }: DragImageProps) {
     e.preventDefault();
   }
   function dragStart() {
-    return
+    return;
   }
   function dragLeave(e: DragEvent) {
     e.preventDefault();

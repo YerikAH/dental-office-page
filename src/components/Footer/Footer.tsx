@@ -2,9 +2,7 @@ import s from "./Footer.module.css";
 import { FooterCompressedProps } from "../../interface/props";
 import FooterQuestion from "../FooterQuestion/FooterQuestion";
 
-function Footer({
-  footer
-}: FooterCompressedProps) {
+function Footer({ footer }: FooterCompressedProps) {
   return (
     <footer className={s.footer}>
       <FooterQuestion text={footer.question} button={footer.button} />
@@ -25,7 +23,9 @@ function Footer({
           </div>
         </div>
         <div className={s.footer__contain__navigation}>
-          <h2 className={`${s["text--bold"]} ${s.text}`}>{footer.labelNavigation}</h2>
+          <h2 className={`${s["text--bold"]} ${s.text}`}>
+            {footer.labelNavigation}
+          </h2>
           <ul>
             {footer.navigation.map((item, idx) => (
               <li key={idx}>
@@ -37,7 +37,9 @@ function Footer({
           </ul>
         </div>
         <div className={s.footer__contain__contact}>
-          <h2 className={`${s["text--bold"]} ${s.text}`}>{footer.labelContact}</h2>
+          <h2 className={`${s["text--bold"]} ${s.text}`}>
+            {footer.labelContact}
+          </h2>
           <ul>
             {footer.contacts.map((item, idx) => (
               <li key={idx}>

@@ -7,30 +7,28 @@ function FormContact({ inputs }: FormContactProps) {
     <form className={s.form}>
       {inputs.map((item, idx) => (
         <>
-          {idx > 1
-            ? (
-              <div className={s.input__full}>
-                <CustomInput
-                  key={idx}
-                  label={item.label}
-                  placeholder={item.placeholder}
-                  withIcon={false}
-                  type={item.type}
-                  multiline={item.multiline}
-                  doctors={[]}
-                />
-              </div>
-            )
-            : (
+          {idx > 1 ? (
+            <div className={s.input__full}>
               <CustomInput
                 key={idx}
                 label={item.label}
                 placeholder={item.placeholder}
                 withIcon={false}
                 type={item.type}
+                multiline={item.multiline}
                 doctors={[]}
               />
-            )}
+            </div>
+          ) : (
+            <CustomInput
+              key={idx}
+              label={item.label}
+              placeholder={item.placeholder}
+              withIcon={false}
+              type={item.type}
+              doctors={[]}
+            />
+          )}
         </>
       ))}
 

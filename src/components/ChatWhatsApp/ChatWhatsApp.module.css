@@ -1,4 +1,4 @@
-.modal{
+.modal {
   max-width: 20rem;
   width: 100%;
   position: relative;
@@ -9,10 +9,10 @@
   bottom: -20rem;
   transition: 0.3s;
 }
-.--active{
+.--active {
   bottom: 0;
 }
-.banner{
+.banner {
   padding: 1rem;
   background-color: var(--green);
   display: grid;
@@ -21,7 +21,7 @@
   gap: 1rem;
   grid-template-columns: 32px auto;
 }
-.banner button{
+.banner button {
   position: absolute;
   top: 0rem;
   right: 0rem;
@@ -36,27 +36,27 @@
   background-color: var(--green);
 }
 .banner button:hover,
-.banner button:focus{
+.banner button:focus {
   filter: brightness(1.1);
 }
-.banner h2{
+.banner h2 {
   font: normal normal 700 1rem/1.2rem var(--font-primary);
   color: var(--white);
   margin-bottom: 0.5rem;
 }
-.banner p{
+.banner p {
   font: normal normal 400 0.8rem/1.2rem var(--font-primary);
   color: var(--white);
 }
 
-.chats{
+.chats {
   display: grid;
   background-color: var(--white);
   padding: 1rem;
   gap: 1rem;
 }
 
-.chat{
+.chat {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -64,44 +64,44 @@
   padding: 0.5rem;
   background-color: var(--white);
   border-radius: 0.3rem;
-  border:none;
+  border: none;
   border-left: 2px solid var(--green);
   box-shadow: var(--shadow-light);
   transition: 0.3s;
 }
-.chat svg{
+.chat svg {
   stroke: var(--green);
 }
-.chat__info{
+.chat__info {
   display: flex;
 }
-.chat__info div:first-child{
+.chat__info div:first-child {
   display: grid;
   place-items: center;
   margin-right: 0.5rem;
 }
-.chat__info div:first-child img{
+.chat__info div:first-child img {
   border-radius: 4rem;
   object-fit: cover;
   width: 3rem;
   height: 3rem;
 }
 
-.chat__info div:last-child{
-  display: grid;  
+.chat__info div:last-child {
+  display: grid;
   align-content: center;
   width: 100%;
 }
-.chat__info div:last-child h5{
+.chat__info div:last-child h5 {
   font: normal normal 400 0.7rem/1rem var(--font-primary);
   color: var(--black-50);
   margin-bottom: 0.2rem;
 }
-.chat__info div:last-child p{
+.chat__info div:last-child p {
   font: normal normal 600 0.8rem/1rem var(--font-primary);
   color: var(--black);
 }
 .chat:hover,
-.chat:focus{
+.chat:focus {
   background-color: var(--black-5);
 }

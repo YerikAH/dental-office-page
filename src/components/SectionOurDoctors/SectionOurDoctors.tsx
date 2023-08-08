@@ -1,16 +1,18 @@
-import CarouselCards from '../CarouselCards/CarouselCards'
-import s from './SectionOurDoctors.module.css'
-import {SectionOurDoctorsProps} from '../../interface/props'
+import CarouselCards from "../CarouselCards/CarouselCards";
+import s from "./SectionOurDoctors.module.css";
+import { SectionOurDoctorsProps } from "../../interface/props";
 
-function SectionOurDoctors({doctors, title}:SectionOurDoctorsProps){
-  return <section className={s.section}>
-    <div className={s.section__contain}>
-      <div className={s.section__contain__title}>
-        <h3>{title}</h3>
-        <div/>
+function SectionOurDoctors({ doctors, title }: SectionOurDoctorsProps) {
+  return (
+    <section className={s.section}>
+      <div className={s.section__contain}>
+        <div className={s.section__contain__title}>
+          <h3>{title}</h3>
+          <div />
+        </div>
+        <CarouselCards cards={doctors} />
       </div>
-      <CarouselCards cards={doctors} />
-    </div>
-  </section>
+    </section>
+  );
 }
-export default SectionOurDoctors
+export default SectionOurDoctors;

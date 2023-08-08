@@ -1,7 +1,7 @@
-.section{
+.section {
   margin-top: 1rem;
 }
-.container{
+.container {
   position: relative;
   bottom: 5rem;
   max-width: 1200px;
@@ -9,19 +9,19 @@
   z-index: 100;
   margin: 0 auto;
 }
-.cards{
+.cards {
   display: none;
   place-items: center;
-  grid-template-columns: repeat(3,auto);
+  grid-template-columns: repeat(3, auto);
 }
-#cards--mobile{
+#cards--mobile {
   display: block;
 }
-@media (min-width: 720px){
-  .cards{
+@media (min-width: 720px) {
+  .cards {
     display: grid;
   }
-  #cards--mobile{
+  #cards--mobile {
     display: none;
   }
 }

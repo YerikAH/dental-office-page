@@ -17,7 +17,7 @@ function SectionAppointment({
       <div className={s.section__content}>
         <h1 className={s.title}>{title}</h1>
         <p className={s.text}>{text}</p>
-        <FormAppointment form={form} services={services}/>
+        <FormAppointment form={form} services={services} />
       </div>
     </section>
   );

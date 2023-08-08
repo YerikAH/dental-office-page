@@ -1,7 +1,7 @@
-.guide{
+.guide {
   border-top: 1px solid var(--black-5);
 }
-.navigation{
+.navigation {
   max-width: 1200px;
   padding: 0.7rem;
   margin-top: 0.2rem;
@@ -11,20 +11,20 @@
   gap: 0.5rem;
   align-items: center;
 }
-.navigation svg{
+.navigation svg {
   color: var(--black-50);
 }
-.navigation__link{
+.navigation__link {
   font: normal normal 400 0.8rem/1rem var(--font-primary);
   color: var(--black-50);
   display: flex;
   align-items: center;
   text-transform: capitalize;
 }
-.navigation__home{
+.navigation__home {
   gap: 0.2rem;
 }
-.navigation__current{
+.navigation__current {
   color: var(--black);
   font-weight: 600;
 }

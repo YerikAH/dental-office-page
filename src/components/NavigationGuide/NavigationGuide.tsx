@@ -15,25 +15,23 @@ function NavigationGuide() {
         <IconCaretRight fill="currentColor" size={12} />
         {routes.map((item, idx) => (
           <>
-            {idx + 1 === routes.length
-              ? (
-                <Link
-                  to={item}
-                  key={idx}
-                  className={`${s.navigation__link} ${s.navigation__current}`}
-                >
+            {idx + 1 === routes.length ? (
+              <Link
+                to={item}
+                key={idx}
+                className={`${s.navigation__link} ${s.navigation__current}`}
+              >
+                {item}
+              </Link>
+            ) : (
+              <>
+                <Link to={item} key={idx} className={s.navigation__link}>
                   {item}
                 </Link>
-              )
-              : (
-                <>
-                  <Link to={item} key={idx} className={s.navigation__link}>
-                    {item}
-                  </Link>
 
-                  <IconCaretRight fill="currentColor" size={12} />
-                </>
-              )}
+                <IconCaretRight fill="currentColor" size={12} />
+              </>
+            )}
           </>
         ))}
       </div>

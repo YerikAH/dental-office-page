@@ -1,8 +1,8 @@
 import s from "./SectionWhyChoice.module.css";
 import CardInfo from "../CardInfo/CardInfo";
-import {SectionWhyChoiceProps} from '../../interface/props'
+import { SectionWhyChoiceProps } from "../../interface/props";
 
-function SectionWhyChoice({info, image}: SectionWhyChoiceProps) {
+function SectionWhyChoice({ info, image }: SectionWhyChoiceProps) {
   return (
     <section className={s.section}>
       <div className={s.section__info}>

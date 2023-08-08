@@ -9,14 +9,22 @@ import { descountPrice, numberToPrice } from "../../helpers/helpers";
 import { useEffect, useState } from "react";
 import Tooltip from "@mui/material/Tooltip";
 
-function CardProduct(
-  { name, description, price, image, descount, like, tag }: CardProductProps,
-) {
+function CardProduct({
+  name,
+  description,
+  price,
+  image,
+  descount,
+  like,
+  tag,
+}: CardProductProps) {
   const [priceConvert, setPriceConvert] = useState("");
   const [priceDescount, setPriceDescount] = useState<string>("");
-  const [tagInterface, setTagInterface] = useState<
-    null | { color: string; bg: string; text: string }
-  >(null);
+  const [tagInterface, setTagInterface] = useState<null | {
+    color: string;
+    bg: string;
+    text: string;
+  }>(null);
 
   function convertPrice(price: number) {
     const newPriceRound = Math.round(price);

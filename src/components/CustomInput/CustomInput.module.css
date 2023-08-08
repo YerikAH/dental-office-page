@@ -1,18 +1,18 @@
-.input label{
+.input label {
   font: normal normal 700 0.7rem/0.8rem var(--font-primary);
   color: var(--black);
   margin-bottom: 0.5rem;
   letter-spacing: 0.05rem;
   display: block;
 }
-.input__contain{
+.input__contain {
   border: 1px solid var(--black-50);
   background-color: var(--white);
   border-radius: 0.5rem;
   position: relative;
   transition: 0.3s;
 }
-.input__text{
+.input__text {
   background-color: transparent;
   border: none;
   padding: 0.7rem 1rem 0.7rem 2.5rem;
@@ -22,17 +22,17 @@
   transition: 0.3s;
   outline: none;
 }
-.input__text--without{
-    padding: 0.7rem 1rem 0.7rem 1rem;
+.input__text--without {
+  padding: 0.7rem 1rem 0.7rem 1rem;
 }
-.textarea__text{
+.textarea__text {
   resize: none;
   height: 100px;
 }
-.input__text::placeholder{
+.input__text::placeholder {
   color: var(--black-50);
 }
-.input__contain svg{
+.input__contain svg {
   position: absolute;
   top: 0rem;
   left: 0.5rem;
@@ -43,10 +43,10 @@
   margin: auto 0;
   transition: 0.3s;
 }
-.input__text:focus + svg{
+.input__text:focus + svg {
   color: var(--strong-blue);
 }
-.modal{
+.modal {
   position: absolute;
   background-color: var(--white);
   border-radius: 1rem;
@@ -56,7 +56,7 @@
   top: 3rem;
   z-index: 100;
 }
-.modal__button{
+.modal__button {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -70,12 +70,12 @@
   text-align: left;
 }
 .modal__button:hover,
-.modal__button:focus{
+.modal__button:focus {
   background-color: var(--black-10);
 }
-.modal__button:first-child{
+.modal__button:first-child {
   margin-top: 0.5rem;
 }
-.modal__button:last-child{
+.modal__button:last-child {
   margin-bottom: 0.5rem;
 }

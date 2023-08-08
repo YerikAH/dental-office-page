@@ -22,15 +22,15 @@
   max-width: 40rem;
 }
 
-.section__contain{
+.section__contain {
   justify-content: center;
   align-items: center;
   display: flex;
   margin: 6rem 0 2rem 0;
-  position: relative
+  position: relative;
 }
 
-.section__decoration{
+.section__decoration {
   height: 60%;
   top: 0;
   width: 100%;

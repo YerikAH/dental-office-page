@@ -1,10 +1,8 @@
 import CustomInput from "../CustomInput/CustomInput";
-import {FormInputProps} from '../../interface/props'
+import { FormInputProps } from "../../interface/props";
 import s from "./FormInput.module.css";
 
-
-
-function FormInput({inputs, textarea}: FormInputProps) {
+function FormInput({ inputs, textarea }: FormInputProps) {
   return (
     <>
       <div className={s.form}>
@@ -14,7 +12,7 @@ function FormInput({inputs, textarea}: FormInputProps) {
             label={item.label}
             placeholder={item.placeholder}
             type={item.type}
-            icon={item.icon}  
+            icon={item.icon}
             withIcon={item.withIcon}
             doctors={item.doctors}
           />

@@ -22,7 +22,7 @@
   padding: 0.2rem;
 }
 .card button:focus,
-.card button:hover{
+.card button:hover {
   background-color: var(--black-5);
 }
 .card div {

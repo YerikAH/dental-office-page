@@ -36,13 +36,13 @@
   max-width: 405px;
   margin-top: 1rem;
 }
-#banner__image--active{
+#banner__image--active {
   filter: brightness(1);
 }
-.banner__contain--active{
+.banner__contain--active {
   display: none;
 }
-@media (min-width: 720px){
+@media (min-width: 720px) {
   .banner h2 {
     font: normal normal 700 2rem/2.5rem var(--font-primary);
   }

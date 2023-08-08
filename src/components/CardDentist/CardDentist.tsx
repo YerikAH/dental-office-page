@@ -20,7 +20,7 @@ function CardDentist({
   const SOCIAL_MEDIA = [
     {
       color: "#3B599B",
-      icon: <IconBrandFacebook/>,
+      icon: <IconBrandFacebook />,
       url: fb,
     },
     {
@@ -44,7 +44,7 @@ function CardDentist({
       <img src={image} alt="doctor" className={s.card__image} />
       <div className={s.card__social}>
         {SOCIAL_MEDIA.map((item, idx) => (
-          <div key={idx} style={{background: `${item.color}`}}>
+          <div key={idx} style={{ background: `${item.color}` }}>
             <a href={item.url}>{item.icon}</a>
           </div>
         ))}
@@ -56,7 +56,7 @@ function CardDentist({
           </h4>
           <span className={s.card__text}>{special}</span>
         </div>
-        <p className={s.card__text}>{text.substring(0,100)}...</p>
+        <p className={s.card__text}>{text.substring(0, 100)}...</p>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-.section{
+.section {
   max-width: 1200px;
   width: 100%;
   margin: 10rem auto 0 auto;
@@ -7,26 +7,26 @@
   flex-direction: column;
 }
 
-.section__intro h2{
+.section__intro h2 {
   font: normal normal 700 1.3rem/1.8rem var(--font-primary);
   color: var(--black);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   text-align: center;
 }
-.section__intro p{
+.section__intro p {
   font: normal normal 400 0.8rem/1.5rem var(--font-primary);
   color: var(--black-50);
   text-align: center;
   margin: 1.25rem auto 0 auto;
   max-width: 40rem;
 }
-.section__contain{
+.section__contain {
   margin-top: 4rem;
 }
-.section__contain__swiper{
+.section__contain__swiper {
   height: 25rem;
 }
-#pagination{
+#pagination {
   background-color: var(--black);
 }
