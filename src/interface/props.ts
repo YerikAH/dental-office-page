@@ -1,28 +1,15 @@
 import { InputTypes } from "./enum";
-import { Contacts, Service, SocialMedia,NavigationItems } from "./interface";
-export interface HomeProps{
-  linkClick?(arg: number): void
-  link?: number
-}
+import { Contacts, NavigationItems, Product, Service, SocialMedia } from "./interface";
 export interface NavigationProps {
   state?: boolean;
   setState?: () => void;
-  items: object;
-  itemsPage: {label: string, to: string}[];
+  items: NavigationItems[];
   logo?: string;
   info?: { title: string; text: string }[];
-  Component?: JSX.Element
-  activeSection?: number
-  linkClick?(arg: number): void
+  Component?: JSX.Element;
 }
-export interface RenderConditionalLinksProps{
-  items: object,
-  activeSection?: number
-  itemsPage: {label: string, to: string}[];
-  linkClick?(arg: number): void
-}
-export interface MainProps{
-  sectionRefs?: React.RefObject<HTMLDivElement>[]
+export interface RenderConditionalLinksProps {
+  items: NavigationItems[];
 }
 export interface CardIntroProps {
   text: string;
@@ -44,7 +31,7 @@ export interface SectionIntroProps {
   images: BannerProps[];
   speed: number;
   items: CardIntroProps[];
-  sectionRefs?: React.RefObject<HTMLDivElement>[]
+  sectionRefs?: React.RefObject<HTMLDivElement>[];
 }
 
 export interface CardInfoProps {
@@ -76,7 +63,6 @@ export interface CarouselCardsProps {
 export interface SectionOurDoctorsProps {
   doctors: CardDentistProps[];
   title: string;
-  sectionRefs?: React.RefObject<HTMLDivElement>[]
 }
 export interface BtnWhatsAppProps {
   text: string;
@@ -104,7 +90,6 @@ export interface SectionServiceProps {
   title: string;
   text: string;
   items: CardServiceProps[];
-  sectionRefs?: React.RefObject<HTMLDivElement>[]
 }
 
 export interface QuestionAnswerProps {
@@ -171,7 +156,9 @@ export interface CustomInputProps {
   type: InputTypes;
   withIcon: boolean;
   multiline?: boolean;
-  doctors: { name: string; phone: string }[];
+  options?: { name: string; value: string }[];
+  isRequired?: boolean;
+  isLabel?: boolean;
 }
 export interface FormInputProps {
   inputs: CustomInputProps[];
@@ -193,38 +180,54 @@ export interface NavInfoProps {
 }
 
 export interface CardFindUsProps {
-  image: string
-  title: string
-  description: string
-  contact: string
+  image: string;
+  title: string;
+  description: string;
+  contact: string;
 }
 
-export interface  SectionFindUsProps {
-  items: CardFindUsProps[]
-  title: string
-  text: string
-  tag: string
+export interface SectionFindUsProps {
+  items: CardFindUsProps[];
+  title: string;
+  text: string;
+  tag: string;
 }
-export interface FormContactProps{
-  inputs: CustomInputProps[]
+export interface FormContactProps {
+  inputs: CustomInputProps[];
 }
-export interface  SectionContactProps{
-  inputs: CustomInputProps[],
-  title: string
-  text: string
-  sectionRefs?: React.RefObject<HTMLDivElement>[]
+export interface SectionContactProps {
+  inputs: CustomInputProps[];
+  title: string;
+  text: string;
 }
 
 export interface CardProductProps {
-  name: string, 
-  description: string,
-  image: string, 
-  price: number,
-  descount?: number
-  like: boolean
-  tag?: {bg: string, color: string, text: string}
+  name: string;
+  description: string;
+  image: string;
+  price: number;
+  descount?: number;
+  like: boolean;
+  tag?: { bg: string; color: string; text: string };
 }
 
-export interface NavigationUserProps{
-  items?: {name: string, to: string, active: boolean}[]
+export interface NavigationUserProps {
+  items?: { name: string; to: string; active: boolean }[];
+}
+
+export interface ProductBagProps {
+  products: Product[]
+}
+export interface LeftDropDownProps {
+  title: string;
+  setState(): void;
+  products: Product[]
+  state: boolean;
+  Component?: JSX.Element;
+  image: JSX.Element | string;
+  ProductComponent: JSX.Element;
+}
+
+export interface SubTotalProps{
+  products: Product[]
 }

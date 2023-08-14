@@ -11,8 +11,9 @@ function SectionFindUs({ items, title, text, tag }: SectionFindUsProps) {
         <p>{text}</p>
       </div>
       <div className={s.section__cards}>
-        {items.map((item) => (
+        {items.map((item, idx) => (
           <CardFindUs
+            key={idx}
             title={item.title}
             description={item.description}
             contact={item.contact}

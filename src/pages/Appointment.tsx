@@ -7,17 +7,32 @@ import location from "../assets/location.png";
 import phone from "../assets/phone.png";
 import facebook from "../assets/facebook.png";
 import { Routes } from "../interface/enum";
-import { HomeProps } from "../interface/props";
-const ITEMS = {
-  home: "Inicio",
-  our: "Nosotros",
-  services: "Servicios",
-  contact: "Contactanos",
-};
-const ITEMS_PAGES = [
+
+const ITEMS = [
   {
+    path: "/",
+    label: "Inicio",
+    active: true,
+  },
+  {
+    path: "/",
+    label: "Nosotros",
+    active: false,
+  },
+  {
+    path: "/",
+    label: "Servicios",
+    active: false,
+  },
+  {
+    path: "/",
+    label: "Contactanos",
+    active: false,
+  },
+  {
+    path: "/",
     label: "Productos",
-    to: Routes.PRODUCTS,
+    active: false,
   },
 ];
 
@@ -121,16 +136,13 @@ const INFO = [
   },
 ];
 
-function Appointment({ linkClick }: HomeProps) {
+function Appointment() {
   return (
     <>
       <Navigation
         items={ITEMS}
         logo={logo}
         info={INFO}
-        itemsPage={ITEMS_PAGES}
-        linkClick={linkClick}
-        activeSection={1000} 
       />
       <MainAppointment />
       <Footer footer={FOOTER} />

@@ -14,7 +14,8 @@ function FormInput({ inputs, textarea }: FormInputProps) {
             type={item.type}
             icon={item.icon}
             withIcon={item.withIcon}
-            doctors={item.doctors}
+            options={item.options}
+            isRequired={item.isRequired}
           />
         ))}
       </div>
@@ -24,8 +25,8 @@ function FormInput({ inputs, textarea }: FormInputProps) {
           placeholder={textarea.placeholder}
           type={textarea.type}
           withIcon={textarea.withIcon}
-          doctors={textarea.doctors}
           multiline={textarea.multiline}
+          isRequired={textarea.isRequired}
         />
       </div>
     </>

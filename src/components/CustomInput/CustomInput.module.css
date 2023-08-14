@@ -49,7 +49,7 @@
 .modal {
   position: absolute;
   background-color: var(--white);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: var(--shadow-bold);
   border: 1px solid var(--black-50);
@@ -78,4 +78,16 @@
 }
 .modal__button:last-child {
   margin-bottom: 0.5rem;
+}
+.modal p{
+  font: normal normal 400 0.8rem/1rem var(--font-primary);
+  color: var(--black-50);
+  text-align: center;
+  padding: 0.5rem 2rem;
+  display: flex;
+  width: 100%;
+}
+.required{
+  font: normal normal 700 0.6rem/1rem var(--font-primary);
+  color: var(--blue);
 }

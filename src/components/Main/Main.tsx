@@ -16,7 +16,6 @@ import smile_good from "../../assets/smile_perfect.jpg";
 import smile_bad from "../../assets/smile_bad.jpg";
 import SectionContact from "../SectionContact/SectionContact";
 import { InputTypes } from "../../interface/enum";
-import { MainProps } from "../../interface/props";
 
 const IMAGES_INTRO = [
   {
@@ -348,18 +347,16 @@ const CONTACT = {
     },
   ],
 };
-function Main({ sectionRefs }: MainProps) {
+function Main() {
   return (
     <main className={s.main}>
-      <SectionIntro images={IMAGES_INTRO} items={ITEMS_INTRO} speed={10000} sectionRefs={sectionRefs}/>
+      <SectionIntro images={IMAGES_INTRO} items={ITEMS_INTRO} speed={10000} />
       <SectionWhyChoice image={doctor} info={ITEMS_INFO} />
       <SectionOurDoctors
-        sectionRefs={sectionRefs}
         doctors={ITEMS_DOCTORS}
         title="Conoce a nuestros dentistas"
       />
       <SectionService
-        sectionRefs={sectionRefs}
         title={SERVICE.title}
         text={SERVICE.text}
         items={SERVICE.items}
@@ -370,7 +367,6 @@ function Main({ sectionRefs }: MainProps) {
         images={BEST.images}
       />
       <SectionContact
-        sectionRefs={sectionRefs}
         title={CONTACT.title}
         text={CONTACT.text}
         inputs={CONTACT.inputs}

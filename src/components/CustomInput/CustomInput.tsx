@@ -1,6 +1,6 @@
 import s from "./CustomInput.module.css";
 import { CustomInputProps } from "../../interface/props";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { InputTypes } from "../../interface/enum";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
@@ -15,12 +15,21 @@ function CustomInput({
   type,
   withIcon,
   multiline = false,
-  doctors,
+  options = [],
+  isRequired = false,
+  isLabel = true,
 }: CustomInputProps) {
   const [showDate, setShowDate] = useState(false);
   const [showTime, setShowTime] = useState(false);
   const [showSelect, setShowSelect] = useState(false);
+  const [error, setError] = useState({
+    text: "",
+    active: false,
+  });
   const [typeInput, setTypeInput] = useState("text");
+  const [optionsFilter, setOptionsFilter] = useState<
+    { name: string; phone: string }[]
+  >(options);
   const [isType, setIsType] = useState({
     text: false,
     date: false,
@@ -58,6 +67,20 @@ function CustomInput({
         break;
     }
   }
+  function filterOptions(value: string) {
+    const isEqual = options.find((item) => item.name === value);
+    if (value.trim() === "" || isEqual !== undefined) {
+      setOptionsFilter(options);
+      return;
+    }
+
+    const filterOps = options.filter((item) => {
+      const valueLowerCase = value.toLocaleLowerCase();
+      const lowerCase = item.name.toLocaleLowerCase();
+      return lowerCase.includes(valueLowerCase);
+    });
+    setOptionsFilter(filterOps);
+  }
   function handleClick() {
     if (isType.date) {
       setShowDate(!showDate);
@@ -80,21 +103,31 @@ function CustomInput({
   function onChangeInput(
     e:
       | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
+      | React.ChangeEvent<HTMLTextAreaElement>,
   ) {
     const value = e.target.value;
-    if (isType.date || isType.hour || isType.select) {
+    if (isType.date || isType.hour) {
       setInput("");
-    } else if (isType.text || isType.email) {
+    } else if (isType.email) {
       setInput(value);
     } else if (isType.number) {
       const regex = /^\d+$/;
-      if (regex.test(value)) {
-        setInput(value);
-      } else {
-        const deleteLast = value.slice(0, value.length - 1);
-        setInput(deleteLast);
-      }
+      noWrite(regex, value);
+    } else if (isType.select) {
+      setShowSelect(true);
+      setInput(value);
+      filterOptions(value);
+    } else if (isType.text) {
+      const regex = /^[a-zA-Z ]*$/;
+      noWrite(regex, value);
+    }
+  }
+  function noWrite(regex: RegExp, value: string) {
+    if (regex.test(value)) {
+      setInput(value);
+    } else {
+      const deleteLast = value.slice(0, value.length - 1);
+      setInput(deleteLast);
     }
   }
   function onChangeHour(newValue: Moment | null) {
@@ -110,35 +143,41 @@ function CustomInput({
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
       <div className={s.input}>
-        <label htmlFor={label}>{label}</label>
+        {isLabel && (
+          <label htmlFor={label}>
+            {label}
+            {isRequired && <span className={s.required}>*</span>}
+          </label>
+        )}
         <div className={`${s.input__contain}`}>
-          {!multiline ? (
-            <input
-              id={label}
-              type={typeInput}
-              name={label}
-              value={input}
-              placeholder={placeholder}
-              className={`${s.input__text} ${
-                !withIcon && `${s["input__text--without"]}`
-              }`}
-              onClick={handleClick}
-              onChange={(e) => onChangeInput(e)}
-              required
-            />
-          ) : (
-            <textarea
-              name={label}
-              id={label}
-              onChange={(e) => onChangeInput(e)}
-              value={input}
-              placeholder={placeholder}
-              className={`${s.input__text} ${s.textarea__text} ${
-                !withIcon && `${s["input__text--without"]}`
-              }`}
-              required
-            ></textarea>
-          )}
+          {!multiline
+            ? (
+              <input
+                id={label}
+                type={typeInput}
+                name={label}
+                value={input}
+                placeholder={placeholder}
+                className={`${s.input__text} ${
+                  !withIcon && `${s["input__text--without"]}`
+                }`}
+                onClick={handleClick}
+                onChange={(e) => onChangeInput(e)}
+              />
+            )
+            : (
+              <textarea
+                name={label}
+                id={label}
+                onChange={(e) => onChangeInput(e)}
+                value={input}
+                placeholder={placeholder}
+                className={`${s.input__text} ${s.textarea__text} ${
+                  !withIcon && `${s["input__text--without"]}`
+                }`}
+              >
+              </textarea>
+            )}
 
           {withIcon && icon}
           {isType.date && showDate && (
@@ -161,15 +200,21 @@ function CustomInput({
           )}
           {isType.select && showSelect && (
             <div className={s.modal}>
-              {doctors.map((item, idx) => (
-                <button
-                  key={idx}
-                  className={s.modal__button}
-                  onClick={() => handleClickButton(item.name)}
-                >
-                  {item.name}
-                </button>
-              ))}
+              {optionsFilter.length !== 0
+                ? (
+                  <>
+                    {optionsFilter.map((item, idx) => (
+                      <button
+                        key={idx}
+                        className={s.modal__button}
+                        onClick={() => handleClickButton(item.name)}
+                      >
+                        {item.name}
+                      </button>
+                    ))}
+                  </>
+                )
+                : <p>No hay resultados de la busqueda</p>}
             </div>
           )}
         </div>

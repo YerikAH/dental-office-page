@@ -1,30 +1,19 @@
-import Navigation from "../components/Navigation/Navigation";
+
 import logo from "../assets/logo.png";
-import Main from "../components/Main/Main";
-import BtnWhatsApp from "../components/BtnWhatsApp/BtnWhatsApp";
 import Footer from "../components/Footer/Footer";
+import Navigation from "../components/Navigation/Navigation";
 import email from "../assets/email.png";
 import location from "../assets/location.png";
 import phone from "../assets/phone.png";
 import facebook from "../assets/facebook.png";
 import { Routes } from "../interface/enum";
-
-const INFO = [
-  {
-    title: "Encuentranos en: ",
-    text: "Jr. Ica N° 113 - 2do Piso - Of. 09",
-  },
-  {
-    title: "Horario: ",
-    text: "Lunes a Sabados - 8:00am a 8:00pm",
-  },
-];
+import NotFound from "../components/NotFound/NotFound";
 
 const ITEMS = [
   {
     path: "/",
     label: "Inicio",
-    active: true,
+    active: false,
   },
   {
     path: "/",
@@ -137,7 +126,18 @@ const FOOTER = {
   button: "Agenda aquí",
 };
 
-function Home() {
+const INFO = [
+  {
+    title: "Encuentranos en: ",
+    text: "Jr. Ica N° 113 - 2do Piso - Of. 09",
+  },
+  {
+    title: "Horario: ",
+    text: "Lunes a Sabados - 8:00am a 8:00pm",
+  },
+];
+
+function Error() {
   return (
     <>
       <Navigation
@@ -145,16 +145,9 @@ function Home() {
         logo={logo}
         info={INFO}
       />
-      <Main />
+      <NotFound />
       <Footer footer={FOOTER} />
-      <BtnWhatsApp
-        text="Chatea con nosotros en WhatsApp"
-        logo="WhatsApp"
-        textTwo="¡Hola! Haga clic en uno de nuestros miembros a continuación para chatear en "
-        title="Abrir Charla"
-      />
     </>
   );
 }
-
-export default Home;
+export default Error;

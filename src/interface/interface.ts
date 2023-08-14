@@ -16,3 +16,9 @@ export interface Service{
   name: string,
   active: boolean
 }
+export interface Product{
+  name: string;
+  price: number;
+  image: string;
+  id: number;
+}

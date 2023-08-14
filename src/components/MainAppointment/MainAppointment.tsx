@@ -51,11 +51,11 @@ const APPOINTMENT = {
 const doctors = [
   {
     name: "Harvey Vasquez Huaranga Yerik",
-    phone: "967523180",
+    value: "967523180",
   },
   {
     name: "Pepe Vargas Sinche Pedro",
-    phone: "971234232",
+    value: "971234232",
   },
 ];
 const FORM = [
@@ -65,7 +65,8 @@ const FORM = [
     icon: <IconUser />,
     type: InputTypes.TEXT,
     withIcon: true,
-    doctors: doctors,
+    options: doctors,
+    isRequired: true
   },
   {
     label: "Email",
@@ -73,7 +74,8 @@ const FORM = [
     icon: <IconMail />,
     type: InputTypes.EMAIL,
     withIcon: true,
-    doctors: doctors,
+    options: doctors,
+    isRequired: true
   },
   {
     label: "Numero de celular",
@@ -81,7 +83,8 @@ const FORM = [
     icon: <IconPhone />,
     type: InputTypes.NUMBER,
     withIcon: true,
-    doctors: doctors,
+    options: doctors,
+    isRequired: true
   },
   {
     label: "Fecha",
@@ -89,7 +92,8 @@ const FORM = [
     icon: <IconCalendar />,
     type: InputTypes.DATE,
     withIcon: true,
-    doctors: doctors,
+    options: doctors,
+    isRequired: true
   },
   {
     label: "Hora",
@@ -97,7 +101,8 @@ const FORM = [
     icon: <IconClock />,
     type: InputTypes.HOUR,
     withIcon: true,
-    doctors: doctors,
+    options: doctors,
+    isRequired: true
   },
   {
     label: "Odontologo",
@@ -105,7 +110,8 @@ const FORM = [
     icon: <IconBuildingHospital />,
     type: InputTypes.SELECT,
     withIcon: true,
-    doctors: doctors,
+    options: doctors,
+    isRequired: true
   },
 ];
 const FORM_ALL = {
@@ -115,7 +121,7 @@ const FORM_ALL = {
     placeholder: "Escribe algún mensaje adicional por la consulta",
     type: InputTypes.TEXT,
     withIcon: false,
-    doctors: doctors,
+    options: doctors,
     multiline: true,
   },
 };

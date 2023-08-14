@@ -9,7 +9,7 @@ import NavInfo from "../NavInfo/NavInfo";
 import { Routes } from "../../interface/enum";
 import RenderConditionalLinks from "../RenderConditionalLinks/RenderConditionalLinks";
 
-function Navigation({ items, logo, info, Component, activeSection, itemsPage, linkClick }: NavigationProps) {
+function Navigation({ items, logo, info, Component}: NavigationProps) {
   const [menu, setMenu] = useState(false);
   const toggleMenu = () => {
     setMenu(!menu);
@@ -28,7 +28,7 @@ function Navigation({ items, logo, info, Component, activeSection, itemsPage, li
             </li>
           </div>
           <ul className={s.nav__pages}>
-            <RenderConditionalLinks items={items} activeSection={activeSection} itemsPage={itemsPage} linkClick={linkClick}/>
+            <RenderConditionalLinks items={items} />
           </ul>
           <div className={s.nav__pages}>
             <li>
@@ -56,11 +56,9 @@ function Navigation({ items, logo, info, Component, activeSection, itemsPage, li
         </nav>
         {Component !== undefined && Component}
         <NavigationMobile
-          itemsPage={itemsPage}
           items={items}
           logo={logo}
           state={menu}
-          linkClick={linkClick}
           setState={toggleMenu}
         />
       </header>
