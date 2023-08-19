@@ -6,6 +6,7 @@ function LeftDropDown(
   { title, setState, products, state, image, Component, ProductComponent }:
     LeftDropDownProps,
 ) {
+
   return (
     <div className={`${s.modal} ${state && `${s["modal--active"]}`}`}>
       <></>

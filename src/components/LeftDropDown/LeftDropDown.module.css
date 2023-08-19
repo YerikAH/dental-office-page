@@ -5,9 +5,13 @@
   background: var(--black-transparent-1);
   overflow: hidden;
   top: 0;
-  left: 0;
+  left: -100vw;
   display: flex;
   justify-content: end;
+  transition: 0.3s;
+}
+.moda--active {
+  left: 0;
 }
 .modal__contain {
   width: 100%;
@@ -44,7 +48,7 @@
   transition: 0.3s;
 }
 .modal__contain__title button:hover,
-.modal__contain__title button:focus{
+.modal__contain__title button:focus {
   background-color: var(--black-5);
 }
 .modal__contain__title svg {
@@ -55,25 +59,25 @@
   display: grid;
   padding: 4rem 0 8rem 0;
 }
-.modal__nothere{
+.modal__nothere {
   display: grid;
   place-items: center;
   margin-top: 2rem;
 }
-.modal__nothere img, 
-.modal__nothere svg{
+.modal__nothere img,
+.modal__nothere svg {
   width: 5rem;
   height: 5rem;
   object-fit: cover;
   filter: grayscale(10);
   color: var(--black-10);
 }
-.modal__nothere h4{
+.modal__nothere h4 {
   font: normal normal 600 0.8rem/1rem var(--font-primary);
   color: var(--black);
   margin-top: 1rem;
 }
-.modal__nothere button{
+.modal__nothere button {
   border: none;
   background-color: var(--blue);
   font: normal normal 600 0.6rem/1rem var(--font-primary);
@@ -85,6 +89,6 @@
   transition: 0.3s;
 }
 .modal__nothere button:focus,
-.modal__nothere button:hover{
+.modal__nothere button:hover {
   filter: brightness(0.8);
 }
