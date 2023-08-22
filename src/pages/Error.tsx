@@ -1,4 +1,3 @@
-
 import logo from "../assets/logo.png";
 import Footer from "../components/Footer/Footer";
 import Navigation from "../components/Navigation/Navigation";
@@ -6,8 +5,8 @@ import email from "../assets/email.png";
 import location from "../assets/location.png";
 import phone from "../assets/phone.png";
 import facebook from "../assets/facebook.png";
-import { Routes } from "../interface/enum";
 import NotFound from "../components/NotFound/NotFound";
+import { ScrollRestoration } from "react-router-dom";
 
 const ITEMS = [
   {
@@ -140,11 +139,8 @@ const INFO = [
 function Error() {
   return (
     <>
-      <Navigation
-        items={ITEMS}
-        logo={logo}
-        info={INFO}
-      />
+      <ScrollRestoration />
+      <Navigation items={ITEMS} logo={logo} info={INFO} />
       <NotFound />
       <Footer footer={FOOTER} />
     </>

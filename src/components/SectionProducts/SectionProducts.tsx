@@ -1,6 +1,14 @@
 import s from "./SectionProducts.module.css";
-
-function SectionProducts() {
-  return <section></section>;
+interface props {
+  children: JSX.Element[];
+}
+function SectionProducts({ children }: props) {
+  return (
+    <section className={s.section}>
+      {children.map((item, idx) => (
+        <div key={idx}>{item}</div>
+      ))}
+    </section>
+  );
 }
 export default SectionProducts;

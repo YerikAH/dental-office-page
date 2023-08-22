@@ -1,5 +1,11 @@
 import { InputTypes } from "./enum";
-import { Contacts, NavigationItems, Product, Service, SocialMedia } from "./interface";
+import {
+  Contacts,
+  NavigationItems,
+  Product,
+  Service,
+  SocialMedia,
+} from "./interface";
 export interface NavigationProps {
   state?: boolean;
   setState?: () => void;
@@ -216,18 +222,22 @@ export interface NavigationUserProps {
 }
 
 export interface ProductBagProps {
-  products: Product[]
+  products: Product[];
 }
 export interface LeftDropDownProps {
   title: string;
   setState(): void;
-  products: Product[]
+  products: Product[];
   state: boolean;
   Component?: JSX.Element;
   image: JSX.Element | string;
   ProductComponent: JSX.Element;
 }
 
-export interface SubTotalProps{
-  products: Product[]
+export interface SubTotalProps {
+  products: Product[];
+}
+
+export interface MapProps {
+  src: string;
 }

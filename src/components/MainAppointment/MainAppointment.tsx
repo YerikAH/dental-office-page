@@ -11,6 +11,7 @@ import {
   IconUser,
 } from "@tabler/icons-react";
 import SectionFindUs from "../SectionFindUs/SectionFindUs";
+import SectionMap from "../SectionMap/SectionMap.tsx";
 
 const APPOINTMENT = {
   services: [
@@ -66,7 +67,7 @@ const FORM = [
     type: InputTypes.TEXT,
     withIcon: true,
     options: doctors,
-    isRequired: true
+    isRequired: true,
   },
   {
     label: "Email",
@@ -75,7 +76,7 @@ const FORM = [
     type: InputTypes.EMAIL,
     withIcon: true,
     options: doctors,
-    isRequired: true
+    isRequired: true,
   },
   {
     label: "Numero de celular",
@@ -84,7 +85,7 @@ const FORM = [
     type: InputTypes.NUMBER,
     withIcon: true,
     options: doctors,
-    isRequired: true
+    isRequired: true,
   },
   {
     label: "Fecha",
@@ -93,7 +94,7 @@ const FORM = [
     type: InputTypes.DATE,
     withIcon: true,
     options: doctors,
-    isRequired: true
+    isRequired: true,
   },
   {
     label: "Hora",
@@ -102,7 +103,7 @@ const FORM = [
     type: InputTypes.HOUR,
     withIcon: true,
     options: doctors,
-    isRequired: true
+    isRequired: true,
   },
   {
     label: "Odontologo",
@@ -111,7 +112,7 @@ const FORM = [
     type: InputTypes.SELECT,
     withIcon: true,
     options: doctors,
-    isRequired: true
+    isRequired: true,
   },
 ];
 const FORM_ALL = {
@@ -166,6 +167,7 @@ function MainAppointment() {
         text={FIND_US.text}
         tag={FIND_US.tag}
       />
+      <SectionMap />
     </main>
   );
 }

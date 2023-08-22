@@ -1,7 +1,8 @@
 import Navigation from "../components/Navigation/Navigation";
 import logo from "../assets/logo.png";
 import NavigationProducts from "../components/NavigationProducts/NavigationProducts";
-import { Routes } from "../interface/enum";
+import MainProducts from "../components/MainProducts/MainProducts";
+import { ScrollRestoration } from "react-router-dom";
 
 const INFO = [
   {
@@ -45,16 +46,14 @@ const ITEMS = [
 function Products() {
   return (
     <>
-      <Navigation items={ITEMS} logo={logo} info={INFO} Component={<NavigationProducts />}/>
-      {/*<CardProduct
-        name="Prada"
-        price={2000}
-        description="Prada re edition 2005 saffiano Bar jacket With Stripes"
-        image="https://www.printhuellas.com/tshirtecommerce//uploaded/Prendas%20PrintHuellas/larga-hombre/A/dg-designer-34766559155741780534723175610763732.png"
-        descount={10}
-        like={false}
-        tag={{ color: "#FFF", bg: "#FF5151", text: "Nuevo" }}
-      />*/}
+      <ScrollRestoration />
+      <Navigation
+        items={ITEMS}
+        logo={logo}
+        info={INFO}
+        Component={<NavigationProducts />}
+      />
+      <MainProducts />
     </>
   );
 }

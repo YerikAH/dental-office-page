@@ -54,7 +54,7 @@ function CardProduct({
     }
   }, [descount, price, tag]);
   return (
-    <button className={s.product}>
+    <div className={s.product}>
       <div className={s.product__image}>
         {tagInterface !== null && (
           <span
@@ -91,7 +91,7 @@ function CardProduct({
           {descount !== undefined && <span>{priceDescount}</span>}
         </div>
       </div>
-    </button>
+    </div>
   );
 }
 export default CardProduct;

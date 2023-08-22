@@ -7,7 +7,7 @@ import email from "../assets/email.png";
 import location from "../assets/location.png";
 import phone from "../assets/phone.png";
 import facebook from "../assets/facebook.png";
-import { Routes } from "../interface/enum";
+import { ScrollRestoration } from "react-router-dom";
 
 const INFO = [
   {
@@ -140,11 +140,8 @@ const FOOTER = {
 function Home() {
   return (
     <>
-      <Navigation
-        items={ITEMS}
-        logo={logo}
-        info={INFO}
-      />
+      <ScrollRestoration />
+      <Navigation items={ITEMS} logo={logo} info={INFO} />
       <Main />
       <Footer footer={FOOTER} />
       <BtnWhatsApp
