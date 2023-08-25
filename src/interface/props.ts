@@ -241,3 +241,11 @@ export interface SubTotalProps {
 export interface MapProps {
   src: string;
 }
+export interface CardMisionProps{
+  title: string,
+  text: string
+}
+export interface SectionVisionMisionProps{
+  items: CardMisionProps[];
+  image: string
+}
