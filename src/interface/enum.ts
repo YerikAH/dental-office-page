@@ -4,7 +4,8 @@ export enum InputTypes{
   EMAIL,
   SELECT,
   TEXT,
-  NUMBER
+  NUMBER,
+  PASSWORD
 }
 export enum Routes{
   APPOINTMENT = "/appointment",

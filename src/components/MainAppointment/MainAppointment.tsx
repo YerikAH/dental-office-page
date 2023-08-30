@@ -12,6 +12,7 @@ import {
 } from "@tabler/icons-react";
 import SectionFindUs from "../SectionFindUs/SectionFindUs";
 import SectionMap from "../SectionMap/SectionMap.tsx";
+import { CustomInputProps } from "../../interface/props.ts";
 
 const APPOINTMENT = {
   services: [
@@ -59,15 +60,17 @@ const doctors = [
     value: "971234232",
   },
 ];
-const FORM = [
+const FORM:CustomInputProps[] = [
   {
     label: "Nombre",
+    name: "name",
     placeholder: "Escribe tu nombre",
-    icon: <IconUser />,
     type: InputTypes.TEXT,
     withIcon: true,
+    icon: <IconUser />,
     options: doctors,
     isRequired: true,
+
   },
   {
     label: "Email",
@@ -77,6 +80,7 @@ const FORM = [
     withIcon: true,
     options: doctors,
     isRequired: true,
+    name: "email",
   },
   {
     label: "Numero de celular",
@@ -86,6 +90,7 @@ const FORM = [
     withIcon: true,
     options: doctors,
     isRequired: true,
+    name: "phone_number",
   },
   {
     label: "Fecha",
@@ -95,6 +100,7 @@ const FORM = [
     withIcon: true,
     options: doctors,
     isRequired: true,
+    name: "date",
   },
   {
     label: "Hora",
@@ -104,6 +110,7 @@ const FORM = [
     withIcon: true,
     options: doctors,
     isRequired: true,
+    name: "hour",
   },
   {
     label: "Odontologo",
@@ -113,6 +120,7 @@ const FORM = [
     withIcon: true,
     options: doctors,
     isRequired: true,
+    name: "doctor",
   },
 ];
 const FORM_ALL = {
@@ -124,6 +132,7 @@ const FORM_ALL = {
     withIcon: false,
     options: doctors,
     multiline: true,
+    name: "message",
   },
 };
 const FIND_US = {

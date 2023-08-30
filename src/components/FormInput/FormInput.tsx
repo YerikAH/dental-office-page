@@ -2,7 +2,7 @@ import CustomInput from "../CustomInput/CustomInput";
 import { FormInputProps } from "../../interface/props";
 import s from "./FormInput.module.css";
 
-function FormInput({ inputs, textarea }: FormInputProps) {
+function FormInput({ inputs, textarea, setFormState,isSubmit }: FormInputProps) {
   return (
     <>
       <div className={s.form}>
@@ -16,6 +16,9 @@ function FormInput({ inputs, textarea }: FormInputProps) {
             withIcon={item.withIcon}
             options={item.options}
             isRequired={item.isRequired}
+            name={item.name}
+            setFormState={setFormState}
+            isSubmit={isSubmit}
           />
         ))}
       </div>
@@ -27,6 +30,9 @@ function FormInput({ inputs, textarea }: FormInputProps) {
           withIcon={textarea.withIcon}
           multiline={textarea.multiline}
           isRequired={textarea.isRequired}
+          name={textarea.name}
+          setFormState={setFormState}
+          isSubmit={isSubmit}
         />
       </div>
     </>

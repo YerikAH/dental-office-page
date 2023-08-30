@@ -156,19 +156,27 @@ export interface ServiceOptionsProps {
 }
 
 export interface CustomInputProps {
-  icon?: JSX.Element;
   label: string;
+  name: string;
   placeholder: string;
   type: InputTypes;
   withIcon: boolean;
+  icon?: JSX.Element;
   multiline?: boolean;
   options?: { name: string; value: string }[];
   isRequired?: boolean;
   isLabel?: boolean;
+  regex?: RegExp 
+  max?: number 
+  min?: number
+  setFormState?: (value: string, name: string, error: boolean) => void;
+  isSubmit?: boolean
 }
 export interface FormInputProps {
   inputs: CustomInputProps[];
   textarea: CustomInputProps;
+  setFormState?: (value: string, name: string, error: boolean) => void;
+  isSubmit?: boolean
 }
 export interface FormAppointmentProps {
   form: FormInputProps;

@@ -91,3 +91,9 @@
   font: normal normal 700 0.6rem/1rem var(--font-primary);
   color: var(--blue);
 }
+.input__error{
+  font: normal normal 700 0.6rem/1rem var(--font-primary);
+  color: var(--purple);
+  position: absolute;
+  bottom: -1rem;
+}
