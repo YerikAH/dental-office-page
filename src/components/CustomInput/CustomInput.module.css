@@ -56,3 +56,18 @@
   position: absolute;
   bottom: -1rem;
 }
+.hidden{
+  -webkit-text-security: disc !important
+}
+.btn__show{
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border: none;
+  background-color: transparent;
+  font: normal normal 700 0.6rem/1rem var(--font-primary); 
+  color: var(--blue);
+  text-transform: uppercase;
+}

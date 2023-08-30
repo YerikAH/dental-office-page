@@ -18,7 +18,7 @@ const APPOINTMENT = {
   services: [
     {
       image: icon,
-      name: "Endodoncia",
+      name: "Pediatria",
       active: true,
     },
     {
@@ -28,22 +28,22 @@ const APPOINTMENT = {
     },
     {
       image: icon,
-      name: "Endodoncia",
+      name: "Ortondoncia",
       active: false,
     },
     {
       image: icon,
-      name: "Endodoncia",
+      name: "Blacamiento",
       active: false,
     },
     {
       image: icon,
-      name: "Endodoncia",
+      name: "Consulta",
       active: false,
     },
     {
       image: icon,
-      name: "Endodoncia",
+      name: "Otros",
       active: false,
     },
   ],

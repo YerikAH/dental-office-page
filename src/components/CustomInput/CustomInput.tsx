@@ -27,6 +27,7 @@ function CustomInput({
   isSubmit,
 }: CustomInputProps) {
   const [modal, setModal] = useState(false);
+  const [password, setPassword] = useState(false);
   const [optionsFilter, setOptionsFilter] = useState<OptionsFilter[]>(options);
   const [moment, setMoment] = useState<Moment | null>(null);
   const [input, setInput] = useState("");
@@ -54,7 +55,7 @@ function CustomInput({
 
   function onOpenModal() {
     const typeAllowed = [InputTypes.DATE, InputTypes.HOUR, InputTypes.SELECT];
-    if(typeAllowed.includes(type)) {
+    if (typeAllowed.includes(type)) {
       setModal(!modal);
     }
   }
@@ -77,7 +78,7 @@ function CustomInput({
   function onChangeInput(
     e:
       | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
+      | React.ChangeEvent<HTMLTextAreaElement>,
   ) {
     const value = e.target.value;
     if (type === InputTypes.DATE || type === InputTypes.HOUR) return;
@@ -95,7 +96,7 @@ function CustomInput({
     regex: RegExp | undefined = /./,
     value: string,
     min: number | undefined = 0,
-    max: number | undefined = 10000
+    max: number | undefined = 10000,
   ) {
     const modelError = {
       text: "",
@@ -140,16 +141,15 @@ function CustomInput({
           {!multiline ? (
             <input
               id={name}
-              type="text"
               name={name}
               value={input}
               placeholder={placeholder}
               className={`${s.input__text} ${
                 !withIcon && `${s["input__text--without"]}`
-              }`}
+              } ${password && `${s.hidden}`}`}
               onClick={onOpenModal}
               onChange={(e) => onChangeInput(e)}
-              autoComplete="off" 
+              autoComplete="off"
               spellCheck="false"
             />
           ) : (
@@ -166,6 +166,15 @@ function CustomInput({
           )}
 
           {withIcon && icon}
+          {InputTypes.PASSWORD === type && (
+            <button
+              className={s.btn__show}
+              type="button"
+              onClick={() => setPassword(!password)}
+            >
+              {!password ? "NO MOSTRAR" : "MOSTRAR"}
+            </button>
+          )}
           {error.active && <p className={s.input__error}>{error.text}</p>}
           {modal && (
             <InputModal

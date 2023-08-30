@@ -155,6 +155,7 @@ export interface SectionBestResultsProps {
 
 export interface ServiceOptionsProps {
   services: Service[];
+  setFormState?: (value: string, name: string, error: boolean) => void;
 }
 
 export interface CustomInputProps {

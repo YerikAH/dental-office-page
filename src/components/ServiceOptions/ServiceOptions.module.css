@@ -20,6 +20,7 @@
   width: 2.5rem;
   height: 2.5rem;
   object-fit: cover;
+  pointer-events: none;
 }
 .service p {
   font: normal normal 500 0.8rem/1rem var(--font-primary);

@@ -4,8 +4,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/scrollbar";
+import { useState } from "react";
 
-function ServiceOptions({ services }: ServiceOptionsProps) {
+function ServiceOptions({ services, setFormState }: ServiceOptionsProps) {
+  const [servicesOp, setServicesOp] = useState(services)
+  function selectService(idx: number){
+    const newServices = servicesOp.map(item => {
+      item.active = false
+      services[idx].active = true
+      return item
+    })
+    const serviceSelect = newServices.find(item => item.active === true)
+    if (serviceSelect !== undefined) {
+      console.log("Exists")
+      setFormState?.(serviceSelect.name, "service", false)
+    }
+    setServicesOp(newServices)
+  }
   return (
     <>
       <Swiper
@@ -27,10 +42,12 @@ function ServiceOptions({ services }: ServiceOptionsProps) {
           },
         }}
       >
-        {services.map((item, idx) => (
+        {servicesOp.map((item, idx) => (
           <SwiperSlide key={idx}>
             <div className={s.service}>
               <button
+                type="button"
+                onClick={() => selectService(idx)}
                 className={`${s.service__button} ${
                   item.active && s["--active"]
                 }`}

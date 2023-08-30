@@ -41,7 +41,7 @@ function FormAppointment({ form, services }: FormAppointmentProps) {
 
   return (
     <form onSubmit={(e) => handleSubmit(e)} autoComplete="off">
-      <ServiceOptions services={services} />
+      <ServiceOptions services={services} setFormState={onSetFormState}/>
       <FormInput inputs={form.inputs} textarea={form.textarea} setFormState={onSetFormState} isSubmit={onSubmit}/>
       <input type="submit" value="Reserva cita" className={s.form__submit} />
     </form>
