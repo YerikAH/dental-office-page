@@ -1,7 +1,9 @@
+import { Moment } from "moment";
 import { InputTypes } from "./enum";
 import {
   Contacts,
   NavigationItems,
+  OptionsFilter,
   Product,
   Service,
   SocialMedia,
@@ -256,4 +258,12 @@ export interface CardMisionProps{
 export interface SectionVisionMisionProps{
   items: CardMisionProps[];
   image: string
+}
+
+export interface InputModalProps {
+  type: InputTypes;
+  value?: Moment | null;
+  onChange?: (newValue: Moment | null) => void;
+  options?: OptionsFilter[];
+  onClick?: (value: string) => void;
 }

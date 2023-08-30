@@ -22,3 +22,8 @@ export interface Product{
   image: string;
   id: number;
 }
+
+export interface OptionsFilter {
+  name: string;
+  value: string;
+}

@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 import { InputTypes } from "../../interface/enum";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
-import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
-import { MultiSectionDigitalClock } from "@mui/x-date-pickers/MultiSectionDigitalClock";
 import { Moment } from "moment";
+import InputModal from "../InputModal/InputModal";
+import { OptionsFilter } from "../../interface/interface";
 
 function CustomInput({
   name,
@@ -26,22 +26,18 @@ function CustomInput({
   setFormState,
   isSubmit,
 }: CustomInputProps) {
-  const [showDate, setShowDate] = useState(false);
-  const [showTime, setShowTime] = useState(false);
-  const [showSelect, setShowSelect] = useState(false);
+  const [modal, setModal] = useState(false);
+  const [optionsFilter, setOptionsFilter] = useState<OptionsFilter[]>(options);
+  const [moment, setMoment] = useState<Moment | null>(null);
+  const [input, setInput] = useState("");
   const [error, setError] = useState({
     text: "",
     active: false,
   });
-  const [optionsFilter, setOptionsFilter] =
-    useState<{ name: string; value: string }[]>(options);
-
-  const [date, setDate] = useState<Moment | null>(null);
-  const [hour, setHour] = useState<Moment | null>(null);
-  const [input, setInput] = useState("");
 
   function filterOptions(value: string) {
     const isEqual = options.find((item) => item.name === value);
+
     if (value.trim() === "" || isEqual !== undefined) {
       setOptionsFilter(options);
       return;
@@ -52,37 +48,32 @@ function CustomInput({
       const lowerCase = item.name.toLocaleLowerCase();
       return lowerCase.includes(valueLowerCase);
     });
+
     setOptionsFilter(filterOps);
   }
 
-  function handleClick() {
-    if (type === InputTypes.DATE) {
-      setShowDate(!showDate);
-    } else if (type === InputTypes.HOUR) {
-      setShowTime(!showTime);
-    } else if (type === InputTypes.SELECT) {
-      setShowSelect(!showSelect);
+  function onOpenModal() {
+    const typeAllowed = [InputTypes.DATE, InputTypes.HOUR, InputTypes.SELECT];
+    if(typeAllowed.includes(type)) {
+      setModal(!modal);
     }
   }
+
   function handleClickButton(name: string) {
     setInput(name);
-    setShowSelect(!showSelect);
+    setModal(!modal);
     detectError(isRequired, regex, name ?? "", min, max);
   }
+
   function onChangeCalendar(newValue: Moment | null) {
-    const dateString = newValue?.format("YYYY-MM-DD");
-    setDate(newValue);
+    const format = type === InputTypes.DATE ? "YYYY-MM-DD" : "HH:mm";
+    const dateString = newValue?.format(format);
+    setMoment(newValue);
     setInput(dateString ?? "");
-    setShowDate(!showDate);
+    setModal(!modal);
     detectError(isRequired, regex, dateString ?? "", min, max);
   }
-  function onChangeHour(newValue: Moment | null) {
-    const hourString = newValue?.format("HH:mm");
-    setHour(newValue);
-    setInput(hourString ?? "");
-    setShowTime(!showTime);
-    detectError(isRequired, regex, hourString ?? "", min, max);
-  }
+
   function onChangeInput(
     e:
       | React.ChangeEvent<HTMLInputElement>
@@ -92,7 +83,7 @@ function CustomInput({
     if (type === InputTypes.DATE || type === InputTypes.HOUR) return;
 
     if (type === InputTypes.SELECT) {
-      setShowSelect(true);
+      setModal(true);
       filterOptions(value);
     }
     setInput(value);
@@ -101,7 +92,7 @@ function CustomInput({
 
   function detectError(
     required: boolean,
-    regex: RegExp | undefined =/./,
+    regex: RegExp | undefined = /./,
     value: string,
     min: number | undefined = 0,
     max: number | undefined = 10000
@@ -110,29 +101,27 @@ function CustomInput({
       text: "",
       active: true,
     };
-    const validations = {
-      1: required && value.trim() === "" && "Este campo es requerido",
-      2: !regex.test(value) && "Este campo no es valido",
-      3: min && value.length < min && "Este campo tiene que tener minimo " + min,
-      4: max && max < value.length && "Este campo tiene que tener maximo " + max,
-    }
-    const idx = Object.values(validations).findIndex(item => typeof item === "string")
+    const validations = [
+      required && value.trim() === "" && "Este campo es requerido",
+      !regex.test(value) && "Este campo no es valido",
+      min && value.length < min && "Este campo tiene que tener minimo " + min,
+      max && max < value.length && "Este campo tiene que tener maximo " + max,
+    ];
+    const idx = validations.findIndex((item) => typeof item === "string");
 
-    if(idx === -1){
+    if (idx === -1) {
       modelError.active = false;
-    }else{
-      const message = Object.values(validations)[idx]
+    } else {
+      const message = validations[idx];
       modelError.text = message as string;
     }
-    
+
     setError(modelError);
     setForm(value, name, modelError.active);
   }
-  function setForm(value: string, name: string, error: boolean) {
-    if (setFormState) {
-      setFormState(value, name, error);
-    }
-  }
+
+  const setForm = (value: string, name: string, error: boolean) =>
+    setFormState?.(value, name, error);
 
   useEffect(() => {
     if (isSubmit) detectError(isRequired, regex, input, min, max);
@@ -158,9 +147,10 @@ function CustomInput({
               className={`${s.input__text} ${
                 !withIcon && `${s["input__text--without"]}`
               }`}
-              onClick={handleClick}
+              onClick={onOpenModal}
               onChange={(e) => onChangeInput(e)}
-              autoComplete="off"
+              autoComplete="off" 
+              spellCheck="false"
             />
           ) : (
             <textarea
@@ -177,42 +167,14 @@ function CustomInput({
 
           {withIcon && icon}
           {error.active && <p className={s.input__error}>{error.text}</p>}
-          {type === InputTypes.DATE && showDate && (
-            <div className={s.modal}>
-              <DateCalendar
-                showDaysOutsideCurrentMonth
-                fixedWeekNumber={6}
-                value={date}
-                onChange={(newValue) => onChangeCalendar(newValue)}
-              />
-            </div>
-          )}
-          {type === InputTypes.HOUR && showTime && (
-            <div className={s.modal}>
-              <MultiSectionDigitalClock
-                value={hour}
-                onChange={(newValue) => onChangeHour(newValue)}
-              />
-            </div>
-          )}
-          {type === InputTypes.SELECT && showSelect && (
-            <div className={s.modal}>
-              {optionsFilter.length !== 0 ? (
-                <>
-                  {optionsFilter.map((item, idx) => (
-                    <button
-                      key={idx}
-                      className={s.modal__button}
-                      onClick={() => handleClickButton(item.name)}
-                    >
-                      {item.name}
-                    </button>
-                  ))}
-                </>
-              ) : (
-                <p>No hay resultados de la busqueda</p>
-              )}
-            </div>
+          {modal && (
+            <InputModal
+              type={type}
+              onClick={handleClickButton}
+              onChange={onChangeCalendar}
+              value={moment}
+              options={optionsFilter}
+            />
           )}
         </div>
       </div>
