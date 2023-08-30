@@ -33,50 +33,12 @@ function CustomInput({
     text: "",
     active: false,
   });
-  const [typeInput, setTypeInput] = useState("text");
   const [optionsFilter, setOptionsFilter] =
     useState<{ name: string; value: string }[]>(options);
-  const [isType, setIsType] = useState({
-    text: false,
-    date: false,
-    email: false,
-    number: false,
-    hour: false,
-    select: false,
-    password: false
-  });
+
   const [date, setDate] = useState<Moment | null>(null);
   const [hour, setHour] = useState<Moment | null>(null);
   const [input, setInput] = useState("");
-
-  function selectType(type: InputTypes) {
-    switch (type) {
-      case InputTypes.TEXT:
-        setIsType({ ...isType, text: true });
-        break;
-      case InputTypes.DATE:
-        setIsType({ ...isType, date: true });
-        break;
-      case InputTypes.EMAIL:
-        setIsType({ ...isType, email: true });
-        setTypeInput("email");
-        break;
-      case InputTypes.NUMBER:
-        setIsType({ ...isType, number: true });
-        break;
-      case InputTypes.HOUR:
-        setIsType({ ...isType, hour: true });
-        break;
-      case InputTypes.SELECT:
-        setIsType({ ...isType, select: true });
-        break;
-      case InputTypes.PASSWORD:
-        setIsType({ ...isType, password: true });
-        break;
-      default:
-        break;
-    }
-  }
 
   function filterOptions(value: string) {
     const isEqual = options.find((item) => item.name === value);
@@ -94,11 +56,11 @@ function CustomInput({
   }
 
   function handleClick() {
-    if (isType.date) {
+    if (type === InputTypes.DATE) {
       setShowDate(!showDate);
-    } else if (isType.hour) {
+    } else if (type === InputTypes.HOUR) {
       setShowTime(!showTime);
-    } else if (isType.select) {
+    } else if (type === InputTypes.SELECT) {
       setShowSelect(!showSelect);
     }
   }
@@ -127,57 +89,44 @@ function CustomInput({
       | React.ChangeEvent<HTMLTextAreaElement>
   ) {
     const value = e.target.value;
-    if(isType.date || isType.hour) return
-    
-    if (isType.select) {
+    if (type === InputTypes.DATE || type === InputTypes.HOUR) return;
+
+    if (type === InputTypes.SELECT) {
       setShowSelect(true);
       filterOptions(value);
     }
     setInput(value);
-    detectError(isRequired, regex, value, min, max)
+    detectError(isRequired, regex, value, min, max);
   }
 
   function detectError(
     required: boolean,
-    regex: RegExp | undefined,
+    regex: RegExp | undefined =/./,
     value: string,
-    min: number | undefined,
-    max: number | undefined
+    min: number | undefined = 0,
+    max: number | undefined = 10000
   ) {
-    let isError = true
-    if (required && value.trim() === "") {
-      isError = true
-      setError({
-        text: "Este campo es requerido",
-        active: true,
-      });
-    } else if (regex && !regex.test(value)) {
-      isError = true
-      setError({
-        text: "Este campo no es valido",
-        active: true,
-      });
-    } else if (min && value.length < min) {
-      isError = true
-      setError({
-        text: "Este campo tiene que tener minimo " + min + " caracteres",
-        active: true,
-      });
-    } else if (max && max < value.length) {
-      isError = true
-      setError({
-        text: "Este campo tiene que tener maximo " + max + " caracteres",
-        active: true,
-      });
-    } else {
-      isError = false
-      setError({
-        text: "",
-        active: false,
-      });
+    const modelError = {
+      text: "",
+      active: true,
+    };
+    const validations = {
+      1: required && value.trim() === "" && "Este campo es requerido",
+      2: !regex.test(value) && "Este campo no es valido",
+      3: min && value.length < min && "Este campo tiene que tener minimo " + min,
+      4: max && max < value.length && "Este campo tiene que tener maximo " + max,
     }
-    setForm(value, name, isError);
+    const idx = Object.values(validations).findIndex(item => typeof item === "string")
 
+    if(idx === -1){
+      modelError.active = false;
+    }else{
+      const message = Object.values(validations)[idx]
+      modelError.text = message as string;
+    }
+    
+    setError(modelError);
+    setForm(value, name, modelError.active);
   }
   function setForm(value: string, name: string, error: boolean) {
     if (setFormState) {
@@ -186,12 +135,8 @@ function CustomInput({
   }
 
   useEffect(() => {
-    if(isSubmit) detectError(isRequired, regex, input, min, max);
+    if (isSubmit) detectError(isRequired, regex, input, min, max);
   }, [isSubmit]);
-
-  useEffect(() => {
-    selectType(type);
-  }, [type]);
 
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
@@ -206,7 +151,7 @@ function CustomInput({
           {!multiline ? (
             <input
               id={name}
-              type={typeInput}
+              type="text"
               name={name}
               value={input}
               placeholder={placeholder}
@@ -232,7 +177,7 @@ function CustomInput({
 
           {withIcon && icon}
           {error.active && <p className={s.input__error}>{error.text}</p>}
-          {isType.date && showDate && (
+          {type === InputTypes.DATE && showDate && (
             <div className={s.modal}>
               <DateCalendar
                 showDaysOutsideCurrentMonth
@@ -242,7 +187,7 @@ function CustomInput({
               />
             </div>
           )}
-          {isType.hour && showTime && (
+          {type === InputTypes.HOUR && showTime && (
             <div className={s.modal}>
               <MultiSectionDigitalClock
                 value={hour}
@@ -250,7 +195,7 @@ function CustomInput({
               />
             </div>
           )}
-          {isType.select && showSelect && (
+          {type === InputTypes.SELECT && showSelect && (
             <div className={s.modal}>
               {optionsFilter.length !== 0 ? (
                 <>
