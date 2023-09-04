@@ -4,6 +4,7 @@ import BtnWhatsApp from "../components/BtnWhatsApp/BtnWhatsApp";
 import Footer from "../components/Footer/Footer";
 import { ScrollRestoration } from "react-router-dom";
 import {NAV, FOOTER} from '../db/db' 
+import Register from "../components/Register/Register";
 
 
 
@@ -21,6 +22,7 @@ function Home() {
         textTwo="¡Hola! Haga clic en uno de nuestros miembros a continuación para chatear en "
         title="Abrir Charla"
       />
+       <Register />
     </>
   );
 }

@@ -268,3 +268,19 @@ export interface InputModalProps {
   options?: OptionsFilter[];
   onClick?: (value: string) => void;
 }
+
+export interface WelcomeProps{
+  title: string,
+  text: string
+  img: string,
+  button: string
+}
+export interface CardIconProps{
+  img: string
+   title: string
+    text: string
+}
+
+export interface SectionNumbersProps{
+  ITEMS: CardIconProps[];
+}

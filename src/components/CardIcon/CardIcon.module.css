@@ -1,0 +1,20 @@
+.card h2, .card p{
+  color: var(--white);
+  text-align: center;
+}
+.card{
+  display: grid;
+  place-items: center;
+}
+.card img{
+  width: 4rem;
+  object-fit: cover;
+}
+.card h2{
+  margin-top: 1.5rem;
+  font: normal normal 900 1.7rem/1.2rem var(--font-primary);
+}
+.card p{
+  font: normal normal 600 1rem/1rem var(--font-primary);
+  margin-top: 0.5rem;
+}

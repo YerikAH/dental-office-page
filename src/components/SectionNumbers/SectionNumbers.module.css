@@ -1,0 +1,12 @@
+.section{
+  background-color:#62b8ff;
+  width: 100%;
+  padding: 6rem 1rem;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  justify-content: space-around;
+}

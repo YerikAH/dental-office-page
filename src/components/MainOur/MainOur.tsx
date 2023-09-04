@@ -1,8 +1,11 @@
 import SectionOurDoctors from "../SectionOurDoctors/SectionOurDoctors";
 import SectionVisionMision from "../SectionVisionMision/SectionVisionMision";
-import poster from '../../assets/doctor_poster_two.png'
+import poster from "../../assets/doctor_poster_two.png";
 import s from "./Main.module.css";
-
+import Welcome from "../Welcome/Welcome";
+import welcome from "../../assets/welcome.png";
+import SectionNumbers from "../SectionNumbers/SectionNumbers";
+import userIcon from '../../assets/user-doctor.png'
 
 const ITEMS_DOCTORS = [
   {
@@ -61,6 +64,13 @@ const ITEMS_DOCTORS = [
     url: "",
   },
 ];
+const WELCOME = {
+  title: 'Bienvenido a "La Preventiva"',
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible dolor sit amet, consectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible dolor sit amet, consectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible",
+  img: welcome,
+  button: "Reserva tu cita aquí",
+};
+
 const ITEMS = [
   {
     title: "Misión",
@@ -71,14 +81,43 @@ const ITEMS = [
     text: "Somos líderes en tratamientos estéticos láser, sin importar tu objetivo de belleza. Nuestros profesionales experimentados, te ayudarán a lograr los resultados que esperas, ofreciéndote tratamientos estéticos accesibles y personalizados",
   },
 ];
+const NUMBERS = [
+  {
+    title: "2000",
+    text: "Pacientes",
+    img:  userIcon,
+  },
+  {
+    title: "500",
+    text: "Pacientes",
+    img:  userIcon,
+  },
+  {
+    title: "100",
+    text: "Pacientes",
+    img:  userIcon,
+  },  {
+    title: "700",
+    text: "Pacientes",
+    img:  userIcon,
+  }
+]
 function MainOur() {
+  
   return (
     <main className={s.main}>
+      <Welcome
+        img={WELCOME.img}
+        title={WELCOME.title}
+        text={WELCOME.text}
+        button={WELCOME.button}
+      />
+      <SectionVisionMision items={ITEMS} image={poster} />
       <SectionOurDoctors
         doctors={ITEMS_DOCTORS}
         title="Conoce a nuestros dentistas"
       />
-      <SectionVisionMision items={ITEMS} image={poster}/>
+      <SectionNumbers ITEMS={NUMBERS}/>
     </main>
   );
 }
