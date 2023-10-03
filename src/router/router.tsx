@@ -5,27 +5,33 @@ import Products from "../pages/Products.tsx";
 import Contact from "../pages/Contact.tsx";
 import Our from "../pages/Our.tsx";
 import { createBrowserRouter } from "react-router-dom";
+import { RoutesEnum } from "../interface/enum.ts";
+import Product from "../pages/Product.tsx";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: RoutesEnum.HOME,
     element: <Home />,
   },
   {
-    path: "/our",
+    path: RoutesEnum.OUR,
     element: <Our />,
   },
   {
-    path: "/contact",
+    path: RoutesEnum.CONTACT,
     element: <Contact />,
   },
   {
-    path: "/appointment",
+    path: RoutesEnum.APPOINTMENT,
     element: <Appointment />,
   },
   {
-    path: "/products",
+    path: RoutesEnum.PRODUCTS,
     element: <Products />,
+  },
+  {
+    path: RoutesEnum.PRODUCT,
+    element: <Product />,
   },
   {
     path: "*",

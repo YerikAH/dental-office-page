@@ -82,7 +82,11 @@
   border: none;
   display: grid;
   place-items: center;
+  transition: 0.3s;
   border-radius: 15rem;
+}
+.user__button:hover{
+  background-color: var(--black-10);
 }
 .user__actions__decoration {
   height: 1.5rem;
@@ -99,11 +103,21 @@
 .user__info {
   display: flex;
   gap: 0.5rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  padding: 0.3rem 1rem;
+  border-radius: 0.3rem;
   align-items: center;
   border: none;
   background-color: transparent;
   outline: none;
+  position: relative;
+  transition: 0.3s;
+}
+.user__info:hover{
+  background-color: var(--black-10);
+}
+.user__info:hover .user__button{
+  background-color: var(--black-10);
 }
 .user__info p {
   color: var(--black);

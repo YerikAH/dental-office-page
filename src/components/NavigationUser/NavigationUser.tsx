@@ -8,10 +8,12 @@ import {
   IconShoppingBag,
   IconUser,
 } from "@tabler/icons-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LeftDropDown from "../LeftDropDown/LeftDropDown";
 import ProductBag from "../ProductBag/ProductBag";
 import SubTotal from "../SubTotal/SubTotal";
+import ModalSettings from "../ModalSettings/ModalSettings";
+import ModalSettingsAllow from "../ModalSettingsAllow/ModalSettingsAllow";
 
 const DEFAULT = [
   {
@@ -23,78 +25,103 @@ const DEFAULT = [
 
 const PRODUCTS = [
   {
-    id:1,
-    name:"Cepillo de dientes",
+    id: 1,
+    name: "Cepillo de dientes",
     price: 100,
-    image: "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031"
+    image:
+      "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031",
   },
   {
-    id:2,
-    name:"Cepillo de dientes",
+    id: 2,
+    name: "Cepillo de dientes",
     price: 200,
-    image: "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031"
+    image:
+      "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031",
   },
   {
-    id:3,
-    name:"Cepillo de dientes",
+    id: 3,
+    name: "Cepillo de dientes",
     price: 300,
-    image: "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031"
+    image:
+      "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031",
   },
   {
-    id:1,
-    name:"Cepillo de dientes",
+    id: 1,
+    name: "Cepillo de dientes",
     price: 100,
-    image: "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031"
+    image:
+      "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031",
   },
   {
-    id:2,
-    name:"Cepillo de dientes",
+    id: 2,
+    name: "Cepillo de dientes",
     price: 200,
-    image: "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031"
+    image:
+      "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031",
   },
   {
-    id:1,
-    name:"Cepillo de dientes",
+    id: 1,
+    name: "Cepillo de dientes",
     price: 100,
-    image: "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031"
+    image:
+      "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031",
   },
   {
-    id:2,
-    name:"Cepillo de dientes",
+    id: 2,
+    name: "Cepillo de dientes",
     price: 200,
-    image: "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031"
+    image:
+      "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031",
   },
   {
-    id:3,
-    name:"Cepillo de dientes",
+    id: 3,
+    name: "Cepillo de dientes",
     price: 300,
-    image: "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031"
+    image:
+      "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031",
   },
   {
-    id:1,
-    name:"Cepillo de dientes",
+    id: 1,
+    name: "Cepillo de dientes",
     price: 100,
-    image: "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031"
+    image:
+      "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031",
   },
   {
-    id:2,
-    name:"Cepillo de dientes",
+    id: 2,
+    name: "Cepillo de dientes",
     price: 200,
-    image: "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031"
+    image:
+      "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031",
   },
   {
-    id:3,
-    name:"Cepillo de dientes",
+    id: 3,
+    name: "Cepillo de dientes",
     price: 300,
-    image: "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031"
+    image:
+      "https://tikafarma.com/cdn/shop/products/Cepillo-dientes-madera-3_800x.jpg?v=1643237031",
   },
-  
-]
+];
 function NavigationUser({ items = DEFAULT }: NavigationUserProps) {
   const [openBag, setOpenBag] = useState(false);
+  const [openUser, setOpenUser] = useState(false)
+  const [openLike, setOpenLike] = useState(false);
+  function openUserModal() {
+    setOpenUser(!openUser);
+  }
   function openProduct() {
     setOpenBag(!openBag);
   }
+  function openLikeProduct() {
+    setOpenLike(!openLike);
+  }
+  useEffect(() => {
+    if (openBag || openLike) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [openBag, openLike]);
   return (
     <>
       <div className={s.navigation}>
@@ -121,34 +148,42 @@ function NavigationUser({ items = DEFAULT }: NavigationUserProps) {
             </div>
             <div className={s.user__actions__decoration}></div>
             <div className={s.actions}>
-              <button className={s.user__button}>
+              <button className={s.user__button} onClick={openLikeProduct}>
                 <IconHeart />
               </button>
-              <button className={s.user__button}>
+              <button className={s.user__button} onClick={openProduct}>
                 <IconShoppingBag />
               </button>
             </div>
-            <button className={s.user__info}>
+            <button className={s.user__info} onClick={openUserModal}>
               <p>Harvey</p>
               <div className={s.user__button}>
                 <IconUser />
               </div>
-              <IconChevronDown size={16} />
+              <IconChevronDown size={16}/>
+              {openUser &&  <ModalSettingsAllow />}
             </button>
           </ul>
         </div>
       </div>
-      {
-        <LeftDropDown
-          title="Bolsa de productos"
-          setState={openProduct}
-          products={PRODUCTS}
-          state={openBag}
-          Component={<SubTotal products={PRODUCTS}/>}
-          ProductComponent={<ProductBag products={PRODUCTS}/>} image={<IconShoppingBag />
-        }
-        />
-      }
+
+      <LeftDropDown
+        title="Bolsa de productos"
+        setState={openProduct}
+        products={PRODUCTS}
+        state={openBag}
+        Component={<SubTotal products={PRODUCTS} />}
+        ProductComponent={<ProductBag products={PRODUCTS} />}
+        image={<IconShoppingBag />}
+      />
+      <LeftDropDown
+        title="Productos que te gustan"
+        setState={openLikeProduct}
+        products={PRODUCTS}
+        state={openLike}
+        ProductComponent={<ProductBag products={PRODUCTS} />}
+        image={<IconShoppingBag />}
+      />
     </>
   );
 }

@@ -2,7 +2,7 @@ import { NavigationProps } from "../../interface/props";
 import { Link } from "react-router-dom";
 import { IconX } from "@tabler/icons-react";
 import s from "./NavigationMobile.module.css";
-import { Routes } from "../../interface/enum";
+import { RoutesEnum } from "../../interface/enum";
 
 function NavigationMobile({
   items,
@@ -53,7 +53,7 @@ function NavigationMobile({
           </li>
           <li>
             <Link
-              to={Routes.APPOINTMENT}
+              to={RoutesEnum.APPOINTMENT}
               tabIndex={1}
               className={`${s.nav__link} ${s.nav__button}`}
             >

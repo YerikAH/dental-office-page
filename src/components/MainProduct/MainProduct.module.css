@@ -1,0 +1,12 @@
+.main {
+  padding: 18rem 1rem 0 1rem;
+}
+.main section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section__info {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { NavigationProps } from "../../interface/props";
 import NavigationMobile from "../NavigationMobile/NavigationMobile";
 import NavInfo from "../NavInfo/NavInfo";
-import { Routes } from "../../interface/enum";
+import { RoutesEnum } from "../../interface/enum";
 import RenderConditionalLinks from "../RenderConditionalLinks/RenderConditionalLinks";
 
 function Navigation({ items, logo, info, Component}: NavigationProps) {
@@ -42,7 +42,7 @@ function Navigation({ items, logo, info, Component}: NavigationProps) {
             </li>
             <li>
               <LinkRouter
-                to={Routes.APPOINTMENT}
+                to={RoutesEnum.APPOINTMENT}
                 tabIndex={1}
                 className={`${s.nav__link} ${s.nav__button}`}
               >

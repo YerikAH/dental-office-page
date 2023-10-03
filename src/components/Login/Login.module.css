@@ -10,7 +10,7 @@
   display: grid;
   place-items: center;
   z-index: 1000;
-  opacity: 0;
+  opacity: 0; 
   visibility: hidden;
 }
 .active{
@@ -114,6 +114,17 @@
   color: var(--black-50);
   text-decoration: none;
   transition: 0.3s;
+}
+.link__color{
+  font: normal normal 600 0.8rem/1rem var(--font-primary);
+  text-decoration: underline;
+  color: var(--blue);
+  display: block;
+  text-align: right;
+  transition: 0.3s;
+}
+.link__color:hover{
+  filter: brightness(1.2);
 }
 .link:hover{
   color: var(--black);

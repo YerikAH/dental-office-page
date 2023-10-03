@@ -3,7 +3,7 @@ import location from "../assets/location.png";
 import phone from "../assets/phone.png";
 import facebook from "../assets/facebook.png";
 import logo from "../assets/logo.png";
-
+import {RoutesEnum} from '../interface/enum'
 
 // local
 const INFO = [
@@ -18,12 +18,12 @@ const INFO = [
 ];
 const ITEMS = [
   {
-    path: "/",
+    path: RoutesEnum.HOME,
     label: "Inicio",
     active: true,
   },
   {
-    path: "/",
+    path: RoutesEnum.OUR,
     label: "Nosotros",
     active: false,
   },
@@ -33,12 +33,12 @@ const ITEMS = [
     active: false,
   },
   {
-    path: "/",
+    path: RoutesEnum.CONTACT,
     label: "Contactanos",
     active: false,
   },
   {
-    path: "/",
+    path: RoutesEnum.PRODUCTS,
     label: "Productos",
     active: false,
   },

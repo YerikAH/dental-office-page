@@ -5,21 +5,32 @@
   background: var(--black-transparent-1);
   overflow: hidden;
   top: 0;
-  left: -100vw;
+  right:-100vw;
   display: flex;
   justify-content: end;
   transition: 0.3s;
 }
-.moda--active {
-  left: 0;
+.modal--active {
+  right: 0;
 }
 .modal__contain {
   width: 100%;
-  max-width: 300px;
+  max-width: 0px;
   position: relative;
   background: var(--white);
   height: 100vh;
   overflow: auto;
+  transition: 0.5s;
+}
+.modal--active .modal__contain{
+  max-width: 300px;
+}
+.left{
+  left:-100vw;
+  justify-content: start;
+}
+.modal--active.left {
+  left: 0;
 }
 .modal__contain__title {
   display: flex;

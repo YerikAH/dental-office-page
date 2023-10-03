@@ -7,8 +7,11 @@ export enum InputTypes{
   NUMBER,
   PASSWORD
 }
-export enum Routes{
-  APPOINTMENT = "/appointment",
+export enum RoutesEnum{
   HOME = "/",
-  PRODUCTS = "/products"
+  OUR = "/our",
+  CONTACT = "/contact",
+  APPOINTMENT = "/appointment",
+  PRODUCTS = "/products",
+  PRODUCT = "/products/:id",
 }

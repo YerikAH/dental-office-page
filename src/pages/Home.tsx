@@ -5,10 +5,13 @@ import Footer from "../components/Footer/Footer";
 import { ScrollRestoration } from "react-router-dom";
 import {NAV, FOOTER} from '../db/db' 
 import Register from "../components/Register/Register";
+import Login from "../components/Login/Login";
+import { useState } from "react";
 
 
 
 function Home() {
+  const [modal, setModal] = useState(true)
   return (
     <>
       <ScrollRestoration />
@@ -22,7 +25,7 @@ function Home() {
         textTwo="¡Hola! Haga clic en uno de nuestros miembros a continuación para chatear en "
         title="Abrir Charla"
       />
-       <Register />
+      <Login setState={setModal} state={modal}/>
     </>
   );
 }

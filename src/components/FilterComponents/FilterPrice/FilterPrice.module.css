@@ -1,0 +1,29 @@
+.price {
+  display: grid;
+  place-items: start;
+}
+.price h3 {
+  font: normal normal 600 1rem/1.2rem var(--font-primary);
+  color: var(--black);
+  border-bottom: 1px solid var(--black-10);
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+.price__line{
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem
+}
+.price__line__heights{
+  display: flex;
+  gap: 0.3rem;
+  justify-content: end;
+  align-items: end;
+  position: relative;
+  bottom: -0.8rem;
+  overflow: hidden;
+}
+.price__line__heights div{
+  background-color: var(--black-10);
+  width: 15px;
+}

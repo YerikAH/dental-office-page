@@ -169,17 +169,17 @@ export interface CustomInputProps {
   options?: { name: string; value: string }[];
   isRequired?: boolean;
   isLabel?: boolean;
-  regex?: RegExp 
-  max?: number 
-  min?: number
+  regex?: RegExp;
+  max?: number;
+  min?: number;
   setFormState?: (value: string, name: string, error: boolean) => void;
-  isSubmit?: boolean
+  isSubmit?: boolean;
 }
 export interface FormInputProps {
   inputs: CustomInputProps[];
   textarea: CustomInputProps;
   setFormState?: (value: string, name: string, error: boolean) => void;
-  isSubmit?: boolean
+  isSubmit?: boolean;
 }
 export interface FormAppointmentProps {
   form: FormInputProps;
@@ -252,13 +252,13 @@ export interface SubTotalProps {
 export interface MapProps {
   src: string;
 }
-export interface CardMisionProps{
-  title: string,
-  text: string
+export interface CardMisionProps {
+  title: string;
+  text: string;
 }
-export interface SectionVisionMisionProps{
+export interface SectionVisionMisionProps {
   items: CardMisionProps[];
-  image: string
+  image: string;
 }
 
 export interface InputModalProps {
@@ -269,18 +269,52 @@ export interface InputModalProps {
   onClick?: (value: string) => void;
 }
 
-export interface WelcomeProps{
-  title: string,
-  text: string
-  img: string,
-  button: string
+export interface WelcomeProps {
+  title: string;
+  text: string;
+  img: string;
+  button: string;
 }
-export interface CardIconProps{
-  img: string
-   title: string
-    text: string
+export interface CardIconProps {
+  img: string;
+  title: string;
+  text: string;
 }
 
-export interface SectionNumbersProps{
+export interface SectionNumbersProps {
   ITEMS: CardIconProps[];
+}
+
+export interface SectionParallaxProps {
+  title?: string;
+  text?: string;
+  slogan?: string;
+  image?: string;
+  logo?: string;
+}
+
+export interface ModalSettingsProps {
+  text: string;
+  button: string;
+}
+
+export interface RegisterProps {
+  state: boolean;
+  setState(state: boolean): void;
+}
+
+export interface LoginProps {
+  state: boolean;
+  setState(state: boolean): void;
+}
+
+export interface SliderProductProps {
+  images: string[];
+}
+
+export interface InfoProductProps {
+  product: {
+    title: string;
+    description: string;
+  };
 }
