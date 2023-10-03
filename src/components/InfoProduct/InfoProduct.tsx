@@ -24,8 +24,8 @@ function InfoProduct({ product }: InfoProductProps) {
         <button className={s.buy__bag}>Añadir a la bolsa</button>
       </div>
 
-      <button>
-        <IconHeart />
+      <button className={s.wish}>
+        <IconHeart size={18}/>
         Añadir a deseos
       </button>
     </div>

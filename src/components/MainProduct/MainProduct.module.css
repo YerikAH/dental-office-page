@@ -8,5 +8,10 @@
 }
 .section__info {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  gap: 2rem;
+}
+@media (min-width: 720px) {
+  .section__info {
+    grid-template-columns: repeat(2, 50%);
+  }
 }
