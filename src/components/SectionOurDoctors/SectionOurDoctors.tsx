@@ -2,9 +2,9 @@ import CarouselCards from "../CarouselCards/CarouselCards";
 import s from "./SectionOurDoctors.module.css";
 import { SectionOurDoctorsProps } from "../../interface/props";
 
-function SectionOurDoctors({ doctors, title, sectionRefs }: SectionOurDoctorsProps) {
+function SectionOurDoctors({ doctors, title }: SectionOurDoctorsProps) {
   return (
-    <section className={s.section} ref={sectionRefs?.[1]} id="Nosotros">
+    <section className={s.section} id="Nosotros">
       <div className={s.section__contain}>
         <div className={s.section__contain__title}>
           <h3>{title}</h3>

@@ -4,6 +4,7 @@ import CardDentist from "../CardDentist/CardDentist";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ButtonCarousel from "../ButtonCarousel/ButtonCarousel";
 import "swiper/css";
+
 function CarouselCards({ cards }: CarouselCardsProps) {
   return (
     <div className={s.carousel}>

@@ -3,6 +3,8 @@ import { SliderProductProps } from "../../interface/props";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 import InnerImageZoom from "react-inner-image-zoom";
 import s from "./SliderProduct.module.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
 function SliderProduct({ images }: SliderProductProps) {
   const [index, setIndex] = useState(0);
@@ -13,17 +15,24 @@ function SliderProduct({ images }: SliderProductProps) {
           src={images[index]}
           zoomType="hover"
           zoomPreload={true}
-          width={600}
-          height={600}
+          zoomScale={2}
+          className={s.image__zoom}
         />
       </div>
-      <div className={s.images}>
+      <Swiper
+        modules={[Autoplay]}
+        slidesPerView={4}
+        rewind={true}
+        spaceBetween={40}
+      >
         {images.map((item, idx) => (
-          <button key={idx} onClick={() => setIndex(idx)}>
-            <img src={item} alt="image" />
-          </button>
+          <SwiperSlide key={idx}>
+            <button onClick={() => setIndex(idx)} className={s.images}>
+              <img src={item} alt="image" />
+            </button>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
   );
 }
