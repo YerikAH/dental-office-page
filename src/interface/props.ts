@@ -226,6 +226,9 @@ export interface CardProductProps {
   descount?: number;
   like: boolean;
   tag?: { bg: string; color: string; text: string };
+  onLikeProduct(): void;
+  onClickProduct(): void;
+  onClickBag(): void;
 }
 
 export interface NavigationUserProps {
