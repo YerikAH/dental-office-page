@@ -5,29 +5,25 @@
   display: grid;
   margin: 6rem auto;
 }
-.section__form h2 {
+.section__info h2 {
   font: normal normal 700 1.3rem/1.2rem var(--font-primary);
   color: var(--black);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   margin-top: 8rem;
 }
-.section__form p {
+.section__info p {
   font: normal normal 400 0.8rem/1rem var(--font-primary);
   color: var(--black-50);
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
-.section__map {
-  height: 500px;
-}
-.section__map iframe {
-  width: 100%;
-  height: 100%;
+.section__info {
+
 }
 @media (min-width: 1000px) {
   .section {
-    grid-template-columns: 38% 58%;
+    grid-template-columns:  58% 38%;
     gap: 4%;
   }
   .section__map {

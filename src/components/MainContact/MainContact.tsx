@@ -8,7 +8,7 @@ import s from './MainContact.module.css'
 
 const CONTACT = {
   title: "Contactanos",
-  text: "Lorem ipsum dolor sit amet, qui minim labore adipisicing.",
+  text: "Lorem ipsum dolor sit amet, qui minim labore adipisicing  qui minim labore adipisicing  qui minim labore adipisicing  qui minim labore adipisicing.",
   inputs: [
     {
       name: "name",

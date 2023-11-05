@@ -317,7 +317,12 @@ export interface SliderProductProps {
 
 export interface InfoProductProps {
   product: {
-    title: string;
+    name: string;
     description: string;
+    image: string;
+    price: number;
+    descount?: number;
+    like: boolean;
+    tag?: { bg: string; color: string; text: string };
   };
 }
