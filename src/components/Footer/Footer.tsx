@@ -28,9 +28,7 @@ function Footer({ footer }: FooterCompressedProps) {
             {footer.contacts.map((item, idx) => (
               <li key={idx}>
                 <img src={item.icon} alt="icon" />
-                <a className={s.text} tabIndex={1}>
-                  {item.label}
-                </a>
+                <p className={s.text}>{item.label}</p>
               </li>
             ))}
           </ul>
