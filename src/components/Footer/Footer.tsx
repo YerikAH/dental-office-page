@@ -23,13 +23,11 @@ function Footer({ footer }: FooterCompressedProps) {
           </div>
         </div>
         <div className={s.footer__contain__navigation}>
-          <h2 className={`${s["text--bold"]} ${s.text}`}>
-            {footer.labelOne}
-          </h2>
+          <h2 className={`${s["text--bold"]} ${s.text}`}>{footer.labelOne}</h2>
           <ul>
             {footer.contacts.map((item, idx) => (
               <li key={idx}>
-                <img src={item.icon} alt="icon"/>
+                <img src={item.icon} alt="icon" />
                 <a className={s.text} tabIndex={1}>
                   {item.label}
                 </a>
@@ -38,32 +36,20 @@ function Footer({ footer }: FooterCompressedProps) {
           </ul>
         </div>
         <div className={s.footer__contain__navigation}>
-          <h2 className={`${s["text--bold"]} ${s.text}`}>
-            {footer.labelTwo}
-          </h2>
-          <ul>
-            {footer.navigation.map((item, idx) => (
-              <li key={idx}>
-                <a href={item.path} className={s.text} tabIndex={1}>
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <h2 className={`${s["text--bold"]} ${s.text}`}>{footer.labelTwo}</h2>
+          <p
+            className={s.text}
+            dangerouslySetInnerHTML={{ __html: footer.descriptionI }}
+          />
         </div>
         <div className={s.footer__contain__navigation}>
           <h2 className={`${s["text--bold"]} ${s.text}`}>
             {footer.labelThree}
           </h2>
-          <ul>
-            {footer.navigation.map((item, idx) => (
-              <li key={idx}>
-                <a href={item.path} className={s.text} tabIndex={1}>
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <p
+            className={s.text}
+            dangerouslySetInnerHTML={{ __html: footer.descriptionII }}
+          />
         </div>
       </div>
       <div className={s.footer__copyright}>

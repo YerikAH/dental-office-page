@@ -5,8 +5,8 @@ import facebook from "../assets/facebook.png";
 import logo from "../assets/logo.png";
 import icon from "../assets/iconAppointment.png";
 import { InputTypes, RoutesEnum } from "../interface/enum";
-import { CustomInputProps } from "../interface/props";
-import userIcon from '../assets/user-doctor.png'
+import { CustomInputProps, FooterProps } from "../interface/props";
+import userIcon from "../assets/user-doctor.png";
 import {
   IconBuildingHospital,
   IconCalendar,
@@ -15,7 +15,6 @@ import {
   IconPhone,
   IconUser,
 } from "@tabler/icons-react";
-
 
 // LOCAL
 const INFO = [
@@ -55,28 +54,7 @@ const ITEMS = [
     active: false,
   },
 ];
-const ITEMS_FOOTER = [
-  {
-    path: "/",
-    label: "Productos",
-    active: true,
-  },
-  {
-    path: "/",
-    label: "Nosotros",
-    active: false,
-  },
-  {
-    path: "/",
-    label: "Servicios",
-    active: false,
-  },
-  {
-    path: "/",
-    label: "Porque elegirnos",
-    active: false,
-  },
-];
+
 const MEDIA = [
   {
     media: facebook,
@@ -103,15 +81,18 @@ const CONTACTS = [
 ];
 
 // export data
-export const FOOTER = {
+export const FOOTER: FooterProps = {
   question: "¿Quieres agendar una cita facilmente?",
   button: "Agenda aquí",
   logo: logo,
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus etLorem ipsum dolor sit amet, consectetur adipiscing elit etiam tellus ipsum, pellentesque quis dapibus et.",
   media: MEDIA,
   contacts: CONTACTS,
-  navigation: ITEMS_FOOTER,
-  labelOne: "Datos de contacto",
+  descriptionI:
+    "<b>Lunes a viernes:</b><br/>9:00am - 9:00pm <br/> <br/> <b>Sabados:</b><br/>9:00am - 7:00pm",
+  descriptionII:
+    "Las entregas se realizarán previa coordinación de fecha y horario con el cliente.",
+  labelOne: "Datos del contacto",
   labelTwo: "Horario de antención",
   labelThree: "Entrega",
   copyright: 'Copyright © 2023 Consultorio odontológico "La Preventiva"',
@@ -320,20 +301,21 @@ export const NUMBERS = [
   {
     title: "2000",
     text: "Pacientes",
-    img:  userIcon,
+    img: userIcon,
   },
   {
     title: "500",
     text: "Pacientes",
-    img:  userIcon,
+    img: userIcon,
   },
   {
     title: "100",
     text: "Pacientes",
-    img:  userIcon,
-  },  {
+    img: userIcon,
+  },
+  {
     title: "700",
     text: "Pacientes",
-    img:  userIcon,
-  }
-]
+    img: userIcon,
+  },
+];

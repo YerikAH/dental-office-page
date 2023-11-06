@@ -13,17 +13,20 @@
   gap: 1rem;
 }
 .footer__contain__info,
-.footer__contain__navigation,
-.footer__contain__contact {
+.footer__contain__navigation {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
+  display: grid;
+}
+.footer__contain__navigation {
+  padding-top: 3rem;
+  grid-template-rows: 1.5rem auto;
+  gap: 1rem;
 }
 .footer__contain h2 {
-  margin-bottom: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .footer__contain ul {
   gap: 0.5rem;
@@ -74,15 +77,16 @@
   padding: 0.3rem;
   transition: 0.3s;
 }
-.footer__contain__navigation img{
+.footer__contain__navigation img {
   width: 16px;
   object-fit: cover;
 }
-.footer__contain__navigation li{
+.footer__contain__navigation li {
   display: flex;
   gap: 0.5rem;
   align-items: center;
   justify-content: start;
+  cursor: pointer;
 }
 .footer__contain__info a:hover,
 .footer__contain__info a:focus {
@@ -94,7 +98,6 @@
   height: 1rem;
   object-fit: cover;
 }
-
 
 .footer__contain__navigation a:hover,
 .footer__contain__navigation a:focus {
@@ -115,6 +118,4 @@
     justify-content: space-between;
     grid-template-columns: 30% 20% 20% 20%;
   }
-
-
 }

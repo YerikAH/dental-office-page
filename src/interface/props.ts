@@ -128,7 +128,8 @@ export interface FooterProps {
   logo: string;
   text: string;
   media: SocialMedia[];
-  navigation: NavigationItems[];
+  descriptionI: string;
+  descriptionII: string;
   contacts: Contacts[];
   labelOne: string;
   labelTwo: string;
