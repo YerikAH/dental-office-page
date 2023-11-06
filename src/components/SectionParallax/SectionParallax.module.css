@@ -33,6 +33,7 @@
   place-items: center;
   position: relative;
   z-index: 100;
+  padding: 0 1rem;
 }
 .container h1 {
   font: normal normal 600 2.5rem/4rem var(--font-primary);

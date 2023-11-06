@@ -1,8 +1,8 @@
 import CardMision from "../CardMision/CardMision";
 import s from "./SectionVisionMision.module.css";
-import {SectionVisionMisionProps} from "../../interface/props";
+import { SectionVisionMisionProps } from "../../interface/props";
 
-function SectionVisionMision({image, items}:SectionVisionMisionProps) {
+function SectionVisionMision({ image, items }: SectionVisionMisionProps) {
   return (
     <section className={s.section}>
       <div className={s.section__grid}>
@@ -20,8 +20,8 @@ function SectionVisionMision({image, items}:SectionVisionMisionProps) {
             </ul>
           </div>
         </div>
-        <div>
-          <img src={image} alt="image"/>
+        <div className={s.container__image}>
+          <img src={image} alt="image" />
         </div>
       </div>
     </section>

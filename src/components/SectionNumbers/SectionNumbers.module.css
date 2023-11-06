@@ -1,12 +1,23 @@
-.section{
-  background-color:#62b8ff;
+.section {
+  background-color: #62b8ff;
   width: 100%;
-  padding: 6rem 1rem;
+  padding: 10rem 1rem;
 }
-.container{
+.container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 100px);
+  row-gap: 4rem;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: 50% 50%;
   justify-content: space-around;
+}
+@media (min-width: 720px) {
+  .section {
+    padding: 6rem 1rem;
+  }
+  .container {
+    row-gap: 0rem;
+    grid-template-columns: repeat(4, 100px);
+  }
 }

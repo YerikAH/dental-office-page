@@ -5,9 +5,9 @@ import s from "./Main.module.css";
 import Welcome from "../Welcome/Welcome";
 import welcome from "../../assets/welcome.png";
 import SectionNumbers from "../SectionNumbers/SectionNumbers";
-import userIcon from '../../assets/user-doctor.png'
+import userIcon from "../../assets/user-doctor.png";
 import SectionParallax from "../SectionParallax/SectionParallax";
-import posterII from '../../assets/good_poster_III.jpg'
+import posterII from "../../assets/good_poster_III.jpg";
 
 const ITEMS_DOCTORS = [
   {
@@ -87,25 +87,25 @@ const NUMBERS = [
   {
     title: "2000",
     text: "Pacientes",
-    img:  userIcon,
+    img: userIcon,
   },
   {
     title: "500",
     text: "Pacientes",
-    img:  userIcon,
+    img: userIcon,
   },
   {
     title: "100",
     text: "Pacientes",
-    img:  userIcon,
-  },  {
+    img: userIcon,
+  },
+  {
     title: "700",
     text: "Pacientes",
-    img:  userIcon,
-  }
-]
+    img: userIcon,
+  },
+];
 function MainOur() {
-  
   return (
     <main className={s.main}>
       <Welcome
@@ -119,8 +119,14 @@ function MainOur() {
         doctors={ITEMS_DOCTORS}
         title="Conoce a nuestros dentistas"
       />
-      <SectionNumbers ITEMS={NUMBERS}/>
-      <SectionParallax text="Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible. Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum." logo='"La preventiva"' slogan="Nos preocupamos por tu salud" title="La mejora atención en" image={posterII}/>
+      <SectionNumbers ITEMS={NUMBERS} />
+      <SectionParallax
+        text="Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible. Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum."
+        logo='"La preventiva"'
+        slogan="Nos preocupamos por tu salud"
+        title="La mejora atención en"
+        image={posterII}
+      />
     </main>
   );
 }
