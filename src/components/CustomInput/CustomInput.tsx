@@ -20,9 +20,9 @@ function CustomInput({
   options = [],
   isRequired = false,
   isLabel = true,
-  regex,
-  max,
-  min,
+  regex = /./,
+  max = 255,
+  min = 4,
   setFormState,
   isSubmit,
 }: CustomInputProps) {
@@ -93,10 +93,10 @@ function CustomInput({
 
   function detectError(
     required: boolean,
-    regex: RegExp | undefined = /./,
+    regex: RegExp,
     value: string,
-    min: number | undefined = 0,
-    max: number | undefined = 10000,
+    min: number,
+    max: number,
   ) {
     const modelError = {
       text: "",

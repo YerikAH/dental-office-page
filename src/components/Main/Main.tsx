@@ -16,6 +16,7 @@ import smile_good from "../../assets/smile_perfect.jpg";
 import smile_bad from "../../assets/smile_bad.jpg";
 import SectionContact from "../SectionContact/SectionContact";
 import { InputTypes } from "../../interface/enum";
+import { CONTACT } from "../../db/db";
 
 const IMAGES_INTRO = [
   {
@@ -305,48 +306,7 @@ const BEST = {
     smile_bad: smile_bad,
   },
 };
-const CONTACT = {
-  title: "Contactanos",
-  text: "Lorem ipsum dolor sit amet, qui minim labore adipisicing.",
-  inputs: [
-    {
-      label: "Nombre",
-      placeholder: "Escribe tu nombre",
-      type: InputTypes.TEXT,
-      withIcon: false,
-      doctors: [],
-    },
-    {
-      label: "Apellido",
-      placeholder: "Escribe tu apellido",
-      type: InputTypes.TEXT,
-      withIcon: false,
-      doctors: [],
-    },
-    {
-      label: "Correo electronico",
-      placeholder: "Escribe tu correo electronico",
-      type: InputTypes.EMAIL,
-      withIcon: false,
-      doctors: [],
-    },
-    {
-      label: "Numero de celular",
-      placeholder: "Escribe tu numero de celular",
-      type: InputTypes.NUMBER,
-      withIcon: false,
-      doctors: [],
-    },
-    {
-      label: "Mensaje",
-      placeholder: "Escribe algún mensaje adicional",
-      type: InputTypes.TEXT,
-      withIcon: false,
-      multiline: true,
-      doctors: [],
-    },
-  ],
-};
+
 function Main() {
   return (
     <main className={s.main}>

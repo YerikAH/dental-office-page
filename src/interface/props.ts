@@ -130,8 +130,9 @@ export interface FooterProps {
   media: SocialMedia[];
   navigation: NavigationItems[];
   contacts: Contacts[];
-  labelNavigation: string;
-  labelContact: string;
+  labelOne: string;
+  labelTwo: string;
+  labelThree: string;
   copyright: string;
   question: string;
   button: string;

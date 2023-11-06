@@ -24,7 +24,22 @@ function Footer({ footer }: FooterCompressedProps) {
         </div>
         <div className={s.footer__contain__navigation}>
           <h2 className={`${s["text--bold"]} ${s.text}`}>
-            {footer.labelNavigation}
+            {footer.labelOne}
+          </h2>
+          <ul>
+            {footer.contacts.map((item, idx) => (
+              <li key={idx}>
+                <img src={item.icon} alt="icon"/>
+                <a className={s.text} tabIndex={1}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={s.footer__contain__navigation}>
+          <h2 className={`${s["text--bold"]} ${s.text}`}>
+            {footer.labelTwo}
           </h2>
           <ul>
             {footer.navigation.map((item, idx) => (
@@ -36,15 +51,16 @@ function Footer({ footer }: FooterCompressedProps) {
             ))}
           </ul>
         </div>
-        <div className={s.footer__contain__contact}>
+        <div className={s.footer__contain__navigation}>
           <h2 className={`${s["text--bold"]} ${s.text}`}>
-            {footer.labelContact}
+            {footer.labelThree}
           </h2>
           <ul>
-            {footer.contacts.map((item, idx) => (
+            {footer.navigation.map((item, idx) => (
               <li key={idx}>
-                <img src={item.icon} alt="icon" />
-                <p className={s.text}>{item.label}</p>
+                <a href={item.path} className={s.text} tabIndex={1}>
+                  {item.label}
+                </a>
               </li>
             ))}
           </ul>
