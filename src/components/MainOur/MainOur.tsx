@@ -8,6 +8,8 @@ import SectionNumbers from "../SectionNumbers/SectionNumbers";
 import userIcon from "../../assets/user-doctor.png";
 import SectionParallax from "../SectionParallax/SectionParallax";
 import posterII from "../../assets/good_poster_III.jpg";
+import SectionPromotion from "../SectionPromotion/SectionPromotion";
+import { section_promotion } from "../../db/db";
 
 const ITEMS_DOCTORS = [
   {
@@ -108,6 +110,12 @@ const NUMBERS = [
 function MainOur() {
   return (
     <main className={s.main}>
+      <SectionPromotion
+        image={section_promotion.image}
+        points={section_promotion.points}
+        text={section_promotion.text}
+        title={section_promotion.title}
+      />
       <Welcome
         img={WELCOME.img}
         title={WELCOME.title}

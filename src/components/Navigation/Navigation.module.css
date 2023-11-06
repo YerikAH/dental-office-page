@@ -1,4 +1,4 @@
-header {
+.header {
   position: fixed;
   width: 100vw;
   z-index: 1000;
@@ -20,6 +20,7 @@ header {
   height: auto;
   width: 4rem;
   object-fit: contain;
+  transition: 0.3s;
 }
 
 .nav__pages {
@@ -37,6 +38,7 @@ header {
   position: relative;
   transition: 0.3s;
 }
+
 .nav__link--active,
 .nav__link--bold {
   font-weight: 600;
@@ -92,4 +94,27 @@ header {
 .nav__ham:focus {
   background-color: var(--black-10);
   outline: none;
+}
+.dark {
+  background: transparent;
+  border: none;
+}
+.dark a {
+  color: var(--white);
+}
+.dark .nav__button {
+  border: none;
+  background-color: var(--strong-blue);
+}
+.dark .nav__logo img {
+  width: 8rem;
+  filter: brightness(10);
+}
+.dark .nav__button:hover,
+.dark .nav__button:focus {
+  filter: brightness(0.7);
+}
+.dark a::after,
+.dark a::before {
+  background-color: var(--white);
 }

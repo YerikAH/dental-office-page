@@ -9,14 +9,20 @@ import NavInfo from "../NavInfo/NavInfo";
 import { RoutesEnum } from "../../interface/enum";
 import RenderConditionalLinks from "../RenderConditionalLinks/RenderConditionalLinks";
 
-function Navigation({ items, logo, info, Component}: NavigationProps) {
+function Navigation({
+  items,
+  logo,
+  info,
+  Component,
+  darkMode = false,
+}: NavigationProps) {
   const [menu, setMenu] = useState(false);
   const toggleMenu = () => {
     setMenu(!menu);
   };
   return (
     <>
-      <header>
+      <header className={`${s.header} ${darkMode ? s.dark : ""}`}>
         {info !== undefined && <NavInfo info={info} />}
 
         <nav className={s.nav}>

@@ -15,6 +15,7 @@ export interface NavigationProps {
   logo?: string;
   info?: { title: string; text: string }[];
   Component?: JSX.Element;
+  darkMode?: boolean;
 }
 export interface RenderConditionalLinksProps {
   items: NavigationItems[];
@@ -327,4 +328,11 @@ export interface InfoProductProps {
     like: boolean;
     tag?: { bg: string; color: string; text: string };
   };
+}
+
+export interface SectionPromotionProps {
+  title: string;
+  text: string;
+  image: string;
+  points: { icon: JSX.Element; title: string }[];
 }
