@@ -118,3 +118,11 @@
 .dark a::before {
   background-color: var(--white);
 }
+
+.dark .nav__ham:hover,
+.dark .nav__ham:focus {
+  background-color: transparent;
+}
+.dark .nav__ham svg {
+  stroke: var(--white);
+}

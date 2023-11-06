@@ -9,13 +9,18 @@ function NavigationMobile({
   logo,
   state,
   setState,
+  darkMode = false,
 }: NavigationProps) {
   const toggleMenu = () => {
     setState?.();
   };
   return (
     <>
-      <nav className={state ? `${s.nav} ${s["nav--active"]}` : `${s.nav}`}>
+      <nav
+        className={`${state ? `${s.nav} ${s["nav--active"]}` : `${s.nav}`} ${
+          darkMode ? `${s.dark}` : ""
+        }`}
+      >
         <ul className={s.nav__logo}>
           <li>
             <Link to="/" tabIndex={1}>
@@ -32,9 +37,11 @@ function NavigationMobile({
               <Link
                 to={item.path}
                 tabIndex={1}
-                className={item.active
-                  ? `${s.nav__link} ${s["nav__link--active"]}`
-                  : `${s.nav__link}`}
+                className={
+                  item.active
+                    ? `${s.nav__link} ${s["nav__link--active"]}`
+                    : `${s.nav__link}`
+                }
               >
                 {item.label}
               </Link>

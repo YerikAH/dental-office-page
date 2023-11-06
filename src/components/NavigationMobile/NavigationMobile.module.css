@@ -12,6 +12,7 @@
   transition: 0.3s;
   z-index: 500;
 }
+
 .nav--active {
   top: 0;
 }
@@ -20,6 +21,7 @@
   height: auto;
   width: 4rem;
   object-fit: contain;
+  transition: 0.3s;
 }
 .nav__logo {
   display: flex;
@@ -102,4 +104,23 @@
   .nav {
     display: none;
   }
+}
+.dark {
+  background-color: #0007;
+  backdrop-filter: blur(5px);
+}
+.dark .nav__logo img {
+  filter: brightness(100);
+  width: 8rem;
+}
+.dark .nav__button {
+  background-color: var(--strong-blue);
+  border: none;
+}
+.dark .nav__ham svg {
+  stroke: var(--white);
+}
+.dark .nav__ham:hover,
+.dark .nav__ham:focus {
+  background-color: transparent;
 }

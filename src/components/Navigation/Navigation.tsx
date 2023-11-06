@@ -66,6 +66,7 @@ function Navigation({
           logo={logo}
           state={menu}
           setState={toggleMenu}
+          darkMode={darkMode}
         />
       </header>
     </>
