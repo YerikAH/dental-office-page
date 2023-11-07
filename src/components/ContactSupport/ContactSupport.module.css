@@ -17,7 +17,7 @@
   width: 100%;
 }
 .section__package {
-  background-color: #333b89;
+  background-color: var(--blue-90);
   display: grid;
   padding: 2rem 2rem;
   margin-top: 4rem;
@@ -45,11 +45,11 @@
 }
 .section__package span {
   font: normal normal 700 1rem/1.5rem var(--font-primary);
-  color: #8eccf3;
+  color: var(--strong-sky);
 }
 .section__package__special {
   display: flex;
-  background-color: #475bbe;
+  background-color: var(--sky);
   margin-top: 2rem;
   padding: 4rem 2rem;
   overflow: hidden;
@@ -59,7 +59,7 @@
   font-size: 1rem;
 }
 .section__package__special span {
-  color: #8eccf3;
+  color: var(--strong-sky);
   letter-spacing: 0;
   font-weight: 700;
 }
