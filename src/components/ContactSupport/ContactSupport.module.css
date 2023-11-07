@@ -1,37 +1,91 @@
-.section{
-  margin: 5rem auto;
+.section {
+  margin: 0rem auto 5rem auto;
   max-width: 1200px;
   width: 100%;
-  padding: 0 1rem ;
+  padding: 0 1rem;
 }
-.section h2{
-  font: normal normal 700 1.3rem/1.2rem var(--font-primary);
+.section h2 {
+  font: normal normal 700 1.5rem/1.2rem var(--font-primary);
   color: var(--black);
   text-transform: capitalize;
+  margin-bottom: 1.5rem;
 }
-.section p{
+.section p {
   font: normal normal 400 0.8rem/1.5rem var(--font-primary);
   color: var(--black-50);
   max-width: 720px;
   width: 100%;
 }
-.section__package{
-  background-color: var(--purple);
+.section__package {
+  background-color: #333b89;
   display: grid;
-  padding: 4rem 2rem;
-  margin-top: 3rem;
+  padding: 2rem 2rem;
+  margin-top: 4rem;
   border-radius: 0.5rem;
-} 
-.section__package p{
+  position: relative;
+  gap: 4rem;
+}
+.section__package p {
   color: var(--white);
   font-weight: 600;
 }
-.section__package span{
-  font: normal normal 700 1rem/1.5rem var(--font-primary);
-  color: var(--blue-70);
+.section__package__icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
-@media (min-width: 1200px){
-  .section__package{
+.section__package__icon {
+  position: relative;
+}
+.section__package__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.section__package span {
+  font: normal normal 700 1rem/1.5rem var(--font-primary);
+  color: #8eccf3;
+}
+.section__package__special {
+  display: flex;
+  background-color: #475bbe;
+  margin-top: 2rem;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+.section__package__special,
+.section__package p {
+  font-size: 1rem;
+}
+.section__package__special span {
+  color: #8eccf3;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+@media (min-width: 720px) {
+  .section__package {
     grid-template-columns: repeat(3, 1fr);
+    padding: 3rem 6rem 0rem 6rem;
+    gap: 0rem;
   }
+  .section__package__icon {
+    bottom: 4rem;
+  }
+  .section__package__special {
+    padding: 4rem 6rem;
+  }
+  .section__package__contact {
+    gap: 1.5rem;
+  }
+}
+.section__package__special p {
+  position: relative;
+  z-index: 100;
+}
+.curve {
+  width: 500px;
+  position: absolute;
+  bottom: -4rem;
+  right: -1rem;
 }

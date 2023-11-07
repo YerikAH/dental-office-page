@@ -3,7 +3,7 @@
   padding: 2rem 1rem;
   max-width: 1200px;
   display: grid;
-  margin: 6rem auto;
+  margin: 6rem auto 0rem auto;
 }
 .section__info h2 {
   font: normal normal 700 1.3rem/1.2rem var(--font-primary);
@@ -25,31 +25,30 @@
   margin: 2rem 0 0 1rem;
   display: block;
 }
-.info p{
+.info p {
   margin-top: 1rem;
 }
 .section__info {
   height: 600px;
 }
-.contact{
-  
+.contact {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 2rem 0 0.8rem 0 ;
+  margin: 2rem 0 0.8rem 0;
 }
 .contact p {
   font-weight: 600;
   color: var(--black);
 }
-.contact img{
+.contact img {
   width: 16px;
   object-fit: cover;
 }
 
 @media (min-width: 1000px) {
   .section {
-    grid-template-columns:   50% 40% ;
+    grid-template-columns: 50% 40%;
     gap: 4%;
   }
   .section__info {
