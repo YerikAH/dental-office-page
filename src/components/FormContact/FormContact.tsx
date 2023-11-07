@@ -18,7 +18,6 @@ function FormContact({ inputs }: FormContactProps) {
           />
         </div>
       ))}
-
       <input type="submit" value="Manda mensaje" name="submit" />
     </form>
   );

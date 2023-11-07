@@ -354,3 +354,15 @@ export const section_promotion = {
     },
   ],
 };
+export const SECTION_CONTACTS_INFO = {
+  title: "CONTACT US",
+  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed quisquam sit quos beatae consectetur nostrum dolorum animi, optio cumque maxime minima sapiente? Recusandae nemo odio possimus inventore laborum cupiditate ipsum, animi delectus rem vero et, alias temporibus.",
+  address: "Col. La preventiva<br />Jiron Ica 113. Segundo piso Of. 09<br />Doveer, DE 12001",
+  contacts: CONTACTS
+}
+export const CONTACT_SUPPORT  = {
+  title: "Contact Support",
+  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed quisquam sit quos beatae consectetur nostrum dolorum animi, optio cumque maxime minima sapiente?",
+  email: "yerik05vh@gmail.com",
+  phoneNumber: "+51 967 523 180"
+}
