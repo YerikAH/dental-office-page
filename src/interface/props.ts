@@ -336,17 +336,29 @@ export interface SectionPromotionProps {
   image: string;
   points: { icon: JSX.Element; title: string }[];
 }
-export interface SectionContactInfoProps{
-  title: string
-  text: string
-  address: string,
-  contacts: {icon: string, label:string}[],
-  inputs: CustomInputProps[]
+export interface SectionContactInfoProps {
+  title: string;
+  text: string;
+  address: string;
+  contacts: { icon: string; label: string }[];
+  inputs: CustomInputProps[];
 }
 
-export interface ContactSupportProps{
-  title: string,
-  text: string,
-  email: string,
-  phoneNumber: string
+export interface ContactSupportProps {
+  title: string;
+  text: string;
+  email: string;
+  phoneNumber: string;
+}
+
+export interface SectionOtherContactsProps {
+  title: string;
+  text: string;
+  contactsLink: {
+    icon: JSX.Element;
+    text: string;
+    link: string;
+    color: string;
+  }[];
+  address: string;
 }

@@ -1,0 +1,86 @@
+.section {
+  margin: 12rem auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 1rem;
+}
+.section h2 {
+  font: normal normal 700 1.5rem/1.2rem var(--font-primary);
+  color: var(--black);
+  text-transform: capitalize;
+  text-align: center;
+  margin: 0 auto 1.5rem auto;
+}
+.section p {
+  font: normal normal 400 0.8rem/1.5rem var(--font-primary);
+  color: var(--black-50);
+  width: 100%;
+  margin-bottom: 10rem;
+  text-align: center;
+}
+.section__grid {
+  display: grid;
+  place-items: center;
+}
+.section__grid__buttons {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+  place-items: center;
+  position: relative;
+}
+.section__grid__buttons span {
+  position: absolute;
+  width: 1px;
+  height: 150%;
+  display: block;
+  background-color: var(--black);
+  opacity: 0.4;
+  right: 0;
+  border-radius: 15rem;
+}
+.section__grid__buttons a {
+  display: block;
+  border-radius: 15rem;
+  width: 100%;
+  max-width: 300px;
+  padding: 0.7rem 1rem;
+  position: relative;
+  text-align: center;
+  color: var(--white);
+  font: normal normal 600 0.9rem/1.5rem var(--font-primary);
+  display: grid;
+  grid-template-columns: 2rem auto;
+  align-items: center;
+}
+.section__grid__info {
+  display: grid;
+  width: 100%;
+  place-items: center;
+}
+.section__grid__buttons svg {
+  color: var(--white);
+}
+.section__grid__info h3 {
+  font: normal normal 700 1.2rem/1.2rem var(--font-primary);
+  color: var(--black);
+  text-transform: capitalize;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+.section__grid__info span {
+  font: normal normal 400 0.9rem/1.5rem var(--font-primary);
+  color: var(--black);
+}
+.section__grid__info a {
+  display: block;
+  margin-top: 2rem;
+  font: normal normal 700 0.8rem/1.5rem var(--font-primary);
+  color: var(--blue);
+}
+@media (min-width: 1200px) {
+  .section__grid {
+    grid-template-columns: 50% 50%;
+    justify-content: space-around;
+  }
+}
