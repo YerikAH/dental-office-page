@@ -16,13 +16,14 @@ function NotFound() {
       <div className={s.error__actions}>
         <button>Ir al inicio</button>
         <CustomInput
-          isLabel={false}
-          options={[]}
-          label=""
+          name="router"
           placeholder="¿A donde quieres ir?"
-          type={InputTypes.SELECT}
-          withIcon={true}
+          type={InputTypes.TEXT}
           icon={<IconSearch />}
+          label="¿A donde quieres ir?"
+          isLabel={false}
+          isRequired={false}
+          withIcon
         />
       </div>
     </div>
