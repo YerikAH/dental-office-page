@@ -1,38 +1,34 @@
-import s from "./Main.module.css";
 import SectionIntro from "../SectionIntro/SectionIntro";
 import SectionWhyChoice from "../SectionWhyChoice/SectionWhyChoice";
+import doctor from "../../assets/doctor.png";
 import SectionOurDoctors from "../SectionOurDoctors/SectionOurDoctors";
 import SectionService from "../SectionService/SectionService";
 import SectionQA from "../SectionQA/SectionQA";
 import SectionOurClient from "../SectionOurClient/SectionOurClient";
+import s from "./Main.module.css";
 import SectionBestResults from "../SectionBestResults/SectionBestResults";
 import SectionContact from "../SectionContact/SectionContact";
-
 import {
-  BEST,
   CONTACT,
   IMAGES_INTRO,
   ITEMS_DOCTORS,
   ITEMS_INFO,
   ITEMS_INTRO,
-  OPINIONS,
-  QA,
-  SERVICES,
 } from "../../db/db";
 
-function Main() {
+export function Main() {
   return (
     <main className={s.main}>
       <SectionIntro images={IMAGES_INTRO} items={ITEMS_INTRO} speed={10000} />
-      <SectionWhyChoice image={ITEMS_INFO.image} info={ITEMS_INFO} />
+      <SectionWhyChoice image={doctor} info={ITEMS_INFO} />
       <SectionOurDoctors
         doctors={ITEMS_DOCTORS}
         title="Conoce a nuestros dentistas"
       />
       <SectionService
-        title={SERVICES.title}
-        text={SERVICES.text}
-        items={SERVICES.items}
+        title={SERVICE.title}
+        text={SERVICE.text}
+        items={SERVICE.items}
       />
       <SectionBestResults
         title={BEST.title}
@@ -53,5 +49,3 @@ function Main() {
     </main>
   );
 }
-
-export default Main;

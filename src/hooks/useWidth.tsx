@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useLayoutEffect } from "react";
 
 function useWidth(maxWidth: number) {
@@ -21,3 +22,5 @@ function useWidth(maxWidth: number) {
 }
 
 export default useWidth;
+
+

@@ -4,10 +4,28 @@ import phone from "../assets/phone.png";
 import facebook from "../assets/facebook.png";
 import logo from "../assets/logo.png";
 import icon from "../assets/iconAppointment.png";
-import { InputTypes, RoutesEnum } from "../interface/enum";
 import { CustomInputProps, FooterProps } from "../interface/props";
 import userIcon from "../assets/user-doctor.png";
 import bannerPromotion from "../assets/banner_promotion.jpg";
+
+// SECTION INTRO
+import banner from "../assets/banner.png";
+import banner_2 from "../assets/banner_2.jpg";
+import banner_3 from "../assets/banner_3.jpeg";
+import iconIntroOne from "../assets/iconIntro.png";
+
+// WHY CHOICE
+import doctorPrincipal from "../assets/doctor.png";
+
+// SERVICE INTRO
+import iconTest from "../assets/IconTestII.svg";
+
+// BEST RESULTS
+import smile_good from "../assets/smile_perfect.jpg";
+import smile_bad from "../assets/smile_bad.jpg";
+// ENUM
+import { InputTypes, RoutesEnum } from "../interface/enum";
+
 import {
   IconBrandFacebook,
   IconBrandTelegram,
@@ -394,4 +412,294 @@ export const CONTACT_DINAMIC = {
       color: "#2C6AC2",
     },
   ],
+};
+
+export const IMAGES_INTRO = [
+  {
+    image: banner,
+    title: "Tratamientos dentales de calidad en un solo lugar",
+    text: "Para ello contamos con una gran variedad de servicios odontológicos, así también tenemos un staff de profesionales.",
+  },
+  {
+    image: banner_2,
+  },
+  {
+    image: banner_3,
+  },
+];
+export const ITEMS_INTRO = [
+  {
+    image: iconIntroOne,
+    title: "Dolor de diente",
+    text: "En Sonreír le brindamos algunos consejos útiles para que mantenga una buena salud bucal. ",
+    button: "ver mas",
+  },
+  {
+    image: iconIntroOne,
+    title: "Dolor de diente",
+    text: "En Sonreír le brindamos algunos consejos útiles para que mantenga una buena salud bucal. ",
+    button: "ver mas",
+  },
+  {
+    image: iconIntroOne,
+    title: "Dolor de diente",
+    text: "En Sonreír le brindamos algunos consejos útiles para que mantenga una buena salud bucal. ",
+    button: "ver mas",
+  },
+];
+export const ITEMS_INFO = {
+  label: "_SALUD DENTAL_",
+  title: "¿Porque elegirnos?",
+  slogan: "La preventiva, donde preveemos tus dientes",
+  text: "Somos líderes en tratamientos estéticos láser, sin importar tu objetivo de belleza. Nuestros profesionales experimentados, te ayudarán a lograr los resultados que esperas, ofreciéndote tratamientos estéticos accesibles y personalizados.",
+  items: [
+    "Contamos con masde 10 años de experiencia.",
+    "Garantiade 20 días con muchas ofertas",
+    "Contamos lo ultimo en teconologia",
+  ],
+  button: "reserva tu cita",
+  image: doctorPrincipal,
+};
+
+export const ITEMS_DOCTORS = [
+  {
+    name: "Harvey Yerik",
+    special: "Ingeniero de software",
+    image:
+      "https://images.pexels.com/photos/6502026/pexels-photo-6502026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    text: "Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible",
+    email: "",
+    fb: "",
+    phone: "",
+    url: "",
+  },
+  {
+    name: "Harvey Yerik",
+    special: "Ingeniero de software",
+    image:
+      "https://images.pexels.com/photos/6502026/pexels-photo-6502026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    text: "Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible",
+    email: "",
+    fb: "",
+    phone: "",
+    url: "",
+  },
+  {
+    name: "Harvey Yerik",
+    special: "Ingeniero de software",
+    image:
+      "https://images.pexels.com/photos/6502026/pexels-photo-6502026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    text: "Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible",
+    email: "",
+    fb: "",
+    phone: "",
+    url: "",
+  },
+  {
+    name: "Harvey Yerik",
+    special: "Ingeniero de software",
+    image:
+      "https://images.pexels.com/photos/6502026/pexels-photo-6502026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    text: "Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible",
+    email: "",
+    fb: "",
+    phone: "",
+    url: "",
+  },
+  {
+    name: "Harvey Yerik",
+    special: "Ingeniero de software",
+    image:
+      "https://images.pexels.com/photos/6502026/pexels-photo-6502026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    text: "Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible",
+    email: "",
+    fb: "",
+    phone: "",
+    url: "",
+  },
+];
+
+export const SERVICES = {
+  title: "UNA AMPLIA GAMA DE SERVICIOS",
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. Sed sit amet vulputate nulla, vitae blandit enim. ",
+  items: [
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+    {
+      title: "Tratamiento Medico",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. ",
+      icon: iconTest,
+      color: "#3498E1",
+    },
+  ],
+};
+
+export const QA = {
+  title: "PREGUNTAS FRECUENTES",
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. Sed sit amet vulputate nulla, vitae blandit enim. ",
+  items: [
+    {
+      title: "¿Quien es el creador o CEO de La Preventiva?",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa repudiandae perspiciatis aliquid maiores, delectus quos inventore quae eius accusantium nulla eos aspernatur illo totam, sunt voluptates, sint quas minima earum architecto asperiores consequatur hic amet. ",
+    },
+    {
+      title: "¿Quien es el creador o CEO de La Preventiva?",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa repudiandae perspiciatis aliquid maiores, delectus quos inventore quae eius accusantium nulla eos aspernatur illo totam, sunt voluptates, sint quas minima earum architecto asperiores consequatur hic amet. ",
+    },
+    {
+      title: "¿Quien es el creador o CEO de La Preventiva?",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa repudiandae perspiciatis aliquid maiores, delectus quos inventore quae eius accusantium nulla eos aspernatur illo totam, sunt voluptates, sint quas minima earum architecto asperiores consequatur hic amet. ",
+    },
+    {
+      title: "¿Quien es el creador o CEO de La Preventiva?",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa repudiandae perspiciatis aliquid maiores, delectus quos inventore quae eius accusantium nulla eos aspernatur illo totam, sunt voluptates, sint quas minima earum architecto asperiores consequatur hic amet. ",
+    },
+    {
+      title: "¿Quien es el creador o CEO de La Preventiva?",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa repudiandae perspiciatis aliquid maiores, delectus quos inventore quae eius accusantium nulla eos aspernatur illo totam, sunt voluptates, sint quas minima earum architecto asperiores consequatur hic amet. ",
+    },
+    {
+      title: "¿Quien es el creador o CEO de La Preventiva?",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa repudiandae perspiciatis aliquid maiores, delectus quos inventore quae eius accusantium nulla eos aspernatur illo totam, sunt voluptates, sint quas minima earum architecto asperiores consequatur hic amet. ",
+    },
+    {
+      title: "¿Quien es el creador o CEO de La Preventiva?",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa repudiandae perspiciatis aliquid maiores, delectus quos inventore quae eius accusantium nulla eos aspernatur illo totam, sunt voluptates, sint quas minima earum architecto asperiores consequatur hic amet. ",
+    },
+    {
+      title: "¿Quien es el creador o CEO de La Preventiva?",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa repudiandae perspiciatis aliquid maiores, delectus quos inventore quae eius accusantium nulla eos aspernatur illo totam, sunt voluptates, sint quas minima earum architecto asperiores consequatur hic amet. ",
+    },
+  ],
+};
+export const OPINIONS = {
+  title: "Nuestro clientes",
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. Sed sit amet vulputate nulla, vitae blandit enim. ",
+  items: [
+    {
+      avatar:
+        "https://images.pexels.com/photos/16999877/pexels-photo-16999877/free-photo-of-gente-mujer-relajacion-conexion.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      name: "Sara Bosu",
+      opinion:
+        "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
+      tag: "Happy client",
+    },
+    {
+      avatar:
+        "https://images.pexels.com/photos/16999877/pexels-photo-16999877/free-photo-of-gente-mujer-relajacion-conexion.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      name: "Sara Bosu",
+      opinion:
+        "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
+      tag: "Happy client",
+    },
+    {
+      avatar:
+        "https://images.pexels.com/photos/16999877/pexels-photo-16999877/free-photo-of-gente-mujer-relajacion-conexion.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      name: "Sara Bosu",
+      opinion:
+        "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
+      tag: "Happy client",
+    },
+    {
+      avatar:
+        "https://images.pexels.com/photos/16999877/pexels-photo-16999877/free-photo-of-gente-mujer-relajacion-conexion.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      name: "Sara Bosu",
+      opinion:
+        "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
+      tag: "Happy client",
+    },
+    {
+      avatar:
+        "https://images.pexels.com/photos/16999877/pexels-photo-16999877/free-photo-of-gente-mujer-relajacion-conexion.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      name: "Sara Bosu",
+      opinion:
+        "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
+      tag: "Happy client",
+    },
+  ],
+};
+
+export const BEST = {
+  title: "Los mejores resultados",
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. Sed sit amet vulputate nulla, vitae blandit enim. ",
+  images: {
+    smile_good: smile_good,
+    smile_bad: smile_bad,
+  },
 };
