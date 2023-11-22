@@ -8,47 +8,55 @@ import SectionOurClient from "../SectionOurClient/SectionOurClient";
 import SectionBestResults from "../SectionBestResults/SectionBestResults";
 import SectionContact from "../SectionContact/SectionContact";
 
-import {
-  BEST,
-  CONTACT,
-  IMAGES_INTRO,
-  ITEMS_DOCTORS,
-  ITEMS_INFO,
-  ITEMS_INTRO,
-  OPINIONS,
-  QA,
-  SERVICES,
-} from "../../db/db";
+import { SECTION_INTRO } from "../../db/SectionIntro";
+import { SECTION_WHY_CHOICE } from "../../db/SectionWhyChoice";
+import { SECTION_OUR_DOCTORS } from "../../db/SectionOurDoctors";
+import { SECTION_SERVICES } from "../../db/SectionService";
+import { SECTION_BEST_RESULT } from "../../db/SectionBestResults";
+import { SECTION_CONTACT } from "../../db/SectionContact";
+import { SECTION_QA } from "../../db/SectionQA";
+import { SECTION_OUR_CLIENTS } from "../../db/SectionOurClient";
 
 function Main() {
   return (
     <main className={s.main}>
-      <SectionIntro images={IMAGES_INTRO} items={ITEMS_INTRO} speed={10000} />
-      <SectionWhyChoice image={ITEMS_INFO.image} info={ITEMS_INFO} />
+      <SectionIntro
+        images={SECTION_INTRO.images_intro}
+        items={SECTION_INTRO.items_intro}
+        speed={10000}
+      />
+      <SectionWhyChoice
+        image={SECTION_WHY_CHOICE.image}
+        info={SECTION_WHY_CHOICE}
+      />
       <SectionOurDoctors
-        doctors={ITEMS_DOCTORS}
-        title="Conoce a nuestros dentistas"
+        doctors={SECTION_OUR_DOCTORS.doctors}
+        title={SECTION_OUR_DOCTORS.title}
       />
       <SectionService
-        title={SERVICES.title}
-        text={SERVICES.text}
-        items={SERVICES.items}
+        title={SECTION_SERVICES.title}
+        text={SECTION_SERVICES.text}
+        items={SECTION_SERVICES.items}
       />
       <SectionBestResults
-        title={BEST.title}
-        text={BEST.text}
-        images={BEST.images}
+        title={SECTION_BEST_RESULT.title}
+        text={SECTION_BEST_RESULT.text}
+        images={SECTION_BEST_RESULT.images}
       />
       <SectionContact
-        title={CONTACT.title}
-        text={CONTACT.text}
-        inputs={CONTACT.inputs}
+        title={SECTION_CONTACT.title}
+        text={SECTION_CONTACT.text}
+        inputs={SECTION_CONTACT.inputs}
       />
-      <SectionQA title={QA.title} text={QA.text} items={QA.items} />
+      <SectionQA
+        title={SECTION_QA.title}
+        text={SECTION_QA.text}
+        items={SECTION_QA.items}
+      />
       <SectionOurClient
-        title={OPINIONS.title}
-        text={OPINIONS.text}
-        items={OPINIONS.items}
+        title={SECTION_OUR_CLIENTS.title}
+        text={SECTION_OUR_CLIENTS.text}
+        items={SECTION_OUR_CLIENTS.items}
       />
     </main>
   );

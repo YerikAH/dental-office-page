@@ -1,14 +1,20 @@
 import { ScrollRestoration } from "react-router-dom";
 import Navigation from "../components/Navigation/Navigation";
-import Footer from "../components/Footer/Footer";
-import { FOOTER, NAV } from "../db/db";
 import MainContact from "../components/MainContact/MainContact";
+import Footer from "../components/Footer/Footer";
+import { NAVIGATION } from "../db/Navigation";
+import { FOOTER } from "../db/Footer";
+
 function Contact() {
   return (
     <>
       <ScrollRestoration />
-      <Navigation items={NAV.items} logo={NAV.logo} info={NAV.info} />
-      <MainContact/>
+      <Navigation
+        items={NAVIGATION.items}
+        logo={NAVIGATION.logo}
+        info={NAVIGATION.info}
+      />
+      <MainContact />
       <Footer footer={FOOTER} />
     </>
   );

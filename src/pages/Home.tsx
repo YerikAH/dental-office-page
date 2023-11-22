@@ -1,18 +1,24 @@
+import { useState } from "react";
+import { ScrollRestoration } from "react-router-dom";
 import Navigation from "../components/Navigation/Navigation";
 import Main from "../components/Main/Main";
 import BtnWhatsApp from "../components/BtnWhatsApp/BtnWhatsApp";
 import Footer from "../components/Footer/Footer";
-import { ScrollRestoration } from "react-router-dom";
-import { NAV, FOOTER } from "../db/db";
 import Login from "../components/Login/Login";
-import { useState } from "react";
+
+import { NAVIGATION } from "../db/Navigation";
+import { FOOTER } from "../db/Footer";
 
 function Home() {
   const [modal, setModal] = useState(true);
   return (
     <>
       <ScrollRestoration />
-      <Navigation items={NAV.items} logo={NAV.logo} info={NAV.info} />
+      <Navigation
+        items={NAVIGATION.items}
+        logo={NAVIGATION.logo}
+        info={NAVIGATION.info}
+      />
       <Main />
       <Footer footer={FOOTER} />
 
