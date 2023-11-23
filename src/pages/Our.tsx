@@ -20,9 +20,6 @@ function Our() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  useEffect(() => {
-    console.log(scrollPosition);
-  }, [scrollPosition]);
   return (
     <>
       <ScrollRestoration />
