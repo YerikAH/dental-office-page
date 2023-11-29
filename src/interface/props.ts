@@ -362,3 +362,9 @@ export interface SectionOtherContactsProps {
   }[];
   address: string;
 }
+export interface NotFoundProps {
+  title: string;
+  text: string;
+  button: string;
+  input: CustomInputProps;
+}

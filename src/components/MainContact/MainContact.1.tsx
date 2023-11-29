@@ -1,15 +1,15 @@
 import s from "./MainContact.module.css";
+import { CONTACT, CONTACT_SUPPORT } from "../../db/db";
 import SectionContactInfo from "../SectionContactInfo/SectionContactInfo";
 import ContactSupport from "../ContactSupport/ContactSupport";
 import SectionMap from "../SectionMap/SectionMap";
 import { SECTION_CONTACTS_INFO } from "../../db/SectionContactInfo";
-import { CONTACT_SUPPORT } from "../../db/ContactSupport";
 
-function MainContact() {
+export function MainContact() {
   return (
     <main className={s.main}>
       <SectionContactInfo
-        inputs={SECTION_CONTACTS_INFO.inputs}
+        inputs={CONTACT.inputs}
         title={SECTION_CONTACTS_INFO.title}
         text={SECTION_CONTACTS_INFO.text}
         address={SECTION_CONTACTS_INFO.address}
@@ -25,4 +25,3 @@ function MainContact() {
     </main>
   );
 }
-export default MainContact;

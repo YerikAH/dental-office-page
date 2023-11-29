@@ -1,5 +1,4 @@
 import s from "./SectionContactInfo.module.css";
-import { SectionContactProps } from "../../interface/props";
 import FormContact from "../FormContact/FormContact";
 import { SectionContactInfoProps } from "../../interface/props";
 

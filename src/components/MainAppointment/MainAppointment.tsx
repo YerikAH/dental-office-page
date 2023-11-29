@@ -2,22 +2,23 @@ import s from "./MainAppointment.module.css";
 import SectionAppointment from "../SectionAppointment/SectionAppointment";
 import SectionFindUs from "../SectionFindUs/SectionFindUs";
 import SectionMap from "../SectionMap/SectionMap.tsx";
-import { FIND_US, FORM_ALL, SERVICES_APPOINTMENT } from "../../db/db.tsx";
+import { SECTION_APPOINTMENT } from "../../db/SectionAppointment/index.tsx";
+import { SECTION_FINDUS } from "../../db/SectionFindUs/index.tsx";
 
 function MainAppointment() {
   return (
     <main className={s.main}>
       <SectionAppointment
-        services={SERVICES_APPOINTMENT.services}
-        title={SERVICES_APPOINTMENT.title}
-        text={SERVICES_APPOINTMENT.text}
-        form={FORM_ALL}
+        services={SECTION_APPOINTMENT.services}
+        title={SECTION_APPOINTMENT.title}
+        text={SECTION_APPOINTMENT.text}
+        form={SECTION_APPOINTMENT.form}
       />
       <SectionFindUs
-        items={FIND_US.items}
-        title={FIND_US.title}
-        text={FIND_US.text}
-        tag={FIND_US.tag}
+        items={SECTION_FINDUS.items}
+        title={SECTION_FINDUS.title}
+        text={SECTION_FINDUS.text}
+        tag={SECTION_FINDUS.tag}
       />
       <SectionMap />
     </main>

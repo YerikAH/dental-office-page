@@ -1,13 +1,13 @@
 import s from "./Main.module.css";
-import SectionOurDoctors from "../SectionOurDoctors/SectionOurDoctors";
-import SectionVisionMision from "../SectionVisionMision/SectionVisionMision";
 import Welcome from "../Welcome/Welcome";
 import SectionNumbers from "../SectionNumbers/SectionNumbers";
+import SectionOurDoctors from "../SectionOurDoctors/SectionOurDoctors";
+import SectionVisionMision from "../SectionVisionMision/SectionVisionMision";
 import SectionParallax from "../SectionParallax/SectionParallax";
 import SectionPromotion from "../SectionPromotion/SectionPromotion";
 import { SECTION_PROMOTION } from "../../db/SectionPromotion";
 import { WELCOME } from "../../db/Welcome";
-import { SECTION_VISION_MISION } from "../../db/SectionVisionMision/SectionVisionMision";
+import { SECTION_VISION_MISION } from "../../db/SectionVisionMision";
 import { SECTION_OUR_DOCTORS } from "../../db/SectionOurDoctors";
 import { SECTION_NUMBERS } from "../../db/SectionNumbers";
 import { SECTION_PARALLAX } from "../../db/SectionParallax";
