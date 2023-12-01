@@ -1,0 +1,15 @@
+.options__content__navigation{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.options__content__navigation button{
+  font: normal normal 400 0.8rem/1rem var(--font-primary);
+  border-radius: 15rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+}
+.options{
+  margin-top: 2rem;
+}

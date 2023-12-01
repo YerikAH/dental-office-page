@@ -1,0 +1,25 @@
+section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  gap: 2%;
+}
+.info h2 {
+  font: normal normal 700 1.3rem/1.5rem var(--font-primary);
+  max-width: 300px;
+  width: 100%;
+}
+.info p {
+  margin-top: 1rem;
+  font: normal normal 400 0.8rem/1rem var(--font-primary);
+  opacity: 0.7;
+  max-width: 400px;
+  width: 100%;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  gap: 2%;
+}

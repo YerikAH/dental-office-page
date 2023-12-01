@@ -3,14 +3,14 @@ import s from "./SectionService.module.css";
 import { SectionServiceProps } from "../../interface/props";
 import { useState } from "react";
 
-function SectionService({ title, text, items, sectionRefs }: SectionServiceProps) {
+function SectionService({ title, text, items }: SectionServiceProps) {
   const [cards, setCards] = useState(4);
   const onLoadCard = () => {
     if (cards > 4) setCards(4);
     else setCards(items.length);
   };
   return (
-    <section className={s.section} id="Servicios" ref={sectionRefs?.[2]}>
+    <section className={s.section} id="Servicios">
       <div className={s.section__intro}>
         <h2>{title}</h2>
         <p>{text}</p>

@@ -368,3 +368,34 @@ export interface NotFoundProps {
   button: string;
   input: CustomInputProps;
 }
+export interface SimpleCardProps {
+  image: string;
+  text: string;
+  button: string;
+  title: string;
+}
+export interface SectionPrincipalServicesProps {
+  title: string;
+  text: string;
+  cards: SimpleCardProps[];
+}
+export interface CardPriceProps {
+  price: string;
+  descount: string;
+  title: string;
+}
+export interface PriceOptionProps {
+  title: string;
+  isCheck: boolean;
+  category?: string;
+}
+export interface PriceOptionsProps {
+  categories: string[];
+  items: PriceOptionProps[];
+}
+export interface SectionPriceProps{
+  title: string,
+  text: string,
+  options: PriceOptionsProps,
+  prices: CardPriceProps[],
+}

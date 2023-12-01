@@ -1,0 +1,25 @@
+.card {
+  display: grid;
+  place-items: start;
+}
+.card img {
+  width: 4rem;
+  object-fit: cover;
+  height: auto;
+}
+.card h2 {
+  margin-top: 1rem;
+  font: normal normal 700 1rem/1rem var(--font-primary);
+}
+.card p {
+  font: normal normal 400 0.8rem/1rem var(--font-primary);
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+.card button {
+  border: none;
+  font: normal normal 700 0.8rem/1rem var(--font-primary);
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 0.4rem;
+}
