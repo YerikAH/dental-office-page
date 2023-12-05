@@ -1,4 +1,4 @@
-section {
+.section {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -17,6 +17,15 @@ section {
   opacity: 0.7;
   max-width: 400px;
   width: 100%;
+}
+.section__button{
+  background: var(--blue);
+  font: normal normal 400 0.8rem/1rem var(--font-primary);
+  color: var(--white);
+  padding: 0.5rem 2rem;
+  border:none;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
 .cards {
   display: grid;

@@ -1,5 +1,6 @@
 import s from "./SimpleCard.module.css";
 import { SimpleCardProps } from "../../interface/props.ts";
+import { IconArrowNarrowRight } from "@tabler/icons-react";
 
 function SimpleCard({ image, text, button, title }: SimpleCardProps) {
   return (
@@ -7,7 +8,11 @@ function SimpleCard({ image, text, button, title }: SimpleCardProps) {
       <img src={image} alt="image" />
       <h2>{title}</h2>
       <p>{text}</p>
-      <button>{button}</button>
+      
+      <button>
+        <IconArrowNarrowRight />
+        {button}
+      </button>
     </div>
   );
 }

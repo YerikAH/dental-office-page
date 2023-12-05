@@ -22,4 +22,13 @@
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   border-radius: 0.4rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.card button {
+  color: var(--black);
 }

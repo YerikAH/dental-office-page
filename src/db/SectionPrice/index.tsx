@@ -1,8 +1,17 @@
 export const SECTION_PRICE = {
-  title: "",
-  text:"",
+  title: "Nuestros precios son accesibles",
+  text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere dolores nostrum doloremque harum nulla quasi? Similique, molestiae sit nisi soluta maxime adipisci aliquam ipsam? Sed qui inventore sunt fugit, impedit ex recusandae accusantium aut culpa, necessitatibus facere eaque! Expedita ad dicta officia similique nobis voluptatibus, tenetur vero? Consectetur, ducimus repellendus.",
   options: {
-    categories: ["General", "Especial"],
+    categories: [
+      {
+        title: "General",
+        active: true
+      },
+      {
+        title: "Especial",
+        active: false
+      },
+    ],
     items: [
       {
         title: "All limited links",
@@ -11,12 +20,12 @@ export const SECTION_PRICE = {
       },
       {
         title: "All limited links",
-        isCheck: false,
+        isCheck: true,
         category: "General",
       },
       {
         title: "All limited links",
-        isCheck: false,
+        isCheck: true,
         category: "General",
       },
       {
@@ -41,12 +50,12 @@ export const SECTION_PRICE = {
       },
       {
         title: "All limited links",
-        isCheck: false,
+        isCheck: true,
         category: "Especial",
       },
       {
         title: "All limited links",
-        isCheck: false,
+        isCheck: true,
         category: "Especial",
       },
       {

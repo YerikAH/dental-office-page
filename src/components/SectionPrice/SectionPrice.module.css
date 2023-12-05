@@ -1,0 +1,43 @@
+.section{
+  max-width: 1200px;
+  width: 100%;
+  margin: 8rem auto 0 auto;
+}
+
+.title {
+  font: normal normal 700 1.3rem/1.5rem var(--font-primary);
+  width: 100%;
+  text-align: center;
+}
+.text {
+  margin: 1rem auto 0 auto;
+  font: normal normal 400 0.8rem/1rem var(--font-primary);
+  opacity: 0.7;
+  width: 100%;
+  text-align: center;
+  max-width: 600px;
+}
+.prices{
+  display: grid;
+  gap: 1rem;
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+}
+.section__price{
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+}
+.section__grid{
+  margin-top: 5rem;
+  display: grid;
+  gap: 4rem;
+  place-items: center;
+  place-content: center;
+}
+@media (width >= 720px){
+  .section__grid{
+    grid-template-columns: repeat(2, 48%);
+  }
+}

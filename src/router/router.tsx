@@ -7,6 +7,7 @@ import Our from "../pages/Our.tsx";
 import { createBrowserRouter } from "react-router-dom";
 import { RoutesEnum } from "../interface/enum.ts";
 import Product from "../pages/Product.tsx";
+import Services from "../pages/Services.tsx";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
   {
     path: RoutesEnum.CONTACT,
     element: <Contact />,
+  },
+  {
+    path: RoutesEnum.SERVICES,
+    element: <Services />,
   },
   {
     path: RoutesEnum.APPOINTMENT,

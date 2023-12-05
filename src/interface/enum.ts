@@ -11,6 +11,7 @@ export enum RoutesEnum{
   HOME = "/",
   OUR = "/our",
   CONTACT = "/contact",
+  SERVICES = "/services",
   APPOINTMENT = "/appointment",
   PRODUCTS = "/products",
   PRODUCT = "/products/:id",

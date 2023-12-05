@@ -15,7 +15,7 @@ export const NAVIGATION = {
       active: false,
     },
     {
-      path: "/",
+      path: RoutesEnum.SERVICES,
       label: "Servicios",
       active: false,
     },
