@@ -17,21 +17,21 @@ function ContactSupport({
       <div className={s.section__package}>
         <div className={s.section__package__icon}>
           <img src={headphones} alt="image" />
-          <p>customer service support</p>
+          <p>Soporte al cliente</p>
         </div>
         <div className={s.section__package__icon}>
           <img src={settings} alt="image" />
-          <p>technical support</p>
+          <p>Apoyo técnico</p>
         </div>
         <div className={s.section__package__contact}>
-          <p>please contact us at</p>
+          <p>por favor contáctenos al</p>
           <span>{phoneNumber}</span>
         </div>
       </div>
       <div className={`${s.section__package} ${s.section__package__special}`}>
         <p>
-          For questions about hiring or to chedule a La preventiva client demo,{" "}
-          <br /> please contact contact us at <span>{email}</span>
+        Estamos aquí para responder a tus consultas y brindarte el apoyo que necesitas. {" "}
+          <br /> ¡Contáctanos hoy! <span>{email}</span>
         </p>
         <img className={s.curve} src={curve} />
       </div>

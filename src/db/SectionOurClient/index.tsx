@@ -1,6 +1,6 @@
 export const SECTION_OUR_CLIENTS = {
-  title: "Nuestro clientes",
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus et, faucibus a nibh. Sed sit amet vulputate nulla, vitae blandit enim. ",
+  title: "Nuestros clientes",
+  text: "Descubre las historias detrás de nuestros clientes: testimonios que reflejan sonrisas satisfechas y experiencias dentales inolvidables",
   items: [
     {
       avatar:

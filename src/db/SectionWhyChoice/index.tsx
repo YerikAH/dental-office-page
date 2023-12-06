@@ -2,13 +2,13 @@ import doctorPrincipal from "../../assets/doctor.png";
 
 export const SECTION_WHY_CHOICE = {
   label: "_SALUD DENTAL_",
-  title: "¿Porque elegirnos?",
-  slogan: "La preventiva, donde preveemos tus dientes",
-  text: "Somos líderes en tratamientos estéticos láser, sin importar tu objetivo de belleza. Nuestros profesionales experimentados, te ayudarán a lograr los resultados que esperas, ofreciéndote tratamientos estéticos accesibles y personalizados.",
+  title: "¿Por qué elegirnos?",
+  slogan: "La preventiva, cuidamos tu sonrisa, cuidamos tu bienestar.",
+  text: "Nuestro objetivo es mantener sonrisas saludables a largo plazo. Por eso, nos destacamos en la prevención, ofreciendo un asesoramiento personalizado para ayudar a nuestros pacientes a adoptar hábitos saludables y prevenir problemas dentales.",
   items: [
-    "Contamos con masde 10 años de experiencia.",
-    "Garantiade 20 días con muchas ofertas",
-    "Contamos lo ultimo en teconologia",
+    "Experiencia personalizada",
+    "Tecnología innovadora",
+    "Enfoque preventivo excepcional",
   ],
   button: "reserva tu cita",
   image: doctorPrincipal,

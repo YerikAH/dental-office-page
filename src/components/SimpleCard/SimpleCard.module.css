@@ -9,16 +9,17 @@
 }
 .card h2 {
   margin-top: 1rem;
-  font: normal normal 700 1rem/1rem var(--font-primary);
+  font: normal normal 600 1rem/1rem var(--font-primary);
+  color: var(--black);
 }
 .card p {
-  font: normal normal 400 0.8rem/1rem var(--font-primary);
+  font: normal normal 400 0.8rem/1.3rem var(--font-primary);
   margin-top: 0.5rem;
-  opacity: 0.7;
+  color: var(--black-50);
 }
 .card button {
   border: none;
-  font: normal normal 700 0.8rem/1rem var(--font-primary);
+  font: normal normal 600 0.8rem/1rem var(--font-primary);
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   border-radius: 0.4rem;

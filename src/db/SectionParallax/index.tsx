@@ -1,9 +1,9 @@
 import posterII from "../../assets/good_poster_III.jpg";
 
 export const SECTION_PARALLAX = {
-  text: "Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum, pellentesque quisdq dapibus et, faucibus a nibh. Lorem ipsum dolor sit, but is increible. Lorem ipsum dolor sit ametaew, ddaasf so the conaconsectetur adipiscing elit. Etiam tellus aefc ipsum.",
+  text: "En La Preventiva, nos esforzamos por brindar la mejor atención odontológica. Con un equipo apasionado y servicios de vanguardia, priorizamos tu bienestar dental. Desde limpiezas hasta tratamientos especializados, nos comprometemos a ofrecer una experiencia excepcional centrada en la prevención y la excelencia. Confía en nosotros para transformar tu sonrisa y garantizar una salud bucal óptima.",
   logo: '"La preventiva"',
-  slogan: "Nos preocupamos por tu salud",
-  title: "La mejora atención en",
+  slogan: "Nos preocupamos por tu salud bucal",
+  title: "La mejor atención en",
   image: posterII,
 };

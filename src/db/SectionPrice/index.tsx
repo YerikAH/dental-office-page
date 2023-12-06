@@ -1,17 +1,8 @@
 export const SECTION_PRICE = {
-  title: "Nuestros precios son accesibles",
-  text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere dolores nostrum doloremque harum nulla quasi? Similique, molestiae sit nisi soluta maxime adipisci aliquam ipsam? Sed qui inventore sunt fugit, impedit ex recusandae accusantium aut culpa, necessitatibus facere eaque! Expedita ad dicta officia similique nobis voluptatibus, tenetur vero? Consectetur, ducimus repellendus.",
+  title: "Tarifas Asequibles para tu Salud Dental",
+  text: "Creemos que la calidad dental no debe ser un lujo. Ofrecemos tarifas accesibles sin comprometer la excelencia en nuestros servicios. Tu salud dental merece atención de calidad a precios que se ajusten a tu presupuesto.",
   options: {
-    categories: [
-      {
-        title: "General",
-        active: true
-      },
-      {
-        title: "Especial",
-        active: false
-      },
-    ],
+    categories: ["General", "Especial"],
     items: [
       {
         title: "All limited links",
@@ -63,24 +54,28 @@ export const SECTION_PRICE = {
         isCheck: false,
         category: "Especial",
       },
-    ]
+    ],
   },
   prices: [
     {
       descount: "Save 20%",
       price: "S/ 52",
-      title: "Intro"
+      title: "Intro",
     },
     {
       descount: "Save 20%",
       price: "S/ 52",
-      title: "Intro"
+      title: "Intro",
     },
     {
       descount: "Save 20%",
       price: "S/ 52",
-      title: "Intro"
+      title: "Intro",
     },
-  ]
-
-}
+    {
+      descount: "Save 20%",
+      price: "S/ 52",
+      title: "Intro",
+    },
+  ],
+};

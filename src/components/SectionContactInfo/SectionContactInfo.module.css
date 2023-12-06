@@ -8,8 +8,7 @@
 .section__info h2 {
   font: normal normal 700 1.3rem/1.2rem var(--font-primary);
   color: var(--black);
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  text-transform: capitalize;
 }
 .section__info p {
   font: normal normal 400 0.8rem/1.5rem var(--font-primary);

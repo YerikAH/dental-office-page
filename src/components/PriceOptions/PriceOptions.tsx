@@ -9,7 +9,7 @@ function PriceOptions({ categories, items }: PriceOptionsProps) {
   const handleClick = (idx: number) => setCategory(idx);
   useEffect(() => {
     const filterResult = items.filter(
-      (item) => item.category === categories[category].title,
+      (item) => item.category === categories[category]
     );
     setFilterOptions(filterResult);
   }, [categories, category, items]);
@@ -17,8 +17,12 @@ function PriceOptions({ categories, items }: PriceOptionsProps) {
     <div className={s.options__content}>
       <div className={s.options__content__navigation}>
         {categories.map((item, idx) => (
-          <button key={idx} onClick={() => handleClick(idx)} className={`${s.button} ${item.active && s.active}`}>
-            {item.title}
+          <button
+            key={idx}
+            onClick={() => handleClick(idx)}
+            className={`${s.button} ${categories[category] === item && s.active}`}
+          >
+            {item}
           </button>
         ))}
       </div>

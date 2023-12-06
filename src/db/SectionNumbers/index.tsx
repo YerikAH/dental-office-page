@@ -2,23 +2,23 @@ import userIcon from "../../assets/user-doctor.png";
 
 export const SECTION_NUMBERS = [
   {
-    title: "2000",
-    text: "Pacientes",
+    title: "740",
+    text: "Sonrisas Transformadas",
     img: userIcon,
   },
   {
-    title: "500",
-    text: "Pacientes",
+    title: "1203",
+    text: "Pacientes Atendidos",
     img: userIcon,
   },
   {
-    title: "100",
-    text: "Pacientes",
+    title: "10",
+    text: "Años de Experiencia",
     img: userIcon,
   },
   {
-    title: "700",
-    text: "Pacientes",
+    title: "95",
+    text: "Satisfacción del Paciente",
     img: userIcon,
   },
 ];

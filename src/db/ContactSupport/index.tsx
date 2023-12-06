@@ -1,6 +1,6 @@
 export const CONTACT_SUPPORT = {
-  title: "Contact Support",
-  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed quisquam sit quos beatae consectetur nostrum dolorum animi, optio cumque maxime minima sapiente?",
-  email: "yerik05vh@gmail.com",
-  phoneNumber: "+51 967 523 180",
+  title: "Contacto de Soporte",
+  text: "¡Te esperamos en nuestra ubicación! Completa el formulario para contactarnos. En La Preventiva, tu nombre es el comienzo de tu experiencia dental excepcional.",
+  email: "odontologiaejhr@gmail.com",
+  phoneNumber: "+51 955 276 569",
 };

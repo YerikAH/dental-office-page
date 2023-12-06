@@ -4,15 +4,11 @@ import logo from "../../assets/logo.png";
 import { CONTACTS } from "../shared";
 
 export const FOOTER = {
-  question: "¿Quieres agendar una cita facilmente?",
+  question: "¿Quieres agendar una cita fácilmente?",
   button: "Agenda aquí",
   logo: logo,
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ipsum, pellentesque quis dapibus etLorem ipsum dolor sit amet, consectetur adipiscing elit etiam tellus ipsum, pellentesque quis dapibus et.",
+  text: "En Consultorio Dental La Preventiva, nos dedicamos a proporcionar cuidado dental excepcional y servicios personalizados. ¡Transformando sonrisas y promoviendo la salud bucal para toda la comunidad! Contáctanos para tu próxima cita o adquiere productos dentales de calidad.",
   media: [
-    {
-      media: facebook,
-      url: "",
-    },
     {
       media: facebook,
       url: "",

@@ -390,10 +390,7 @@ export interface PriceOptionProps {
   category?: string;
 }
 export interface PriceOptionsProps {
-  categories: {
-    title: string;
-    active: boolean
-  }[];
+  categories: string[];
   items: PriceOptionProps[];
 }
 export interface SectionPriceProps{

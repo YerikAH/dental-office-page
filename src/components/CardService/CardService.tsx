@@ -7,7 +7,7 @@ function CardService({ title, text, icon, color }: CardServiceProps) {
       <div className={s.card__container}>
         <img src={icon} alt="icon" />
         <h2>{title}</h2>
-        <p>{text}</p>
+        <p>{text.slice(0, 120)}...</p>
       </div>
     </button>
   );

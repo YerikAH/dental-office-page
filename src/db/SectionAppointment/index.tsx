@@ -121,6 +121,6 @@ export const SECTION_APPOINTMENT = {
     },
   ],
   title: 'Reserva tu cita en "La preventiva"',
-  text: "Suspendisse fermentum arcu eget risus auctor, vel pretium eros ultricies.",
+  text: "¡Reserva ahora en La Preventiva y descubre la mejor atención para tu sonrisa!",
   form: APPOINTMENT_FORM,
 };

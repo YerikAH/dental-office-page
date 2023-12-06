@@ -10,11 +10,12 @@
   font: normal normal 700 1.3rem/1.5rem var(--font-primary);
   max-width: 300px;
   width: 100%;
+  color: var(--black);
 }
 .info p {
   margin-top: 1rem;
-  font: normal normal 400 0.8rem/1rem var(--font-primary);
-  opacity: 0.7;
+  font: normal normal 400 0.8rem/1.3rem var(--font-primary);
+  color: var(--black-50);
   max-width: 400px;
   width: 100%;
 }
@@ -29,6 +30,6 @@
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 48%);
-  gap: 2%;
+  grid-template-columns: repeat(2, 45%);
+  gap: 5%;
 }
