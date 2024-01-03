@@ -399,3 +399,9 @@ export interface SectionPriceProps{
   options: PriceOptionsProps,
   prices: CardPriceProps[],
 }
+
+export interface FormCommentProps{
+  inputs: CustomInputProps[],
+  title: string
+  text: string
+}

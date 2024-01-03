@@ -1,4 +1,5 @@
 import InfoProduct from "../InfoProduct/InfoProduct";
+import Separator from "../Separator/Separator";
 import SliderProduct from "../SliderProduct/SliderProduct";
 import s from "./MainProduct.module.css";
 const IMAGES = [
@@ -25,6 +26,7 @@ function MainProduct() {
           }}
         />
       </section>
+      <Separator/>
     </main>
   );
 }
