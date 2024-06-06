@@ -379,29 +379,9 @@ export interface SectionPrincipalServicesProps {
   text: string;
   cards: SimpleCardProps[];
 }
-export interface CardPriceProps {
-  price: string;
-  descount: string;
-  title: string;
-}
-export interface PriceOptionProps {
-  title: string;
-  isCheck: boolean;
-  category?: string;
-}
-export interface PriceOptionsProps {
-  categories: string[];
-  items: PriceOptionProps[];
-}
-export interface SectionPriceProps{
-  title: string,
-  text: string,
-  options: PriceOptionsProps,
-  prices: CardPriceProps[],
-}
 
-export interface FormCommentProps{
-  inputs: CustomInputProps[],
-  title: string
-  text: string
+export interface FormCommentProps {
+  inputs: CustomInputProps[];
+  title: string;
+  text: string;
 }

@@ -9,7 +9,7 @@
 }
 .card h2 {
   margin-top: 1rem;
-  font: normal normal 600 1rem/1rem var(--font-primary);
+  font: normal normal 600 0.8rem/1rem var(--font-primary);
   color: var(--black);
 }
 .card p {
@@ -28,8 +28,10 @@
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  color: var(--black);
+  transition: all 0.3s;
 }
 
-.card button {
-  color: var(--black);
+.card button:hover {
+  background-color: var(--black-5);
 }

@@ -8,7 +8,7 @@ function SimpleCard({ image, text, button, title }: SimpleCardProps) {
       <img src={image} alt="image" />
       <h2>{title}</h2>
       <p>{text}</p>
-      
+
       <button>
         <IconArrowNarrowRight />
         {button}
