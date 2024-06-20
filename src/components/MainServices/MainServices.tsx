@@ -1,7 +1,6 @@
 import { SECTION_PRICE } from "../../db/SectionPrice";
 import { SECTION_PRINCIPAL_SERVICES } from "../../db/SectionPrincipalServices";
 import { SECTION_SERVICES } from "../../db/SectionService";
-import PromoServices from "../PromoServices/PromoServices";
 import SectionPrice from "../SectionPrice/SectionPrice";
 import SectionPrincipalServices from "../SectionPrincipalServices/SectionPrincipalServices";
 import SectionService from "../SectionService/SectionService";
