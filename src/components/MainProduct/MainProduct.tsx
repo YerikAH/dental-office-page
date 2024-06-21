@@ -1,4 +1,5 @@
 import InfoProduct from "../InfoProduct/InfoProduct";
+import Review from "../Review/Review";
 import Separator from "../Separator/Separator";
 import SliderProduct from "../SliderProduct/SliderProduct";
 import s from "./MainProduct.module.css";
@@ -26,7 +27,8 @@ function MainProduct() {
           }}
         />
       </section>
-      <Separator/>
+      <Separator />
+      <Review />
     </main>
   );
 }
