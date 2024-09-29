@@ -1,4 +1,4 @@
-import image from "@/assets/service-image-test.png";
+import image from "@/assets/illustration/service-image-test.png";
 export const PRINCIPAL_SERVICES_SECTION = {
   title: "Servicios Dentales de Excelencia",
   text: "Te ofrecemos una experiencia odontológica integral. Desde blanqueamiento dental avanzado hasta implantes de alta calidad, nuestro compromiso es proporcionar tratamientos de excelencia que no solo mejoren la salud bucal, sino también embellezcan tu sonrisa.",

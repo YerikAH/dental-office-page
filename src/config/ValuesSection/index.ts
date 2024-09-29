@@ -1,4 +1,4 @@
-import poster from "@/assets/doctor_poster_two.png";
+import poster from "@/assets/poster/doctor_poster_two.png";
 export const VALUES_SECTION = {
   values: [
     {

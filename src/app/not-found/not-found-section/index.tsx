@@ -1,6 +1,6 @@
 import { CustomInput } from "@/components/shared";
 import s from "./index.module.css";
-import illustration from "@/assets/illustration.svg";
+import illustration from "@/assets/illustration/illustration.svg";
 import Image from "next/image";
 import { InputTypes } from "@/types";
 import Link from "next/link";

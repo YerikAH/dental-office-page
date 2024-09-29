@@ -6,7 +6,7 @@ import {
   IconPhone,
   IconUser,
 } from "@tabler/icons-react";
-import icon from "@/assets/iconAppointment.png";
+import icon from "@/assets/icon/iconAppointment.png";
 import { InputTypes } from "@/types";
 
 const doctors = [

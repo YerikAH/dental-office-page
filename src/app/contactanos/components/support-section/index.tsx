@@ -1,7 +1,7 @@
 import s from "./index.module.css";
-import headphones from "@/assets/headphones-icon.png";
-import settings from "@/assets/setting-icon.png";
-import curve from "@/assets/curve.svg";
+import headphones from "@/assets/icon/headphones-icon.png";
+import settings from "@/assets/icon/setting-icon.png";
+import curve from "@/assets/illustration/curve.svg";
 import Image from "next/image";
 
 interface Props {

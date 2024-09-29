@@ -1,5 +1,5 @@
 import Image from "next/image";
-import banner from "@/assets/banner_5.jpg";
+import banner from "@/assets/banner/banner_5.jpg";
 
 const testimonials = [
   {
@@ -25,7 +25,6 @@ const testimonials = [
 export const DiscountSection = () => {
   return (
     <div className="relative overflow-hidden bg-white">
-      {/* Decorative background image and gradient */}
       <div aria-hidden="true" className="absolute inset-0">
         <div className="absolute inset-0 mx-auto max-w-7xl overflow-hidden xl:px-8">
           <Image

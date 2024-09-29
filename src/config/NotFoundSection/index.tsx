@@ -2,8 +2,8 @@ import { InputTypes } from "@/types";
 import { IconSearch } from "@tabler/icons-react";
 
 export const NOT_FOUND_SECTION = {
-  title: "We can't find the page you're looking for.",
-  text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid modi neque porro quaerat. Ea, inventore",
+  title: "No podemos encontrar la página que buscas.",
+  text: "Lo sentimos, parece que esta página no existe o ha sido movida. ¡No te preocupes! Estamos aquí para ayudarte a encontrar lo que necesitas.",
   button: "Ir al inicio",
   input: {
     name: "",

@@ -1,4 +1,4 @@
-import userIcon from "@/assets/user-doctor.png";
+import userIcon from "@/assets/icon/user-doctor.png";
 
 export const STATS_SECTION = [
   {

@@ -7,36 +7,36 @@ export const TESTIMONIAL_SECTION = {
       avatar: avatar1,
       name: "Sara Bosu",
       opinion:
-        "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
-      tag: "Happy client",
+        "Todos los generadores de texto en Internet tienden a repetir fragmentos predefinidos, pero este fue el primero en ofrecer un servicio dental completamente personalizado. Usan tecnología avanzada y un equipo increíblemente profesional.",
+      tag: "Cliente satisfecho",
     },
     {
       avatar: avatar1,
-      name: "Sara Bosu",
+      name: "Juan Pérez",
       opinion:
-        "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
-      tag: "Happy client",
+        "Mi experiencia en el consultorio fue excelente. El personal fue muy amable y me explicaron cada paso del tratamiento. Definitivamente los recomendaré a mis amigos y familiares.",
+      tag: "Cliente feliz",
     },
     {
       avatar: avatar1,
-      name: "Sara Bosu",
+      name: "Lucía Gómez",
       opinion:
-        "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
-      tag: "Happy client",
+        "He visitado varios dentistas antes, pero ninguno como este. El trato, la tecnología y la dedicación al paciente son insuperables. Me siento muy segura y cómoda cada vez que vengo.",
+      tag: "Paciente satisfecho",
     },
     {
       avatar: avatar1,
-      name: "Sara Bosu",
+      name: "Carlos Hernández",
       opinion:
-        "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
-      tag: "Happy client",
+        "Estaba nervioso por mi tratamiento, pero el equipo hizo que todo fuera sencillo y sin dolor. La profesionalidad y amabilidad del consultorio son excepcionales.",
+      tag: "Paciente feliz",
     },
     {
       avatar: avatar1,
-      name: "Sara Bosu",
+      name: "Ana Martínez",
       opinion:
-        "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
-      tag: "Happy client",
+        "Nunca había tenido una experiencia tan cómoda en una clínica dental. El consultorio es moderno, el equipo es increíblemente atento, y salí con una sonrisa perfecta.",
+      tag: "Cliente encantada",
     },
   ],
 };

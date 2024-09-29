@@ -1,6 +1,6 @@
-import email from "@/assets/email.png";
-import location from "@/assets/location.png";
-import phone from "@/assets/phone.png";
+import email from "@/assets/icon/email.png";
+import location from "@/assets/icon/location.png";
+import phone from "@/assets/icon/phone.png";
 
 export const CONTACTS = [
   {

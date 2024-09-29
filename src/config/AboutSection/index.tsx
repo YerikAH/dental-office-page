@@ -5,7 +5,7 @@ import {
   IconScale,
   IconShieldChevron,
 } from "@tabler/icons-react";
-import bannerPromotion from "@/assets/banner_promotion.jpg";
+import bannerPromotion from "@/assets/banner/banner_promotion.jpg";
 
 export const ABOUT_SECTION = {
   title: "Descubre Quiénes Somos y Nuestra Pasión por tu Salud Dental",

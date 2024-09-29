@@ -11,7 +11,7 @@
   object-fit: cover;
 }
 .error h1 {
-  font: normal normal 700 2rem/2rem Arial;
+  font: normal normal 700 2rem/2rem var(--font-primary);
   color: var(--black);
   text-align: center;
   max-width: 500px;
@@ -19,7 +19,7 @@
   margin-bottom: 1rem;
 }
 .error p {
-  font: normal normal 400 0.8rem/1rem Arial;
+  font: normal normal 400 0.8rem/1rem var(--font-primary);
   color: var(--black-50);
   text-align: center;
   max-width: 500px;

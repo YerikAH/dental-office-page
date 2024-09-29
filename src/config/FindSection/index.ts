@@ -1,4 +1,4 @@
-import icon from "@/assets/iconAppointment.png";
+import icon from "@/assets/icon/iconAppointment.png";
 export const FIND_SECTION = {
   items: [
     {

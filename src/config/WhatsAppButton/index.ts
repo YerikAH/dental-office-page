@@ -1,4 +1,4 @@
-import bot from "@/assets/bot.png";
+import bot from "@/assets/avatar/bot.png";
 
 export const WHATSAPP_BUTTON = {
   text: "Chatea con nosotros en WhatsApp",

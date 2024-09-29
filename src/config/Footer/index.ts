@@ -1,5 +1,5 @@
-import facebook from "@/assets/facebook.png";
-import logo from "@/assets/logo.png";
+import facebook from "@/assets/icon/facebook.png";
+import logo from "@/assets/logo/logo.png";
 import { CONTACTS } from "../Contacts";
 
 export const FOOTER = {

@@ -1,10 +1,10 @@
-import banner from "@/assets/banner.png";
-import banner_2 from "@/assets/banner_2.jpg";
-import banner_3 from "@/assets/banner_3.jpeg";
-import banner_4 from "@/assets/banner_4.jpeg";
-import iconIntroOne from "@/assets/icon-intro-1.png";
-import iconIntroTwo from "@/assets/icon-intro-2.png";
-import iconIntroThree from "@/assets/icon-intro-3.png";
+import banner from "@/assets/banner/banner.png";
+import banner_2 from "@/assets/banner/banner_2.jpg";
+import banner_3 from "@/assets/banner/banner_3.jpeg";
+import banner_4 from "@/assets/banner/banner_4.jpeg";
+import iconIntroOne from "@/assets/icon/icon-intro-1.png";
+import iconIntroTwo from "@/assets/icon/icon-intro-2.png";
+import iconIntroThree from "@/assets/icon/icon-intro-3.png";
 
 export const HERO_SECTION = {
   images_intro: [

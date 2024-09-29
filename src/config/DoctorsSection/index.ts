@@ -1,4 +1,4 @@
-import doctor from "@/assets/doctor-1.jpeg";
+import doctor from "@/assets/dentists/doctor-1.jpeg";
 
 export const DOCTORS_SECTION = {
   doctors: [

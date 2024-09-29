@@ -1,6 +1,6 @@
 "use client";
 import s from "./index.module.css";
-import image from "@/assets/doctor_poster.png";
+import image from "@/assets/poster/doctor_poster.png";
 import Image, { StaticImageData } from "next/image";
 import { InputTypes } from "@/types";
 import { FormReserve } from "./form-reserve";

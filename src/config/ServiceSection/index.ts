@@ -1,4 +1,4 @@
-import iconTest from "@/assets/IconTestII.svg";
+import iconTest from "@/assets/illustration/IconTestII.svg";
 
 export const SERVICE_SECTION = {
   title: "UNA AMPLIA GAMA DE SERVICIOS",

@@ -1,4 +1,4 @@
-import doctorPrincipal from "@/assets/doctor.png";
+import doctorPrincipal from "@/assets/poster/doctor.png";
 
 export const WHY_SECTION = {
   label: "_SALUD DENTAL_",

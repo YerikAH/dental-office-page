@@ -1,5 +1,5 @@
 import { RoutesEnum } from "@/routes";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo/logo.png";
 
 export const NAVIGATION = {
   items: [
