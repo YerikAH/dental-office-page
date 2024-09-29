@@ -1,0 +1,260 @@
+.container {
+  background-color: white;
+  padding: 4rem 0;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 4rem 0;
+  }
+}
+
+.innerContainer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .innerContainer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.centeredText {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 32rem;
+  text-align: center;
+  font-family: var(--font-primary);
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--black);
+  font-family: var(--font-primary);
+}
+
+.paragraph {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--black-50);
+  font-family: var(--font-primary);
+}
+
+.pricingContainer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 32rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--blue-5);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .pricingContainer {
+    margin-top: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pricingContainer {
+    max-width: none;
+    margin-left: 0;
+    flex-direction: row;
+  }
+}
+
+.pricingContent {
+  padding: 2rem;
+}
+
+@media (min-width: 640px) {
+  .pricingContent {
+    padding: 2.5rem;
+  }
+}
+
+.subheading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--black);
+  font-family: var(--font-primary);
+}
+
+.subparagraph {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: var(--black-50);
+  font-family: var(--font-primary);
+}
+
+.includedSection {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.includedHeading {
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-family: var(--font-primary);
+  color: var(--blue);
+}
+
+.divider {
+  height: 1px;
+  flex-grow: 1;
+  background-color: #f3f4f6;
+}
+
+.featuresList {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: #4b5563;
+}
+
+@media (min-width: 640px) {
+  .featuresList {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.featureItem {
+  display: flex;
+  gap: 0.75rem;
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  color: var(--black-50);
+}
+
+.checkIcon {
+  height: 1.5rem;
+  width: 1.25rem;
+  flex-shrink: 0;
+  color: var(--blue-70);
+}
+
+.membershipContainer {
+  margin-top: -0.5rem;
+  padding: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .membershipContainer {
+    margin-top: 0;
+    width: 100%;
+    max-width: 28rem;
+    flex-shrink: 0;
+  }
+}
+
+.membershipContent {
+  border-radius: 1rem;
+  background-color: #f9fafb;
+  padding-top: 2.5rem;
+  text-align: center;
+  border-width: 1px;
+  border-color: #0000000d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .membershipContent {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.membershipInner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 20rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.membershipText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--black-50);
+  font-family: var(--font-primary);
+}
+
+.pricingInfo {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: var(--font-primary);
+  letter-spacing: -0.025em;
+  color: var(--black);
+}
+
+.currency {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 0.05em;
+  color: var(--black-50);
+  font-family: var(--font-primary);
+}
+
+.accessButton {
+  margin-top: 2.5rem;
+  display: block;
+  width: 100%;
+  border-radius: 0.375rem;
+  background-color: var(--blue);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.accessButton:hover {
+  background-color: var(--blue-70);
+}
+
+.accessButton:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  outline-color: #6366f1;
+}
+
+.reimbursementInfo {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: var(--font-primary);
+  color: #4b5563;
+}

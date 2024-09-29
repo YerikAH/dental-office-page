@@ -1,0 +1,57 @@
+.section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 10rem auto 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.section__intro h2 {
+  font: normal normal 700 1.3rem/1.8rem var(--font-primary);
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+.section__intro p {
+  font: normal normal 400 0.8rem/1.5rem var(--font-primary);
+  color: var(--black-50);
+  text-align: center;
+  margin: 1.25rem auto 0 auto;
+  max-width: 40rem;
+}
+.section__contain {
+  display: grid;
+  grid-template-columns: 100%;
+  margin: 4rem auto 0 auto;
+  width: 100%;
+  max-width: 60rem;
+}
+.button {
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding: 0.8rem 4rem;
+  font-weight: 700;
+  border-radius: 0.4rem;
+  font-size: 0.7rem;
+  transition: 0.3s;
+  border: none;
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.button:hover,
+.button:focus {
+  background-color: var(--black-50);
+}
+
+@media (min-width: 720px) {
+  .section__contain {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
+}
