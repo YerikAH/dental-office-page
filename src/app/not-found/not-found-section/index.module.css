@@ -50,7 +50,7 @@
 }
 .error__actions a {
   padding: 0.5rem 2rem;
-  font: normal normal 400 0.8rem/1rem Arial;
+  font: normal normal 400 0.8rem/1rem var(--font-primary);
   color: var(--white);
   background-color: var(--blue);
   border: none;
@@ -58,6 +58,10 @@
   border-radius: 0.4rem;
   width: 100%;
   transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
 }
 .error__actions a:hover,
 .error__actions a:focus {

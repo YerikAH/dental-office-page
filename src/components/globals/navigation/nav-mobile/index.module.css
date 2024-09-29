@@ -19,7 +19,7 @@
 
 .nav__logo img {
   height: auto;
-  width: 4rem;
+  width: 6rem;
   object-fit: contain;
   transition: 0.3s;
 }
@@ -68,7 +68,7 @@
   letter-spacing: 0.1rem;
   display: block;
   width: 100%;
-  padding: 0.2rem 1rem;
+  padding: 0.7rem 1rem;
   font-weight: 700;
   border-radius: 0.2rem;
   border: 1px solid var(--black);

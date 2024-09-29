@@ -18,7 +18,7 @@
 
 .nav__logo img {
   height: auto;
-  width: 4rem;
+  width: 6rem;
   object-fit: contain;
   transition: 0.3s;
 }
@@ -69,6 +69,7 @@
   border: none;
   border-radius: 0.2rem;
   transition: 0.3s;
+  margin-right: 1rem;
 }
 .nav__ham svg {
   stroke: var(--black);
